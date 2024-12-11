@@ -123,6 +123,76 @@ function handleDropdown(dropdown, arrow, open) {
 }
 
 
+// ============ DropDown with click outside [close] ================
+// Select all toggle buttons and content elements
+const toggleButtons = document.querySelectorAll('.icon-btn');
+const contents = document.querySelectorAll('.icon-content');
+
+// Function to close all content elements
+function closeAllContents(exceptIndex = -1) {
+  contents.forEach((content, index) => {
+    if (index !== exceptIndex) {
+      content.classList.add('hidden');
+    }
+  });
+}
+
+// Add a click event listener to each button
+toggleButtons.forEach((button, index) => {
+  button.addEventListener('click', (event) => {
+    // Prevent click from propagating to document
+    event.stopPropagation();
+    
+    // Check if the associated content is already visible
+    const isContentVisible = !contents[index].classList.contains('hidden');
+    
+    // Close all content elements except the one being toggled
+    closeAllContents(index);
+    
+    // Only toggle the current content if it was not already visible
+    if (!isContentVisible) {
+      contents[index].classList.remove('hidden');
+    }
+    else  {
+      contents[index].classList.add('hidden');
+    }
+  });
+});
+
+// Prevent content click from closing it
+contents.forEach((content) => {
+  content.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+// Add a click event listener to the document to close contents when clicking outside
+document.addEventListener('click', () => {
+  closeAllContents();
+});
+
+// ----------===================== Range slider ================--------------------------- 
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.inputRange').forEach(function (element) {
+    let input = element.getElementsByTagName('input')[0];
+    let output = element.getElementsByTagName('output')[0];
+    if (!input || !output) return;
+    let val = parseFloat(input.value);
+    let min = parseFloat(input.min) || 0;
+    let max = parseFloat(input.max) || 100;
+    output.textContent = val;
+    function handleInput() {
+      let val = parseFloat(input.value);
+      let fillPercent = ((val - min) / (max - min)) * 100;
+      input.style.background = 'linear-gradient(to right, #F99D1A 0%, #F99D1A ' + fillPercent + '%, #2C2B2A ' + fillPercent + '%)';
+      output.textContent = val;
+    }
+    input.addEventListener('input', handleInput);
+    input.addEventListener('change', handleInput);
+    handleInput();
+  });
+});
+
 // ----------===================== user-input ================--------------------------- 
 
 document.addEventListener('DOMContentLoaded', function () {

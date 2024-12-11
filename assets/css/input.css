@@ -58,6 +58,12 @@
         visibility: visible;
         display: block;
     }
+    
+    .wrapper-dropdown1.active .dropdown {
+      opacity: 1;
+      visibility: visible;
+      display: block;
+  }
       .selected-display .border {
         border:none;
       }
@@ -174,4 +180,7 @@
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
 }
+.hidden {
+    display: none;
+   }
 }
