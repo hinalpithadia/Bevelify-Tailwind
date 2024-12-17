@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Get the textarea and the paragraph for displaying the character count
   const textarea = document.getElementById('user-input');
   const characterCountParagraph = document.getElementById('character-count-paragraph');
-  const maxLength = 500; // Set the maximum character limit
+  const maxLength = 50; // Set the maximum character limit
 
   // Event listener for when the user types in the textarea
   textarea.addEventListener('input', function () {
@@ -269,29 +269,42 @@ function show2() {
 
 
 
-// ----------------===== ADD TEXTURE =====---------------
+// ----------------===== Generate 3D Modal =====---------------
 
-function addTexture(triggerId, targetId) {
-  const trigger = document.getElementById(triggerId);
-  const target = document.getElementById(targetId);
-  const banner = document.getElementById("banner");
+let selectedTrigger = null;
+let selectedTarget = null;
 
-  // Your existing logic for showing the target
-  target.classList.remove("hidden", "opacity-0", "-translate-y-8");
-  target.classList.add("flex", "opacity-100", "translate-y-0");
+// Function to handle trigger selection
+function selectTrigger(triggerId, targetId) {
+    // Store the selected trigger and target
+    selectedTrigger = triggerId;
+    selectedTarget = targetId;
 
-  // Hide the banner
-  if (banner) {
-      banner.style.display = "none";
-  }
+    // Highlight the selected trigger
+    document.querySelectorAll('ul li div').forEach(el => el.classList.remove('border-[#F99D1A]'));
+    document.getElementById(triggerId).classList.add('border-[#F99D1A]');
 
-  // Optional: Success message logic
-  const successMessage = trigger.querySelector("#sucess");
-  if (successMessage) {
-      trigger.querySelector("span").style.display = "none";
-      successMessage.classList.remove("hidden");
-      successMessage.classList.add("flex");
-  }
+    // Enable the "try" button
+    const generateBtn = document.getElementById('GenerateBtn');
+    generateBtn.disabled = false;
+    generateBtn.classList.remove('cursor-not-allowed');
+    generateBtn.classList.add('cursor-pointer');
+}
+
+// Function to reveal the target div
+function applyTexture() {
+    if (!selectedTarget) return;
+
+    // Hide all target divs
+    document.querySelectorAll('[id^="targetDiv"]').forEach(div => {
+        div.classList.add('hidden');
+        div.classList.remove('opacity-100');
+    });
+
+    // Show the selected target div
+    const targetDiv = document.getElementById(selectedTarget);
+    targetDiv.classList.remove('hidden');
+    setTimeout(() => targetDiv.classList.add('opacity-100'), 10);
 }
 // =============== Tooltip ======================== 
 

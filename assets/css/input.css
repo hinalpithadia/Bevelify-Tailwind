@@ -183,4 +183,14 @@
 .hidden {
     display: none;
    }
+   #GenerateBtn[disabled]{
+    background-color: #1f1405;
+    color: #6c450d;
+  }
+  #GenerateBtn[disabled] svg path{
+    stroke:#6c450d;
+  }
+  #GenerateBtn svg path{
+    stroke:#FA9D1A;
+  }
 }

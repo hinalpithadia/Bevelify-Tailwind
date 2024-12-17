@@ -213,7 +213,7 @@
                             <div
                                 class="p-px bg-gradient-to-bl from-[#292114] to-[#2c2c2c] relative z-[2] rounded-xl transition-all duration-500 hover:from-[#7a633d] hover:to-[#404040]  focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-[#F99d1a] focus-within:border-transparent">
                                 <div class=" rounded-xl bg-black w-full gap-2.5 flex flex-col ">
-                                    <label for="dropzone-file" class="h-[220px] flex flex-col items-center justify-center py-9 w-full   cursor-pointer  ">
+                                    <label for="dropzone-file" class="h-[220px] flex flex-col items-center justify-center xl:py-9 px-2 w-full   cursor-pointer  ">
                                         <div class="mb-2.5 flex items-center justify-center">
                                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M22 40.3334V23.8334M22 23.8334L28.4167 30.25M22 23.8334L15.5833 30.25" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -221,7 +221,7 @@
                                                 </svg>
                                                 
                                         </div>
-                                        <h2 class="text-center text-white   text-sm font-medium leading-6 mb-1">
+                                        <h2 class="text-center text-white  text-xs xl:text-sm font-medium leading-6 mb-1">
                                             Drag and drop image here or click to upload</h2>
                                         <p class="text-center text-[#B1B1B1] text-xs font-normal leading-4 max-w-[254px]">Compatible image format: .png / .jpg / .jpeg /
                                             .webp,
@@ -244,11 +244,11 @@
                                 class="p-px bg-gradient-to-bl from-[#292114] to-[#2c2c2c] relative z-[2] rounded-xl transition-all duration-500 hover:from-[#7a633d] hover:to-[#404040]  focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-[#F99d1a] focus-within:border-transparent">
                                 <div class=" rounded-xl bg-black w-full gap-2.5 flex flex-col ">
                                     <textarea name="prompt" id="user-input"
-                                        class="border-none outline-none bg-black w-full rounded-t-xl h-[80px] resize-none pt-3 px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D]"
+                                        class="border-none outline-none bg-black w-full rounded-t-xl h-[50px] resize-none pt-3 px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D]"
                                         placeholder="Give your generation a name"></textarea>
                                     <p id="character-count-paragraph"
                                         class="text-xs pb-[11px] text-[#4D4D4D] text-right pr-3.5">
-                                        0/500
+                                        0/50
                                     </p>
 
                                 </div>
@@ -260,7 +260,7 @@
                     <li class="">
                         <div class="flex flex-col gap-3">
                             <div class="flex items-center gap-2">
-                                <p class="text-base leading-5 font-medium text-white">Target Polycount</p>
+                                <p class="text-base leading-5 font-medium text-white">Polycount</p>
                                 <button  class="flex items-center justify-center focus:outline-none tooltip"
                                 data-tippy-interactive="true" 
                                 data-tippy-placement="top" 
@@ -287,53 +287,31 @@
                             </div>   
                             <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
                                 <div class="w-full flex items-center">
-                                    <input id="adaptive" name="polycount" onclick="show1();" type="radio" name="radio"
+                                    <input id="low" name="polycount" onclick="show1();" type="radio" name="radio"
                                         class="hidden sr-only peer cursor-pointer" />
-                                    <label for="adaptive"
+                                    <label for="low"
                                         class="flex justify-center text-sm leading-4 cursor-pointer font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-medium peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Adaptive
+                                        Low
                                     </label>
                                 </div>
                                 <div class="w-full flex items-center triger">
-                                    <input id="Fixed" name="polycount" onclick="show2();" value="fixed" type="radio"
+                                    <input id="medium" name="polycount" onclick="show2();" value="medium" type="radio"
                                         name="radio" class="hidden sr-only peer" checked />
-                                    <label for="Fixed"
+                                    <label for="medium"
                                         class="flex justify-center text-sm leading-4 cursor-pointer font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-medium peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Fixed
+                                        Medium
+                                    </label>
+                                </div>
+                                <div class="w-full flex items-center triger">
+                                    <input id="high" name="polycount" onclick="show3();" value="fixed" type="radio"
+                                        name="radio" class="hidden sr-only peer" checked />
+                                    <label for="high"
+                                        class="flex justify-center text-sm leading-4 cursor-pointer font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-medium peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
+                                        High
                                     </label>
                                 </div>
                             </div>
-                            <div id="target"
-                                class="flex items-center p-0.5 bg-black rounded-xl gap-0.5 transition-all duration-300 delay-100 -mt-0.5 ">
-                                <div class="w-full flex items-center">
-                                    <input id="3K" type="radio" name="radio" class="hidden sr-only peer" />
-                                    <label for="3K"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-light text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-normal peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        3K
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center">
-                                    <input id="10K" type="radio" name="radio" class="hidden sr-only peer" />
-                                    <label for="10K"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-light text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-normal peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        10K
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center">
-                                    <input id="30K" type="radio" name="radio" class="hidden sr-only peer" checked />
-                                    <label for="30K"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-light text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-normal peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        30K
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center">
-                                    <input id="100K" type="radio" name="radio" class="hidden sr-only peer" />
-                                    <label for="100K"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-light text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:bg-[#121313] peer-checked:font-normal peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        100K
-                                    </label>
-                                </div>
-                            </div>
+                            
                             <p class="text-base leading-5 font-medium text-white">Topology</p>
                             <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
                                 <div class="w-full flex items-center">
@@ -380,23 +358,93 @@
                                     </label>
                                 </div>
                             </div>
+                            <p class="text-base leading-5 font-medium text-white">Texture Size</p>
+                            <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
+                                <div class="w-full flex items-center">
+                                    <input id="low1" name="texture" type="radio" name="radio1"
+                                        class="hidden sr-only peer" checked />
+                                    <label for="low1"
+                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
+                                        Low
+                                    </label>
+                                </div>
+                                <div class="w-full flex items-center">
+                                    <input id="normal" name="texture" type="radio" name="radio1"
+                                        class="hidden sr-only peer"  />
+                                    <label for="normal"
+                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
+                                        Normal
+                                    </label>
+                                </div>
+                                <div class="w-full flex items-center triger">
+                                    <input id="hd" name="texture" value="fixed" type="radio" name="radio1"
+                                        class="hidden sr-only peer" />
+                                    <label for="hd"
+                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
+                                        HD
+                                    </label>
+                                </div>
+                                <div class="w-full flex items-center triger">
+                                    <input id="fhd" name="texture" value="fixed" type="radio" name="radio1"
+                                        class="hidden sr-only peer" />
+                                    <label for="fhd"
+                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
+                                        FHD
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
 
             </div>
-            <div class="px-3.5 w-full h-auto sticky left-0 bottom-0">
-                <div class="bg-black w-full rounded-t-2xl border border-b-0 border-[#2C2C2C]">
+            <div class=" w-full h-auto sticky left-0 bottom-0">
+                <div class="bg-black w-full  border-t border-[rgba(249,157,26,0.5)]">
                     <div
                         class="w-full rounded-t-2xl bg-gradient-to-bl from-[#00000000] via-[#00000000] to-[#F99D1A1F] px-4 pb-4 pt-[18px] flex flex-col gap-[18px]">
                         <ul class="flex flex-col gap-[15px]">
                             <li class="flex items-center justify-between">
-                                <span class="text-base leading-[22px] font-light text-white">Estimated Time</span>
-                                <span class="text-base leading-[22px] font-normal text-white">1 minute</span>
+                                <span class="text-base leading-[22px] font-light text-[#898989]">Estimated Time</span>
+                                <span class="text-base leading-[22px] font-normal text-white">40 Sec - 1 Min</span>
                             </li>
                             <li class="flex items-center justify-between">
-                                <span class="text-base leading-[22px] font-light text-white">Credit cost</span>
-                                <span class="text-base leading-[22px] font-normal text-white">15 credits</span>
+                                <span class="text-base leading-[22px] font-light text-[#898989]">Credit cost</span>
+                                <span class="text-base leading-[22px] font-normal text-[#F99D1A] flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M16 8.02342L8.00003 0.143066V8.02342H16Z" fill="url(#paint0_linear_12591_234)"/>
+                                    <path d="M6.10352e-05 8.02344L7.99999 15.9037V8.02344H6.10352e-05Z" fill="url(#paint1_linear_12591_234)"/>
+                                    <path d="M7.99999 0.143066L6.10352e-05 8.02342H7.99999V0.143066Z" fill="url(#paint2_linear_12591_234)"/>
+                                    <path d="M8.00003 8.02344V15.9037L16 8.02344H8.00003Z" fill="url(#paint3_linear_12591_234)"/>
+                                    <path opacity="0.25" d="M7.98123 1.14429V2.01573L14.6165 7.92597L7.98123 1.14429Z" fill="#FDFFD2"/>
+                                    <path opacity="0.5" d="M7.78357 2.87793L7.69889 7.68956L2.99774 7.78415L7.31335 7.22793L7.78357 2.87793Z" fill="#FDFFD2"/>
+                                    <path opacity="0.5" d="M5.92712 8.2251H7.74829L7.78358 14.8098L7.48713 8.54493L5.92712 8.2251Z" fill="#FDFFD2"/>
+                                    <path opacity="0.5" d="M0.442474 7.78425C0.442474 7.78425 5.52695 4.02361 6.54938 2.02677L6.59773 1.93237L0.442474 7.78425Z" fill="#FDFFD2"/>
+                                    <path d="M7.99998 9.83135C8.07087 9.27429 8.10347 8.71727 8.12879 8.1602C8.46861 8.17029 8.80843 8.17826 9.1482 8.17906C9.53096 8.18208 9.91368 8.17774 10.2964 8.16916C10.6791 8.1603 11.0619 8.1454 11.4447 8.12272C11.8274 8.10037 12.2101 8.07019 12.5929 8.02351C12.2101 7.97683 11.8274 7.94669 11.4447 7.9243C11.0619 7.90157 10.6792 7.88667 10.2964 7.87785C9.91368 7.86922 9.53096 7.86488 9.1482 7.86795C8.81853 7.8687 8.48891 7.87634 8.15924 7.88601C8.15627 6.61844 8.14938 5.35092 8.12482 4.08336C8.11405 3.42666 8.0971 2.76995 8.07838 2.1133C8.05373 1.50456 8.03717 0.895767 8.0062 0.287022C8.28523 0.546269 8.56411 0.805613 8.84778 1.06029C9.15682 1.3399 9.4639 1.6215 9.77878 1.89541C9.50071 1.58524 9.21484 1.28275 8.93098 0.978332C8.64822 0.672781 8.36033 0.372324 8.0725 0.0717713L8.00376 0L7.92746 0.0717713L6.90445 1.03416L5.89159 2.0065C5.22081 2.65914 4.55242 3.3141 3.89078 3.97575C2.56682 5.29835 1.26134 6.63919 4.67469e-05 8.02351C1.40538 6.78103 2.76658 5.49511 4.10925 4.19096C4.78089 3.53916 5.44584 2.88077 6.10839 2.22006L7.0955 1.22235L7.58093 0.721633C7.72401 0.574044 7.97527 0.679993 7.96723 0.883882C7.9511 1.29369 7.93813 1.70345 7.92152 2.1133C7.9028 2.77 7.88591 3.4267 7.87509 4.08336C7.85364 5.18956 7.86264 6.29582 7.86436 7.40203C7.8648 7.67151 7.64254 7.89049 7.36897 7.89016C6.24597 7.8887 5.12297 7.87988 3.99997 7.90105C3.3333 7.91161 2.66663 7.9283 2.00001 7.94674C1.33334 7.97272 0.666669 7.98805 0 8.02355C0.666669 8.05906 1.33334 8.07439 2.00001 8.10037C2.66667 8.1188 3.33334 8.1355 3.99997 8.14606C5.29065 8.17039 6.58139 8.17718 7.87207 8.18048C7.89735 8.73071 7.92994 9.28103 7.99998 9.83135Z" fill="white"/>
+                                    <path d="M13.9661 9.9602C13.2927 10.6102 12.6167 11.2577 11.9498 11.9141L9.94412 13.8786L8.01036 15.7971C8.06483 15.1888 8.0778 14.1364 8.07991 13.586C8.07733 13.0019 8.06287 12.4178 7.99997 11.8338C7.93707 12.4179 7.92262 13.0019 7.92003 13.586C7.92175 14.0306 7.93056 14.8026 7.96254 15.4035C7.96991 15.542 7.80041 15.6168 7.69974 15.5199L6.24798 14.1227C5.64617 13.5466 5.04149 12.9734 4.43298 12.404C5.01349 13.0011 5.59777 13.5945 6.18498 14.185L7.95139 15.9518L7.99949 15.9999L8.04875 15.9517L10.0558 13.9887L12.0502 12.013C12.7166 11.356 13.3739 10.6902 14.0338 10.0268C14.6946 9.36428 15.3481 8.69461 16 8.02344C15.3185 8.66561 14.6387 9.30935 13.9661 9.9602Z" fill="white"/>
+                                    <defs>
+                                      <linearGradient id="paint0_linear_12591_234" x1="7.10002" y1="3.41264" x2="15.0423" y2="9.51132" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFB752"/>
+                                        <stop offset="0.2162" stop-color="#FFAD39"/>
+                                        <stop offset="0.2473" stop-color="#F99D1A"/>
+                                        <stop offset="0.5453" stop-color="#D38413"/>
+                                        <stop offset="0.7807" stop-color="#C47A11"/>
+                                        <stop offset="0.9229" stop-color="#AC6C0F"/>
+                                      </linearGradient>
+                                      <linearGradient id="paint1_linear_12591_234" x1="2.06121" y1="13.8734" x2="7.77415" y2="8.07373" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFBE73"/>
+                                        <stop offset="0.4077" stop-color="#F99D1A"/>
+                                        <stop offset="1" stop-color="#C77C11"/>
+                                      </linearGradient>
+                                      <linearGradient id="paint2_linear_12591_234" x1="4.00002" y1="4.08323" x2="7.93974" y2="8.08275" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFB750"/>
+                                        <stop offset="0.9804" stop-color="#F99D1A"/>
+                                      </linearGradient>
+                                      <linearGradient id="paint3_linear_12591_234" x1="8.00004" y1="11.9636" x2="16" y2="11.9636" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F99D1A"/>
+                                        <stop offset="0.3939" stop-color="#E89219"/>
+                                        <stop offset="0.9804" stop-color="#BF7815"/>
+                                      </linearGradient>
+                                    </defs>
+                                  </svg>15 credits</span>
                             </li>
                         </ul>
                         <button
@@ -417,11 +465,11 @@
             </div>
         </aside>
 
-        <div class="xl:w-[calc(100%-370px)]  w-full xl:ml-auto relative h-screen pt-14">
+        <div class="xl:w-[calc(100%-370px)] lg:w-[calc(100%-300px)] w-full ml-auto relative h-screen pt-14">
             <!--header-->
             <div
-                class="fixed z-30 top-0 w-full flex items-center justify-between right-0 px-10 xl:pr-3 xl:pl-3.5 xl:pb-0 xl:pt-[11px] border-b border-[#161616] py-[20px] bg-black xl:w-[calc(100%-384px)]  ml-auto">
-                <ul class="xl:flex hidden items-center gap-7">
+                class="fixed z-30 top-0 w-full flex items-center justify-between right-0 px-10 xl:pr-3 xl:pl-3.5 xl:pb-0 xl:pt-[11px] border-b border-[#161616] py-[5px] bg-black xl:w-[calc(100%-384px)] lg:w-[calc(100%-320px)] ml-auto">
+                <ul class="lg:flex hidden items-center gap-7">
                     <li><a href="Community.html" class="header-links active">Community</a></li>
                     <li><a href="#" class="header-links">My Assets</a></li>
                     <li><a href="#" class="header-links">API</a></li>
@@ -511,7 +559,7 @@
             <!--Main Content Page-->
             <div class="w-full h-full pt-px flex">
                 <div
-                    class="w-full flex flex-col gap-3.5 xl:max-w-[400px] 2xl:max-w-[500px] h-[calc(100vh-57px)] bg-[#0C0C0C] overflow-y-auto p-3.5">
+                    class="w-full flex flex-col gap-3.5 lg:max-w-[370px] xl:max-w-[400px] 2xl:max-w-[500px] h-[calc(100vh-57px)] bg-[#0C0C0C] overflow-y-auto p-3.5">
                     <div class="flex items-center gap-2.5">
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">

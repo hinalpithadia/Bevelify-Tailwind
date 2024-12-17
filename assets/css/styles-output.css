@@ -740,6 +740,19 @@ svg.final stop {
   display: none;
 }
 
+#GenerateBtn[disabled]{
+  background-color: #1f1405;
+  color: #6c450d;
+}
+
+#GenerateBtn[disabled] svg path{
+  stroke:#6c450d;
+}
+
+#GenerateBtn svg path{
+  stroke:#FA9D1A;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -865,6 +878,10 @@ svg.final stop {
   top: -180px;
 }
 
+.top-\[-230px\] {
+  top: -230px;
+}
+
 .top-\[0px\] {
   top: 0px;
 }
@@ -875,22 +892,6 @@ svg.final stop {
 
 .top-\[57px\] {
   top: 57px;
-}
-
-.top-\[-1220px\] {
-  top: -1220px;
-}
-
-.top-\[-220px\] {
-  top: -220px;
-}
-
-.top-\[-210px\] {
-  top: -210px;
-}
-
-.top-\[-230px\] {
-  top: -230px;
 }
 
 .z-0 {
@@ -936,14 +937,6 @@ svg.final stop {
 
 .-mb-px {
   margin-bottom: -1px;
-}
-
-.-mt-0 {
-  margin-top: -0px;
-}
-
-.-mt-0\.5 {
-  margin-top: -0.125rem;
 }
 
 .-mt-1 {
@@ -1010,16 +1003,16 @@ svg.final stop {
   margin-bottom: 34px;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .block {
@@ -1036,10 +1029,6 @@ svg.final stop {
 
 .grid {
   display: grid;
-}
-
-.contents {
-  display: contents;
 }
 
 .hidden {
@@ -1066,6 +1055,14 @@ svg.final stop {
   height: 2.25rem;
 }
 
+.h-\[110px\] {
+  height: 110px;
+}
+
+.h-\[18px\] {
+  height: 18px;
+}
+
 .h-\[220px\] {
   height: 220px;
 }
@@ -1076,6 +1073,10 @@ svg.final stop {
 
 .h-\[330px\] {
   height: 330px;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .h-\[56px\] {
@@ -1102,17 +1103,13 @@ svg.final stop {
   height: 100vh;
 }
 
-.h-\[18px\] {
-  height: 18px;
+.h-\[60px\] {
+  height: 60px;
 }
 
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .w-1\/2 {
@@ -1121,6 +1118,10 @@ svg.final stop {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-16 {
@@ -1139,6 +1140,18 @@ svg.final stop {
   width: 2.25rem;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[130px\] {
+  width: 130px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
 .w-\[300px\] {
   width: 300px;
 }
@@ -1149,6 +1162,10 @@ svg.final stop {
 
 .w-\[67px\] {
   width: 67px;
+}
+
+.w-\[80px\] {
+  width: 80px;
 }
 
 .w-\[calc\(100\%-24px\)\] {
@@ -1172,16 +1189,12 @@ svg.final stop {
   width: 1px;
 }
 
-.w-12 {
-  width: 3rem;
+.w-\[50px\] {
+  width: 50px;
 }
 
-.w-\[350px\] {
-  width: 350px;
-}
-
-.w-\[130px\] {
-  width: 130px;
+.w-\[60px\] {
+  width: 60px;
 }
 
 .min-w-\[160px\] {
@@ -1260,6 +1273,10 @@ svg.final stop {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
 }
 
 .cursor-pointer {
@@ -1419,6 +1436,10 @@ svg.final stop {
   border-radius: 5px;
 }
 
+.rounded-\[6px\] {
+  border-radius: 6px;
+}
+
 .rounded-\[7px\] {
   border-radius: 7px;
 }
@@ -1433,10 +1454,6 @@ svg.final stop {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-\[6px\] {
-  border-radius: 6px;
 }
 
 .rounded-b-lg {
@@ -1554,9 +1571,18 @@ svg.final stop {
   border-color: rgb(249 157 26 / var(--tw-border-opacity));
 }
 
+.border-\[rgba\(249\2c 157\2c 26\2c 0\.5\)\] {
+  border-color: rgba(249,157,26,0.5);
+}
+
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+.\!bg-\[\#2C2B2A\] {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(44 43 42 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-\[\#0C0C0C\] {
@@ -1622,6 +1648,11 @@ svg.final stop {
   background-color: rgb(0 0 0 / 0.5);
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1629,11 +1660,6 @@ svg.final stop {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.\!bg-\[\#2C2B2A\] {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(44 43 42 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-gradient-to-b {
@@ -1798,6 +1824,10 @@ svg.final stop {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -1943,9 +1973,14 @@ svg.final stop {
   padding-bottom: 9px;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.py-\[8px\] {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .pb-0 {
@@ -2210,6 +2245,11 @@ svg.final stop {
   color: rgb(77 77 77 / var(--tw-text-opacity));
 }
 
+.text-\[\#898989\] {
+  --tw-text-opacity: 1;
+  color: rgb(137 137 137 / var(--tw-text-opacity));
+}
+
 .text-\[\#B1B1B1\] {
   --tw-text-opacity: 1;
   color: rgb(177 177 177 / var(--tw-text-opacity));
@@ -2245,13 +2285,14 @@ svg.final stop {
   color: rgb(204 204 204 / var(--tw-text-opacity));
 }
 
-.text-\[var\(--label-faint\)\] {
-  color: var(--label-faint);
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
@@ -2262,11 +2303,6 @@ svg.final stop {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .placeholder-\[\#B1B1B1\]::-moz-placeholder {
@@ -2299,15 +2335,15 @@ svg.final stop {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-none {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2329,26 +2365,10 @@ svg.final stop {
   outline-color: #F99d1a;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.delay-100 {
-  transition-delay: 100ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
 }
 
 .duration-1000 {
@@ -2365,10 +2385,6 @@ svg.final stop {
 
 .duration-700 {
   transition-duration: 700ms;
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .scrollbar-hide {
@@ -2596,10 +2612,6 @@ svg.final stop {
   color: rgb(255 204 133 / var(--tw-text-opacity));
 }
 
-.hover\:text-\[var\(--label-muted\)\]:hover {
-  color: var(--label-muted);
-}
-
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2668,10 +2680,6 @@ svg.final stop {
   font-weight: 500;
 }
 
-.peer:checked ~ .peer-checked\:font-normal {
-  font-weight: 400;
-}
-
 .peer:checked ~ .peer-checked\:text-\[\#F99D1A\] {
   --tw-text-opacity: 1;
   color: rgb(249 157 26 / var(--tw-text-opacity));
@@ -2703,11 +2711,6 @@ svg.final stop {
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .sm\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -2730,8 +2733,36 @@ svg.final stop {
     grid-column: span 8 / span 8;
   }
 
+  .lg\:ml-auto {
+    margin-left: auto;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:w-\[calc\(100\%-370px\)\] {
+    width: calc(100% - 370px);
+  }
+
+  .lg\:w-\[calc\(100\%-350px\)\] {
+    width: calc(100% - 350px);
+  }
+
+  .lg\:w-\[calc\(100\%-320px\)\] {
+    width: calc(100% - 320px);
+  }
+
+  .lg\:w-\[calc\(100\%-300px\)\] {
+    width: calc(100% - 300px);
+  }
+
   .lg\:max-w-\[180px\] {
     max-width: 180px;
+  }
+
+  .lg\:max-w-\[370px\] {
+    max-width: 370px;
   }
 
   .lg\:grid-cols-4 {
@@ -2757,6 +2788,10 @@ svg.final stop {
     display: flex;
   }
 
+  .xl\:h-\[80px\] {
+    height: 80px;
+  }
+
   .xl\:min-h-screen {
     min-height: 100vh;
   }
@@ -2773,12 +2808,20 @@ svg.final stop {
     width: calc(100% - 384px);
   }
 
+  .xl\:w-\[80px\] {
+    width: 80px;
+  }
+
   .xl\:max-w-\[200px\] {
     max-width: 200px;
   }
 
   .xl\:max-w-\[400px\] {
     max-width: 400px;
+  }
+
+  .xl\:max-w-\[320px\] {
+    max-width: 320px;
   }
 
   .xl\:grid-cols-6 {
@@ -2788,6 +2831,11 @@ svg.final stop {
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:py-9 {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 
   .xl\:pb-0 {
@@ -2809,9 +2857,30 @@ svg.final stop {
   .xl\:pt-\[11px\] {
     padding-top: 11px;
   }
+
+  .xl\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .xl\:pb-2\.5 {
+    padding-bottom: 0.625rem;
+  }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:h-\[110px\] {
+    height: 110px;
+  }
+
+  .\32xl\:w-\[100px\] {
+    width: 100px;
+  }
+
   .\32xl\:max-w-\[230px\] {
     max-width: 230px;
   }
@@ -2855,16 +2924,4 @@ svg.final stop {
 .\[\&\:\:-webkit-slider-thumb\]\:bg-white::-webkit-slider-thumb {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.\[\&\:\:-webkit-slider-thumb\]\:shadow-\[0_1px_5px_\#d1d5db\]::-webkit-slider-thumb {
-  --tw-shadow: 0 1px 5px #d1d5db;
-  --tw-shadow-colored: 0 1px 5px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.\[\&\:\:-webkit-slider-thumb\]\:shadow-\[0_1px_5px_\#D1D5DB\]::-webkit-slider-thumb {
-  --tw-shadow: 0 1px 5px #D1D5DB;
-  --tw-shadow-colored: 0 1px 5px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
