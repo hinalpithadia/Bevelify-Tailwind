@@ -886,12 +886,32 @@ svg.final stop {
   top: 0px;
 }
 
+.top-\[30px\] {
+  top: 30px;
+}
+
 .top-\[50px\] {
   top: 50px;
 }
 
 .top-\[57px\] {
   top: 57px;
+}
+
+.\!left-\[0px\] {
+  left: 0px !important;
+}
+
+.\!left-\[-50px\] {
+  left: -50px !important;
+}
+
+.\!left-\[-100px\] {
+  left: -100px !important;
+}
+
+.\!left-\[-80px\] {
+  left: -80px !important;
 }
 
 .z-0 {
@@ -1055,10 +1075,6 @@ svg.final stop {
   height: 2.25rem;
 }
 
-.h-\[110px\] {
-  height: 110px;
-}
-
 .h-\[18px\] {
   height: 18px;
 }
@@ -1083,8 +1099,8 @@ svg.final stop {
   height: 56px;
 }
 
-.h-\[80px\] {
-  height: 80px;
+.h-\[60px\] {
+  height: 60px;
 }
 
 .h-\[calc\(100vh-57px\)\] {
@@ -1101,10 +1117,6 @@ svg.final stop {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[60px\] {
-  height: 60px;
 }
 
 .max-h-max {
@@ -1136,12 +1148,12 @@ svg.final stop {
   width: 14rem;
 }
 
-.w-9 {
-  width: 2.25rem;
+.w-7 {
+  width: 1.75rem;
 }
 
-.w-\[100px\] {
-  width: 100px;
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-\[130px\] {
@@ -1156,16 +1168,16 @@ svg.final stop {
   width: 300px;
 }
 
+.w-\[60px\] {
+  width: 60px;
+}
+
 .w-\[66px\] {
   width: 66px;
 }
 
 .w-\[67px\] {
   width: 67px;
-}
-
-.w-\[80px\] {
-  width: 80px;
 }
 
 .w-\[calc\(100\%-24px\)\] {
@@ -1189,12 +1201,8 @@ svg.final stop {
   width: 1px;
 }
 
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[60px\] {
-  width: 60px;
+.min-w-\[100px\] {
+  min-width: 100px;
 }
 
 .min-w-\[160px\] {
@@ -1235,6 +1243,10 @@ svg.final stop {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.flex-none {
+  flex: none;
 }
 
 .grow {
@@ -1283,6 +1295,12 @@ svg.final stop {
   cursor: pointer;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .resize-none {
   resize: none;
 }
@@ -1299,6 +1317,10 @@ svg.final stop {
 
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1418,6 +1440,10 @@ svg.final stop {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded-2xl {
@@ -1580,6 +1606,10 @@ svg.final stop {
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .\!bg-\[\#2C2B2A\] {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(44 43 42 / var(--tw-bg-opacity)) !important;
@@ -1646,11 +1676,6 @@ svg.final stop {
 
 .bg-black\/50 {
   background-color: rgb(0 0 0 / 0.5);
-}
-
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1971,16 +1996,6 @@ svg.final stop {
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
-}
-
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.py-\[8px\] {
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 .pb-0 {
@@ -2305,6 +2320,10 @@ svg.final stop {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-opacity-70 {
+  --tw-text-opacity: 0.7;
+}
+
 .placeholder-\[\#B1B1B1\]::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(177 177 177 / var(--tw-placeholder-opacity));
@@ -2365,10 +2384,22 @@ svg.final stop {
   outline-color: #F99d1a;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
 }
 
 .duration-1000 {
@@ -2385,6 +2416,10 @@ svg.final stop {
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .scrollbar-hide {
@@ -2627,6 +2662,24 @@ svg.final stop {
   outline-offset: 2px;
 }
 
+.focus-visible\:ring-2:focus-visible {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-offset-2:focus-visible {
+  --tw-ring-offset-width: 2px;
+}
+
+.active\:opacity-70:active {
+  opacity: 0.7;
+}
+
+.group\/card:hover .group-hover\/card\:flex {
+  display: flex;
+}
+
 .group:hover .group-hover\:border-\[\#F99D1A\] {
   --tw-border-opacity: 1;
   border-color: rgb(249 157 26 / var(--tw-border-opacity));
@@ -2733,28 +2786,12 @@ svg.final stop {
     grid-column: span 8 / span 8;
   }
 
-  .lg\:ml-auto {
-    margin-left: auto;
-  }
-
   .lg\:flex {
     display: flex;
   }
 
-  .lg\:w-\[calc\(100\%-370px\)\] {
-    width: calc(100% - 370px);
-  }
-
-  .lg\:w-\[calc\(100\%-350px\)\] {
-    width: calc(100% - 350px);
-  }
-
   .lg\:w-\[calc\(100\%-320px\)\] {
     width: calc(100% - 320px);
-  }
-
-  .lg\:w-\[calc\(100\%-300px\)\] {
-    width: calc(100% - 300px);
   }
 
   .lg\:max-w-\[180px\] {
@@ -2800,6 +2837,10 @@ svg.final stop {
     width: 370px !important;
   }
 
+  .xl\:w-\[80px\] {
+    width: 80px;
+  }
+
   .xl\:w-\[calc\(100\%-370px\)\] {
     width: calc(100% - 370px);
   }
@@ -2808,20 +2849,12 @@ svg.final stop {
     width: calc(100% - 384px);
   }
 
-  .xl\:w-\[80px\] {
-    width: 80px;
-  }
-
   .xl\:max-w-\[200px\] {
     max-width: 200px;
   }
 
   .xl\:max-w-\[400px\] {
     max-width: 400px;
-  }
-
-  .xl\:max-w-\[320px\] {
-    max-width: 320px;
   }
 
   .xl\:grid-cols-6 {
@@ -2842,6 +2875,14 @@ svg.final stop {
     padding-bottom: 0px;
   }
 
+  .xl\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .xl\:pb-2\.5 {
+    padding-bottom: 0.625rem;
+  }
+
   .xl\:pl-3 {
     padding-left: 0.75rem;
   }
@@ -2856,14 +2897,6 @@ svg.final stop {
 
   .xl\:pt-\[11px\] {
     padding-top: 11px;
-  }
-
-  .xl\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .xl\:pb-2\.5 {
-    padding-bottom: 0.625rem;
   }
 
   .xl\:text-sm {
