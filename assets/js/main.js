@@ -1,64 +1,80 @@
+ /*============ Modal ===============*/
+ const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+ const modals = document.querySelectorAll(".modalTrigger");
+ const modalCloseButtons = document.querySelectorAll(".modal-close");
+ const overlay = document.querySelector(".overlay-modal");
 
-// /* ======= modal ======*/
-// var modal = document.querySelector(".modal");
-// var trigger = document.querySelector(".trigger");
-// var closeButton = document.querySelector(".close-button");
+ modalTriggerButtons.forEach(elem => {
+     elem.addEventListener("click", event => {
+         toggleModal(event.currentTarget.getAttribute("data-modal-target"));
 
-// function toggleModal() {
-//   modal.classList.toggle("show-modal");
-// }
+         // Setting multiple CSS properties individually
+         overlay.style.opacity = "1";
+         overlay.style.zIndex = "200";
+         overlay.style.visibility = "visible";
+         overlay.style.transition = "opacity 0.3s ease"; // Optional: Add a transition
+     });
+ });
 
-// function windowOnClick(event) {
-//   if (event.target === modal) {
-//     toggleModal();
-//   }
-// }
 
-// trigger.addEventListener("click", toggleModal);
-// closeButton.addEventListener("click", toggleModal);
-// window.addEventListener("click", windowOnClick);
+ // modalCloseButtons.forEach(elem => {
+ //   elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modalTrigger").id));
+ //   elem.addEventListener("click", event => overlay.style.opacity = 0);
 
-/*============ Modal ===============*/
-const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
-const modals = document.querySelectorAll(".modal");
-const modalCloseButtons = document.querySelectorAll(".modal-close");
+ // });
 
-modalTriggerButtons.forEach(elem => {
-  elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+ modalCloseButtons.forEach(elem => {
+     elem.addEventListener("click", event => {
+         toggleModal(event.currentTarget.closest(".modalTrigger").id);
+         overlay.style.opacity = "0";
+         overlay.style.zIndex = "-1";
+         overlay.style.visibility = "hidden";
+         overlay.style.transition = "opacity 0.3s ease"; // Optional: Add a transition
+     });
+ });
+
+
+
+ modals.forEach(elem => {
+     elem.addEventListener("click", event => {
+         if (event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+     });
+ });
+
+ // Close Modal with "Esc"...
+ document.addEventListener("keydown", event => {
+     if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+         toggleModal(document.querySelector(".modal.modal-show").id);
+     }
+ });
+
+ function toggleModal(modalId) {
+     const modal = document.getElementById(modalId);
+
+     if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
+         modal.classList.add("modal-hide");
+         setTimeout(() => {
+             document.body.style.overflow = "initial";
+             modal.classList.remove("modal-show", "modal-hide");
+             modal.style.display = "none";
+         }, 200);
+     }
+     else {
+         document.body.style.overflow = "hidden";
+         modal.style.display = "flex";
+         modal.classList.add("modal-show");
+     }
+ }
+
+
+// ============ tippy tooltip ================
+ 
+tippy('button', { 
+  theme: 'custom',
+  arrow: true,
+ 
 });
-modalCloseButtons.forEach(elem => {
-  elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
-});
-modals.forEach(elem => {
-  elem.addEventListener("click", event => {
-    if (event.currentTarget === event.target) toggleModal(event.currentTarget.id);
-  });
-});
 
-// Close Modal with "Esc"...
-document.addEventListener("keydown", event => {
-  if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
-    toggleModal(document.querySelector(".modal.modal-show").id);
-  }
-});
-
-function toggleModal(modalId) {
-  const modal = document.getElementById(modalId);
-
-  if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
-    modal.classList.add("modal-hide");
-    setTimeout(() => {
-      document.body.style.overflow = "initial";
-      modal.classList.remove("modal-show", "modal-hide");
-      modal.style.display = "none";
-    }, 200);
-  }
-  else {
-    document.body.style.overflow = "hidden";
-    modal.style.display = "flex";
-    modal.classList.add("modal-show");
-  }
-}
 
 // ============ DropDown ================
 
@@ -70,7 +86,7 @@ selectedAll.forEach((selected) => {
 
   selected.addEventListener("click", () => {
     let arrow = selected.children[1];
-
+   
     if (selected.classList.contains("active")) {
       handleDropdown(selected, arrow, false);
     } else {
@@ -143,6 +159,8 @@ toggleButtons.forEach((button, index) => {
     // Prevent click from propagating to document
     event.stopPropagation();
     
+   // tooltipInstance[1].hide();
+   
     // Check if the associated content is already visible
     const isContentVisible = !contents[index].classList.contains('hidden');
     
@@ -152,9 +170,12 @@ toggleButtons.forEach((button, index) => {
     // Only toggle the current content if it was not already visible
     if (!isContentVisible) {
       contents[index].classList.remove('hidden');
+      toggleButtons.classList.remove('tippy-active');
+      
     }
     else  {
       contents[index].classList.add('hidden');
+      toggleButtons.classList.add('tippy-active');
     }
   });
 });
@@ -269,49 +290,8 @@ function show2() {
 
 
 
-// ----------------===== Generate 3D Modal =====---------------
 
-let selectedTrigger = null;
-let selectedTarget = null;
-
-// Function to handle trigger selection
-function selectTrigger(triggerId, targetId) {
-    // Store the selected trigger and target
-    selectedTrigger = triggerId;
-    selectedTarget = targetId;
-
-    // Highlight the selected trigger
-    document.querySelectorAll('ul li div').forEach(el => el.classList.remove('border-[#F99D1A]'));
-    document.getElementById(triggerId).classList.add('border-[#F99D1A]');
-
-    // Enable the "try" button
-    const generateBtn = document.getElementById('GenerateBtn');
-    generateBtn.disabled = false;
-    generateBtn.classList.remove('cursor-not-allowed');
-    generateBtn.classList.add('cursor-pointer');
-}
-
-// Function to reveal the target div
-function applyTexture() {
-    if (!selectedTarget) return;
-
-    // Hide all target divs
-    document.querySelectorAll('[id^="targetDiv"]').forEach(div => {
-        div.classList.add('hidden');
-        div.classList.remove('opacity-100');
-    });
-
-    // Show the selected target div
-    const targetDiv = document.getElementById(selectedTarget);
-    targetDiv.classList.remove('hidden');
-    setTimeout(() => targetDiv.classList.add('opacity-100'), 10);
-}
 // =============== Tooltip ======================== 
-
-tippy('.tooltip', { 
-  theme: 'custom',
-  arrow: true 
-});
 
 // =============== Tabs ======================== 
 let tabsContainer = document.querySelector("#tabs");
@@ -340,3 +320,32 @@ tabTogglers.forEach(function(toggler) {
     e.target.parentElement.classList.add("border-t", "border-r", "border-l", "-mb-px", "bg-white");
   });
 });
+// =============== gsap js ======================== 
+
+document.addEventListener("DOMContentLoaded", function () {
+  animateText("#prompt");
+});
+
+function animateText(selector) {
+  const textElement = document.querySelector(selector);
+  const textContent = textElement.textContent;
+
+  // Replace text with spans for each character
+  textElement.innerHTML = [...textContent]
+      .map(char => `<span>${char == "" ? "&nbsp;" : char}</span>`)
+      .join("");
+
+  // Animate each span
+  gsap.fromTo(
+      `${selector} span`,
+      { opacity: 0, y: 90 },
+      {
+          opacity: 1,
+          y: 0,
+          duration: 0.02,
+          stagger: 0.02,
+          ease: "elastic(1.2, 0.5)",
+      }
+  );
+}
+

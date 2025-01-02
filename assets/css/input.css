@@ -89,72 +89,27 @@
     .selected-display:hover > div {
       background: transparent;
     }
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: 1000;
-    overflow: auto;
-  }
-  .modal.modal-show {
-    animation: fadeIn 0.1s ease-in-out forwards;
-  }
-  .modal.modal-hide {
-    animation: fadeOut 0.1s ease-in-out 0.1s forwards;
-  }
-  .modal-content {
-    position: relative;
-    background-color: #121313;
-    max-height: 75%;
-    overflow: auto;
-    width: 100%;
-    /* box-shadow: 0 4px 20px rgba(249, 157, 26, 0.1); */
-  }
-  .modal.modal-show .modal-content {
-    animation: fadeInDown 0.3s ease-in-out forwards;
-  }
-  .modal.modal-hide .modal-content {
-    animation: fadeOutUp 0.2s ease-in-out forwards;
-  }
-  .modal-content h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .modal-content p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
-  }
- 
-  .modal-close:hover, .modal-close:focus {
-    color: #F99D1A;
-  }
-  #modal1{
-    max-width: 472px;
-    left: 20%;
-    top: 7.5%;
-    width: 100%;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+.tooltip{
+  border: 1px solid rgba(153, 153, 153, 0.20) !important;
+  background: #000000 !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  color: #fff !important;
+  white-space: nowrap;
+}
+.tooltip:before {
+  content: '';
+  position: absolute;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  bottom: -6px;
+  margin: 0 6px;
+  transform-origin: 50% 0;
+}
   .tippy-tooltip{
     border: 1px solid rgba(153, 153, 153, 0.20) !important;
     background: #000000 !important;
@@ -193,4 +148,154 @@
   #GenerateBtn svg path{
     stroke:#FA9D1A;
   }
+  .webgl {
+      width: 100% !important;
+      max-width: 580px!important;
+      height: 370px !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+
+    @property --angle {
+      syntax: "<angle>";
+      inherits: true;
+      initial-value: 0turn;
+    }
+    .highlighted-box::before{
+      content: " ";
+    position: absolute;
+    inset: calc(1px * -1);
+    z-index: -1;
+    border: inherit;
+    border-radius: inherit;
+    background-image: conic-gradient(from var(--angle) at 50% 50%, rgba(249, 157, 26, 0.00) 0deg, rgba(249, 157, 26, 0.00) 341.78638458251953deg, #F99D1A 360deg);    
+    background-origin: border-box;
+    -webkit-mask:
+      linear-gradient(black, black) content-box,
+      linear-gradient(black, black);  
+    mask: linear-gradient(black, black),
+          linear-gradient(black, black);
+    -webkit-mask-clip: content-box, border-box;  
+    mask-clip: content-box, border-box;
+    -webkit-mask-composite: xor;  
+    mask-composite: exclude;
+    
+    }
+    .rotate-small-box{
+      animation: spin 10s linear infinite;
+    }
+    .rotate-big-box{
+      animation: spin 25s linear infinite;
+    }
+    @keyframes spin {
+      to {
+        --angle: 1turn;
+      }
+    }
+    .box_rotate {
+      transform: perspective(500px) rotateY(2deg) translateX(0%);
+    }
+    .box_rotate1 {
+      transform: perspective(500px) rotateY(6deg) translateX(0%);
+    }
+    .box_-rotate {
+      transform: perspective(500px) rotateY(-2deg) translateX(0%);
+    }
+    .box_-rotate1 {
+      transform: perspective(500px) rotateY(-6deg) translateX(0%);
+    }
+    .slider-detail{
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all .3s ease-in-out;
+    }
+    .hero-slider .slick-current.slick-active .slider-detail{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .bg-radial {
+      background-image:  radial-gradient(22.64% 41.12% at 50% 0%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
+    }
+    .line-horizontal {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+      -webkit-animation: drop2 7s 0s infinite;
+      animation: drop2 7s 0s infinite;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+   
+    @keyframes drop2 {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(120px);
+        opacity: 0;
+      }
+    } 
+    .nav-link{
+      position: realtive;
+      color: #B1B1B1;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      transition: all .6s ease-in-out;
+    }
+    .nav-link:hover{
+      color: #fff;
+    }
+    .nav-link::before{
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      width: 0;
+      height: 2px;
+      background-color: #F99D1A;
+      left: 50%;
+      transform: translate(-50%, 0);
+      transition: 0.3s all ease-out;
+    }
+    .navbar ul>li>a:hover:before{
+      width: 100%;
+      -webkit-transition: 0.3s all ease-out;
+      -moz-transition: 0.3s all ease-out;
+      -ms-transition: 0.3s all ease-out;
+      -o-transition: 0.3s all ease-out;
+      transition: 0.3s all ease-out;
+  }
+  .modal-home {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 436px;
+    height: auto;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1000;
+    overflow: auto;
+}
+.modal {
+  position: fixed;
+  left: 28.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1000;
+  overflow: auto;
+  max-width: max-content;
+}
+
 }
