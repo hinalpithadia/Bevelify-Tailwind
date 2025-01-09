@@ -65,8 +65,60 @@
          modal.classList.add("modal-show");
      }
  }
+/*=======generate button enabled=============*/
+let selectedTrigger = null;
+let selectedTarget = null;
+
+// Function to handle trigger selection
+function selectTrigger(triggerId, targetId) {
+  // Store the selected trigger and target
+  selectedTrigger = triggerId;
+  selectedTarget = targetId;
+
+  // Highlight the selected trigger
+  document.querySelectorAll('ul li div').forEach(el => el.classList.remove('active-box'));
+  document.getElementById(triggerId).classList.add('active-box');
+
+  // Enable the "try" button
+  const generateBtn = document.getElementById('GenerateBtn');
+  generateBtn.disabled = false;
+  generateBtn.classList.remove('cursor-not-allowed');
+  generateBtn.classList.add('cursor-pointer');
+}
+
+// Function to reveal the target div
+function applyTexture() {
+  if (!selectedTarget) return;
+
+  // Hide all target divs
+  document.querySelectorAll('[id^="targetDiv"]').forEach(div => {
+    div.classList.add('hidden');
+    div.classList.remove('opacity-100');
+  });
+
+  // Show the selected target div
+  const targetDiv = document.getElementById(selectedTarget);
+  targetDiv.classList.remove('hidden');
+  setTimeout(() => targetDiv.classList.add('opacity-100'), 10);
+}
 
 
+// ============ login forn & sign up form ===============
+const formDiv = document.getElementById("Login_Form");
+const formDiv1 = document.getElementById("Sign_Up_Form");
+const login = document.getElementById("login");
+const register = document.getElementById("register");
+
+login.addEventListener("click", event => {
+    formDiv.classList.add("flex");
+    formDiv.classList.remove("hidden");
+    formDiv1.classList.add("hidden");
+});
+register.addEventListener("click", event => {
+    formDiv1.classList.add("flex");
+    formDiv1.classList.remove("hidden")
+    formDiv.classList.add("hidden");
+});
 // ============ tippy tooltip ================
  
 tippy('button', { 
@@ -76,121 +128,7 @@ tippy('button', {
 });
 
 
-// ============ DropDown ================
 
-const selectedAll = document.querySelectorAll(".wrapper-dropdown");
-
-selectedAll.forEach((selected) => {
-  const optionsContainer = selected.children[2];
-  const optionsList = selected.querySelectorAll("div.wrapper-dropdown li");
-
-  selected.addEventListener("click", () => {
-    let arrow = selected.children[1];
-   
-    if (selected.classList.contains("active")) {
-      handleDropdown(selected, arrow, false);
-    } else {
-      let currentActive = document.querySelector(".wrapper-dropdown.active");
-
-      if (currentActive) {
-        let anotherArrow = currentActive.children[1];
-        handleDropdown(currentActive, anotherArrow, false);
-      }
-
-      handleDropdown(selected, arrow, true);
-    }
-  });
-
-  // update the display of the dropdown
-  for (let o of optionsList) {
-    o.addEventListener("click", () => {
-      selected.querySelector(".selected-display").innerHTML = o.innerHTML;
-    });
-  }
-});
-
-// check if anything else ofther than the dropdown is clicked
-window.addEventListener("click", function (e) {
-  if (e.target.closest(".wrapper-dropdown") === null) {
-    closeAllDropdowns();
-  }
-});
-
-// close all the dropdowns
-function closeAllDropdowns() {
-  const selectedAll = document.querySelectorAll(".wrapper-dropdown");
-  selectedAll.forEach((selected) => {
-    const optionsContainer = selected.children[2];
-    let arrow = selected.children[1];
-
-    handleDropdown(selected, arrow, false);
-  });
-}
-
-// open all the dropdowns
-function handleDropdown(dropdown, arrow, open) {
-  if (open) {
-    arrow.classList.add("rotated");
-    dropdown.classList.add("active");
-  } else {
-    arrow.classList.remove("rotated");
-    dropdown.classList.remove("active");
-  }
-}
-
-
-// ============ DropDown with click outside [close] ================
-// Select all toggle buttons and content elements
-const toggleButtons = document.querySelectorAll('.icon-btn');
-const contents = document.querySelectorAll('.icon-content');
-
-// Function to close all content elements
-function closeAllContents(exceptIndex = -1) {
-  contents.forEach((content, index) => {
-    if (index !== exceptIndex) {
-      content.classList.add('hidden');
-    }
-  });
-}
-
-// Add a click event listener to each button
-toggleButtons.forEach((button, index) => {
-  button.addEventListener('click', (event) => {
-    // Prevent click from propagating to document
-    event.stopPropagation();
-    
-   // tooltipInstance[1].hide();
-   
-    // Check if the associated content is already visible
-    const isContentVisible = !contents[index].classList.contains('hidden');
-    
-    // Close all content elements except the one being toggled
-    closeAllContents(index);
-    
-    // Only toggle the current content if it was not already visible
-    if (!isContentVisible) {
-      contents[index].classList.remove('hidden');
-      toggleButtons.classList.remove('tippy-active');
-      
-    }
-    else  {
-      contents[index].classList.add('hidden');
-      toggleButtons.classList.add('tippy-active');
-    }
-  });
-});
-
-// Prevent content click from closing it
-contents.forEach((content) => {
-  content.addEventListener('click', (event) => {
-    event.stopPropagation();
-  });
-});
-
-// Add a click event listener to the document to close contents when clicking outside
-document.addEventListener('click', () => {
-  closeAllContents();
-});
 
 // ----------===================== Range slider ================--------------------------- 
 document.addEventListener("DOMContentLoaded", function() {
@@ -294,32 +232,30 @@ function show2() {
 // =============== Tooltip ======================== 
 
 // =============== Tabs ======================== 
-let tabsContainer = document.querySelector("#tabs");
-
-let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
-
-console.log(tabTogglers);
-
-tabTogglers.forEach(function(toggler) {
-  toggler.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    let tabName = this.getAttribute("href");
-
-    let tabContents = document.querySelector("#tab-contents");
-
-    for (let i = 0; i < tabContents.children.length; i++) {
-      
-      tabTogglers[i].parentElement.classList.remove("border-t", "border-r", "border-l", "-mb-px", "bg-white");  tabContents.children[i].classList.remove("hidden");
-      if ("#" + tabContents.children[i].id === tabName) {
-        continue;
+document.addEventListener('click', function (event) {
+  // Check if the clicked element has the "tablink" class
+  if (event.target.classList.contains('tablink')) {
+      var tab = event.target.dataset.tab; // Get the data-tab attribute value
+      var tabContainer = event.target.closest('.tabs'); // Find the closest .tabs container
+      // Hide all tab content within the current tab container
+      var tabcontents = tabContainer.querySelectorAll('.tabcontent');
+      for (var i = 0; i < tabcontents.length; i++) {
+          tabcontents[i].style.display = 'none';
       }
-      tabContents.children[i].classList.add("hidden");
-      
-    }
-    e.target.parentElement.classList.add("border-t", "border-r", "border-l", "-mb-px", "bg-white");
-  });
+
+      // Remove "active" class from all tab links within the current tab container
+      var tablinks = tabContainer.querySelectorAll('.tablink');
+      for (var i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove('active');
+      }
+
+      // Show the current tab content and add "active" class to the clicked tab link
+      var tabcontent = tabContainer.querySelector('#' + tab);
+      tabcontent.style.display = 'block';
+      event.target.classList.add('active');
+  }
 });
+
 // =============== gsap js ======================== 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -348,4 +284,9 @@ function animateText(selector) {
       }
   );
 }
+
+
+
+
+
 
