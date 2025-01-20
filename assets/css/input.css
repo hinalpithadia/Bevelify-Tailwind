@@ -301,7 +301,6 @@
   background-color: #F99D1A;
   color: #000;
 }
-}
 .active-box{
   border:2px solid #FA9D1A;
   border-radius: 12px;
@@ -314,4 +313,54 @@
   height: 100%;
   background: linear-gradient(180deg, rgba(249, 157, 26, 0.00) 80%, rgba(249, 157, 26, 0.50) 100%);
   border-radius: 12px;
+}
+.right-list-btn.active{
+  border-color:#F99D1A;
+}
+.dot1,
+.dot2,
+.dot3 {
+	opacity: 0;
+	animation: dotanimation 3s ease 5s infinite;
+	animation-timing-function: ease-in-out;
+}
+.dot1 {
+	-o-animation-delay: 200ms;
+	-moz-animation-delay: 200ms;
+	-webkit-animation-delay: 200ms;
+	animation-delay: 200ms;
+}
+
+.dot2 {
+	-o-animation-delay: 400ms;
+	-moz-animation-delay: 400ms;
+	-webkit-animation-delay: 400ms;
+	animation-delay: 400ms;
+}
+
+.dot3{
+	-o-animation-delay: 600ms;
+	-moz-animation-delay: 600ms;
+	-webkit-animation-delay: 600ms;
+	animation-delay: 600ms;
+}
+
+@-webkit-keyframes dotanimation {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opactiy: 0.8;
+	}
+	50% {
+		opactiy: 0.4;
+	}
+	75% {
+		opactiy: 0.8;
+	}
+	100% {
+		opactiy: 1;
+	}
+}
+
 }

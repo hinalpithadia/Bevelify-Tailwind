@@ -858,6 +858,30 @@ svg.final stop {
   color: #000;
 }
 
+.right-list-btn.active{
+  border-color:#F99D1A;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  opacity: 0;
+  animation: dotanimation 3s ease 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.dot1 {
+  animation-delay: 200ms;
+}
+
+.dot2 {
+  animation-delay: 400ms;
+}
+
+.dot3{
+  animation-delay: 600ms;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -872,10 +896,6 @@ svg.final stop {
 
 .pointer-events-none {
   pointer-events: none;
-}
-
-.visible {
-  visibility: visible;
 }
 
 .invisible {
@@ -1101,6 +1121,11 @@ svg.final stop {
   margin-right: auto;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .-mb-0 {
   margin-bottom: -0px;
 }
@@ -1119,10 +1144,6 @@ svg.final stop {
 
 .-mt-1\.5 {
   margin-top: -0.375rem;
-}
-
-.-mt-4 {
-  margin-top: -1rem;
 }
 
 .-mt-\[18px\] {
@@ -1285,10 +1306,6 @@ svg.final stop {
   height: 0.375rem;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-32 {
   height: 8rem;
 }
@@ -1399,10 +1416,6 @@ svg.final stop {
 
 .max-h-\[724px\] {
   max-height: 724px;
-}
-
-.max-h-\[850px\] {
-  max-height: 850px;
 }
 
 .max-h-max {
@@ -1595,10 +1608,6 @@ svg.final stop {
   max-width: 750px;
 }
 
-.max-w-\[800px\] {
-  max-width: 800px;
-}
-
 .max-w-\[824px\] {
   max-width: 824px;
 }
@@ -1639,16 +1648,6 @@ svg.final stop {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-8 {
-  --tw-translate-y: -2rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-0 {
-  --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1944,11 +1943,6 @@ svg.final stop {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-b-lg {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 
 .rounded-b-xl {
@@ -2484,10 +2478,6 @@ svg.final stop {
   padding: 0.5rem;
 }
 
-.p-2\.5 {
-  padding: 0.625rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -2514,10 +2504,6 @@ svg.final stop {
 
 .p-\[1px\] {
   padding: 1px;
-}
-
-.p-\[26px\] {
-  padding: 26px;
 }
 
 .p-\[34px\] {
@@ -2872,10 +2858,6 @@ svg.final stop {
   padding-top: 0.875rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -3185,10 +3167,6 @@ svg.final stop {
   opacity: 0;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3241,11 +3219,6 @@ svg.final stop {
 
 .outline-\[\#F99d1a\] {
   outline-color: #F99d1a;
-}
-
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
@@ -3314,21 +3287,6 @@ svg.final stop {
   font-family: 'manrope';
 
   src: url(../font/Manrope/Manrope-VariableFont_wght.ttf);
-}
-
-.active-box{
-  border:2px solid #FA9D1A;
-  border-radius: 12px;
-  position: relative;
-}
-
-.active-box:before{
-  content:'';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(249, 157, 26, 0.00) 80%, rgba(249, 157, 26, 0.50) 100%);
-  border-radius: 12px;
 }
 
 .wrapper-dropdown.dropdown-2 .selected-display .hover\:text-white:hover{
@@ -3628,11 +3586,6 @@ svg.final stop {
   background-color: rgb(36 31 26 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#321F05\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 31 5 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-\[\#3e3c3c\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(62 60 60 / var(--tw-bg-opacity));
@@ -3714,6 +3667,11 @@ svg.final stop {
 
 .hover\:to-\[\#404040\]:hover {
   --tw-gradient-to: #404040 var(--tw-gradient-to-position);
+}
+
+.hover\:text-\[\#1D1D1D\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(29 29 29 / var(--tw-text-opacity));
 }
 
 .hover\:text-\[\#F99D1A\]:hover {
@@ -4314,10 +4272,6 @@ svg.final stop {
 @media (min-width: 1536px) {
   .\32xl\:h-\[107px\] {
     height: 107px;
-  }
-
-  .\32xl\:h-\[110px\] {
-    height: 110px;
   }
 
   .\32xl\:w-\[100px\] {
