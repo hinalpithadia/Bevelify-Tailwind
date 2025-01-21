@@ -253,16 +253,17 @@
     .nav-link::before{
       content: '';
       position: absolute;
-      bottom: -15px;
-      width: 0;
-      height: 2px;
+      bottom: -16px;
+      width: 100%;
+      opacity: 0;
+      height: 1px;
       background-color: #F99D1A;
       left: 50%;
       transform: translate(-50%, 0);
       transition: 0.3s all ease-out;
     }
     .navbar ul>li>a:hover:before{
-      width: 100%;
+      opacity: 1;
       -webkit-transition: 0.3s all ease-out;
       -moz-transition: 0.3s all ease-out;
       -ms-transition: 0.3s all ease-out;
@@ -275,13 +276,18 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 436px;
+    max-width: 536px;
     height: auto;
     display: none;
     justify-content: flex-start;
     align-items: flex-start;
     z-index: 1000;
     overflow: auto;
+}
+@media (max-width: 600px) {
+  .modal-home {
+    margin: 10px;
+  }
 }
 .modal {
   position: fixed;

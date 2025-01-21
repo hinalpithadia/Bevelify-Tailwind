@@ -119,13 +119,6 @@ register.addEventListener("click", event => {
     formDiv1.classList.remove("hidden")
     formDiv.classList.add("hidden");
 });
-// ============ tippy tooltip ================
- 
-tippy('button', { 
-  theme: 'custom',
-  arrow: true,
- 
-});
 
 
 
