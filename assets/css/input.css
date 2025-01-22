@@ -31,6 +31,9 @@
     .header-links {
         @apply flex items-center pt-2 gap-3 text-sm leading-[18px] font-medium text-[#B1B1B1] pb-[18px] border-b border-transparent transition-all duration-500 hover:text-white hover:border-[#F99D1A]
     }
+    .header-links:hover .abs-line {
+     background: #F99D1A;
+  }
     .abs-line {
       @apply w-20 h-px absolute -bottom-5 left-0 bg-transparent
     }
@@ -239,7 +242,7 @@
       }
     } 
     .nav-link{
-      position: realtive;
+      position: relative;
       color: #B1B1B1;
       font-size: 14px;
       font-style: normal;
@@ -368,5 +371,35 @@
 		opactiy: 1;
 	}
 }
+.accordion.active > .accordion-toggle.accordion-active\:text-white {
+  color: #fff;
+}
 
+.accordion.active > .accordion-toggle .accordion-active\:rotate-45 {
+  transform: rotate(45deg);
+}
+.accordion.active > .accordion-toggle .accordion-active\:rotate-45 .accordion-icon{
+  opacity: 0.8;
+}
+.accordion.active.accordion-active\:bg-indigo-100 {
+  background-color: rgb(224 231 255);
+}
+ .accordion.active.accordion-active\:border-gray-900{
+  border-color:#191919;
+}
+.accordion.active > .accordion-content {
+  max-height: 175px !important;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-icon{
+  opacity: 0.22;
+}
+.panel-btn.active svg path{
+  stroke: #F99D1A;
+  fill:#F99D1A33;
+}
 }

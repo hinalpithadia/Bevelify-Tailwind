@@ -103,23 +103,6 @@ function applyTexture() {
 }
 
 
-// ============ login forn & sign up form ===============
-const formDiv = document.getElementById("Login_Form");
-const formDiv1 = document.getElementById("Sign_Up_Form");
-const login = document.getElementById("login");
-const register = document.getElementById("register");
-
-login.addEventListener("click", event => {
-    formDiv.classList.add("flex");
-    formDiv.classList.remove("hidden");
-    formDiv1.classList.add("hidden");
-});
-register.addEventListener("click", event => {
-    formDiv1.classList.add("flex");
-    formDiv1.classList.remove("hidden")
-    formDiv.classList.add("hidden");
-});
-
 
 
 
@@ -277,9 +260,6 @@ function animateText(selector) {
       }
   );
 }
-
-
-
 
 
 

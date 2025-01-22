@@ -11,7 +11,24 @@
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/styles-output.css">
 
-
+ <!--- FAVICON ---->
+ <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+ <link rel="manifest" href="/manifest.json">
+ <meta name="msapplication-TileColor" content="#ffffff">
+ <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+ <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="">
@@ -254,53 +271,7 @@
                                     </label>
                                 </div>
                             </div>
-                            
-                            <p class="text-base leading-5 font-medium text-white">Topology</p>
-                            <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
-                                <div class="w-full flex items-center">
-                                    <input id="Quad" name="Topology" type="radio" name="radio"
-                                        class="hidden sr-only peer" checked />
-                                    <label for="Quad"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Quad
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center triger">
-                                    <input id="Triangle" name="Topology" value="fixed" type="radio" name="radio"
-                                        class="hidden sr-only peer" />
-                                    <label for="Triangle"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Triangle
-                                    </label>
-                                </div>
-                            </div>
-                            <p class="text-base leading-5 font-medium text-white">Symmetry</p>
-                            <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
-                                <div class="w-full flex items-center">
-                                    <input id="off" name="Symmetry" type="radio" name="radio"
-                                        class="hidden sr-only peer" checked />
-                                    <label for="off"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Off
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center">
-                                    <input id="auto" name="Symmetry" type="radio" name="radio"
-                                        class="hidden sr-only peer" checked />
-                                    <label for="auto"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        Auto
-                                    </label>
-                                </div>
-                                <div class="w-full flex items-center triger">
-                                    <input id="On" name="Symmetry" value="fixed" type="radio" name="radio"
-                                        class="hidden sr-only peer" />
-                                    <label for="On"
-                                        class="flex justify-center text-sm cursor-pointer leading-4 font-normal text-[#b1b1b1] w-full rounded-lg py-[9px] bg-black transition-all duration-500 hover:text-white peer-checked:font-medium peer-checked:bg-[#121313] peer-checked:text-[#F99D1A] peer-checked:border-[#F99D1A]">
-                                        On
-                                    </label>
-                                </div>
-                            </div>
+                           
                             <p class="text-base leading-5 font-medium text-white">Texture Size</p>
                             <div class="flex items-center p-1 bg-black rounded-xl gap-0.5">
                                 <div class="w-full flex items-center">
@@ -690,7 +661,7 @@
                         class="absolute left-1/2 -translate-x-1/2 bottom-0 rounded-t-xl p-[7px] pl-4 bg-[#0C0C0C] flex items-center gap-4">
                         <div class="flex items-center gap-5">
                             <div class="relative flex flex-col items-center" >
-                            <button class="transition-all duration-500 tooltip-trigger group">
+                            <button class="transition-all duration-500 tooltip-trigger group panel-btn ">
                                 <svg class="fill-none group-hover:fill-[#F99D1A33]"
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="">
@@ -708,7 +679,7 @@
                             </div>
                         </div>
                         <div class="relative flex flex-col items-center" >    
-                        <button class="svgbtn transition-all duration-500 group tooltip-trigger"  >
+                            <button class="svgbtn transition-all duration-500 group tooltip-trigger panel-btn"  >
                                 <svg class="final" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none">
                                     <path

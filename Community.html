@@ -11,15 +11,29 @@
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/styles-output.css">
 
-
+     <!--- FAVICON ---->
+     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+     <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+     <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+     <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+     <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+     <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+     <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+     <link rel="manifest" href="/manifest.json">
+     <meta name="msapplication-TileColor" content="#ffffff">
+     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+     <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="bg-black">
 
     <!--SideBar-->
-
-
-
     <!--header-->
     <nav
         class="fixed z-30 top-0 w-full flex items-center justify-between right-0 px-3.5 py-2.5 border-b border-[#161616] bg-black ">
@@ -151,44 +165,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="ai-texturing.html">
-                                    <div
-                                        class="flex items-center gap-1.5 text-lg py-2.5 px-3 bg-gradient-to-r from-transparent via-[#0C0C0C] to-[#0C0C0C] rounded-[5px] transition-all duration-700 hover:from-[#F99D1A2B] hover:via-[#0000002B] hover:to-[#0000002B]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none">
-                                            <g clip-path="url(#clip0_12193_793)">
-                                                <path d="M12.9171 3.19432C7.2998 8.8116 4.09507 12.0163 3.19486 12.9165"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M16.8058 7.08334C11.1885 12.7006 7.9838 15.9054 7.08359 16.8056"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M15.8331 4.16667C9.09239 10.9074 5.24671 14.7531 4.16646 15.8333"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M8.05582 4.16687C5.8089 6.41378 4.52701 7.69568 4.16693 8.05576"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M15.8335 11.9445C13.5866 14.1914 12.3047 15.4733 11.9446 15.8334"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M5.13895 3.19452C4.01549 4.31798 3.37454 4.95892 3.1945 5.13896"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                                <path
-                                                    d="M16.8058 14.8612C15.6824 15.9846 15.0414 16.6256 14.8614 16.8056"
-                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_12193_793">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <h4 class="text-white text-sm leading-[18px] font-medium">AI Texturing</h4>
-                                    </div>
-                                </a>
-                            </li>
+                          
                         </ul>
                     </div>
                 </div>
@@ -285,7 +262,60 @@
                     </defs>
                 </svg>
             </button>
-            <img src="assets/images/nav-user-avatar.png" alt="">
+            <div class="wrapper-dropdown w-full relative" id="dropdown">
+                <button
+                    class="dropbtn w-full flex items-center justify-between   rounded-lg font-medium  text-base text-white transition-all duration-300  ">
+                    <div class="w-full bg-black rounded-[7px]">
+                        <div
+                            class="flex items-center justify-between rounded-lg  w-full ">
+                            <img src="assets/images/nav-user-avatar.png" alt="image"/>
+                          
+                        </div>
+                    </div>
+
+                </button>
+
+                <div
+                    class="dropdown absolute top-[57px] left-[-290px] w-[326px] z-20 invisible opacity-0  rounded-xl ">
+                    <div class="flex flex-col gap-1 rounded-lg p-3 bg-[#0C0C0C] w-full border border-[#99999933]">
+                        <div class="flex items-center justify-between pb-3">
+                            <div class="block">
+                                <h5 class="text-base font-semibold leading-5 text-white">Cameronwa</h5>
+                                <span class="text-xs font-normal leading-4 text-[#B1B1B1]">cameronwa@gmail.com</span>
+                            </div>
+                            <button class="border border-[rgba(249,157,26,0.50)] bg-[rgba(249,157,26,0.10)] rounded-[34px] py-2 px-3 text-sm font-medium leading-5"><span class="text-transparent bg-clip-text bg-[linear-gradient(263deg,#F99D1A_13.95%,#FFD79D_46.91%,#F99D1A_76.61%)]">Gold Member</span></button>
+                        </div>
+                        <div class="border-t border-b border-[#161616] py-3">
+                            <ul class="block">
+                                <li><a href="#" class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                    <svg class="text-white group-hover:text-[#F99D1A]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75 15V14.25C3.75 11.3505 6.10051 9 9 9C11.8995 9 14.25 11.3505 14.25 14.25V15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9 9C10.6568 9 12 7.65683 12 6C12 4.34314 10.6568 3 9 3C7.34314 3 6 4.34314 6 6C6 7.65683 7.34314 9 9 9Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                        My Profile    
+                                </a></li>
+                                <li><a href="#" class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                    <svg  class="text-white group-hover:text-[#F99D1A]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.45027 2.69995C10.8229 2.69995 11.3094 3.43838 11.4461 4.20019C11.5232 4.62967 12.3288 5.11123 12.7439 4.9768C13.44 4.75139 14.2664 4.81332 14.9062 5.84995C15.5436 7.06251 14.9732 7.89404 14.3305 8.39692C14.0127 8.64567 14.0127 9.35423 14.3305 9.60298C14.9732 10.1059 15.5436 10.9374 14.9062 12.15C14.2664 13.1866 13.44 13.2485 12.7439 13.0231C12.3288 12.8887 11.5232 13.3702 11.4461 13.7997C11.3094 14.5615 10.8229 15.3 9.45027 15.3C8.07764 15.3 7.59113 14.5615 7.45445 13.7997C7.37739 13.3702 6.57173 12.8887 6.15661 13.0231C5.46051 13.2485 4.63413 13.1866 3.9943 12.15C3.43914 11.0938 3.80033 10.3267 4.3274 9.81406C4.63615 9.51378 4.58006 8.6147 4.24582 8.34307C3.66098 7.86778 3.27109 7.08635 3.9943 5.84995C4.60083 4.81304 5.34665 4.66962 5.99916 4.84226C6.43294 4.95703 7.38306 4.42388 7.50147 3.99108C7.68815 3.30876 8.20392 2.69995 9.45027 2.69995Z" stroke="currentColor" stroke-width="1.2"/>
+                                        <circle cx="9.4525" cy="8.99998" r="1.29" stroke="currentColor" stroke-width="1.2"/>
+                                        </svg>
+                                        
+                                        Settings   
+                                </a></li>
+                            </ul>
+                        </div>
+                        <button class="mt-3 w-full bg-[#191919] rounded-lg py-2 px-3 flex justify-center gap-1.5 text-sm font-medium text-white transition-all duration-500 hover:bg-[#2d2d2d]">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 15H13.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 3V12M9 12L11.625 9.375M9 12L6.375 9.375" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                                Log Out
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -342,26 +372,21 @@
                     class="py-2.5 text-sm leading-4 font-medium text-[#F99D1A] transition-all duration-500 hover:text-[#ffcc85]">See
                     More</button>
             </div>
-            <div class="absolute bottom-8 w-[calc(100%-70px)] flex items-center px-[34px] justify-between">
+            <div class="absolute bottom-8 w-[calc(100%-70px)] flex items-center left-0 px-[34px] justify-between">
                 <div class="wrapper-dropdown dropdown-3 w-28 relative" id="dropdown">
                     <button
-                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium p-3.5 pr-2.5 border border-[#2C2C2C] rounded-xl bg-black text-sm leading-[18px] text-white transition-all duration-300 ">
+                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium p-3.5 pr-2.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-300 ">
                         <div class="flex items-center justify-between w-[calc(100%-24px)] gap-4">
                            
                             <span id="destination"
                                 class="selected-display text-sm leading-[18px] font-medium text-[#F99D1A]">Popular</span>
                         </div>
-                        <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none"
-                            xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                            fill="none">
-                            <path
-                                d="M2.38 5.19727L6.18333 9.0006C6.6325 9.44977 7.3675 9.44977 7.81667 9.0006L11.62 5.19727"
-                                stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                        <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                     </button>
                     <div
-                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-black border border-[#2C2C2C] absolute top-12 transition-all duration-300 w-full p-1">
+                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-12 transition-all duration-300 w-full p-1">
                         <ul class=" w-full block">
                             <li>
                                 <div
@@ -399,6 +424,77 @@
                                     <h4 class="text-sm leading-[18px] font-medium">Trending</h4>
                                 </div>
                             </li>
+                        </ul>
+    
+                    </div>
+                </div>
+                <div class="wrapper-dropdown !relative hidden" id="dropdown">
+                    <button
+                        class="dropbtn  w-max flex items-center justify-between   rounded-lg border border-[#2C2C2C] font-medium text-base text-white  bg-black p-3 transition-all duration-500 hover:border-[#3c3c3c] outline-[#F99d1a] focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-[#F99d1a] focus-within:border-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path d="M14.6666 2H1.33331L6.66665 8.30667V12.6667L9.33331 14V8.30667L14.6666 2Z"
+                                stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="dropdown invisible opacity-0 !absolute top-[50px] !-left-10 w-max ">
+                        <div
+                            class="flex flex-col gap-2 w-max px-2.5 py-3 border border-gray-500 bg-[#0C0C0C] rounded-lg">
+                            <a href="#" class="2xl:text-base text-sm font-normal text-white">Text to 3D</a>
+                            <a href="#" class="2xl:text-base text-sm font-normal text-white">Image to 3D</a>
+                            <a href="#" class="2xl:text-base text-sm font-normal text-white">AI Texturing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 right-0  flex items-center px-[34px] justify-between">
+                <div class="wrapper-dropdown dropdown-3 w-28 relative" id="dropdown">
+                    <button
+                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium p-3.5 pr-2.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-300 ">
+                        <div class="flex items-center justify-between w-[calc(100%-24px)] gap-4">
+                           
+                            <span id="destination"
+                                class="selected-display text-sm leading-[18px] font-medium text-[#F99D1A]">All Time</span>
+                        </div>
+                        <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </button>
+                    <div
+                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-12 transition-all duration-300 w-full p-1">
+                        <ul class=" w-full block">
+                            <li>
+                                <div
+                                    class="flex items-center  rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] text-white cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">All Time</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">Day</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Week</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Month</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Year</h4>
+                                </div>
+                            </li>
+                           
                         </ul>
     
                     </div>
@@ -801,7 +897,10 @@
     <!-- MAIN JS-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
+    <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/tooltip.js"></script>
 </body>
 
 </html>
