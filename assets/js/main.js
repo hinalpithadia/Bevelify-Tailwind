@@ -1,70 +1,4 @@
- /*============ Modal ===============*/
-//  const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
-//  const modals = document.querySelectorAll(".modalTrigger");
-//  const modalCloseButtons = document.querySelectorAll(".modal-close");
-//  const CloseButtons = document.querySelectorAll(".close-btn");
-
-//  const overlay = document.querySelector(".overlay-modal");
-
-//  modalTriggerButtons.forEach(elem => {
-//      elem.addEventListener("click", event => {
-//          toggleModal(event.currentTarget.getAttribute("data-modal-target"));
-
-//          overlay.style.opacity = "1";
-//          overlay.style.zIndex = "200";
-//          overlay.style.visibility = "visible";
-//          overlay.style.transition = "opacity 0.3s ease"; // Optional: Add a transition
-//      });
-//  });
-//  modalCloseButtons.forEach(elem => {
-//   elem.addEventListener("click", event => {
-//       toggleModal(event.currentTarget.closest(".modalTrigger").id);
-//       overlay.style.opacity = "0";
-//       overlay.style.zIndex = "-1";
-//       overlay.style.visibility = "hidden";
-//       overlay.style.transition = "opacity 0.3s ease"; // Optional: Add a transition
-//   });
-// });
-// CloseButtons.forEach(elem => {
-//      elem.addEventListener("click", event => {
-//         toggleModal(event.currentTarget.closest(".modalTrigger").id);
-//          overlay.style.opacity = "0";
-//          overlay.style.zIndex = "-1";
-//          overlay.style.visibility = "hidden";
-//          overlay.style.transition = "opacity 0.3s ease"; // Optional: Add a transition
-//      });
-//  });
-
-
-
-//  modals.forEach(elem => {
-//      elem.addEventListener("click", event => {
-//          if (event.currentTarget === event.target) toggleModal(event.currentTarget.id);
-//      });
-//  });
-
-//  document.addEventListener("keydown", event => {
-//      if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
-//          toggleModal(document.querySelector(".modal.modal-show").id);
-//      }
-//  });
-
-//  function toggleModal(modalId) {
-//      const modal = document.getElementById(modalId);
-
-//      if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
-//          modal.classList.add("modal-hide");
-//          setTimeout(() => {
-//              document.body.style.overflow = "initial";
-//              modal.classList.remove("modal-show", "modal-hide");
-//              modal.style.display = "none";
-//          }, 200);
-//      }
-//      else {
-//          modal.style.display = "flex";
-//          modal.classList.add("modal-show");
-//      }
-//  }
+//==================Modal=====================//
 const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
 const modals = document.querySelectorAll(".modalTrigger");
 const modalCloseButtons = document.querySelectorAll(".modal-close");
@@ -291,10 +225,6 @@ function show2() {
   }, 50);  // Delay in milliseconds
 }
 
-
-
-
-// =============== Tooltip ======================== 
 
 // =============== Tabs ======================== 
 document.addEventListener('click', function (event) {

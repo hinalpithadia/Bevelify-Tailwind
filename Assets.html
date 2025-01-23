@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>bevelify</title>
+
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-black">
+
+    <!--SideBar-->
+
+
+
+    <!--header-->
+    <nav
+        class="fixed z-30 top-0 w-full flex items-center justify-between right-0 px-3.5 py-2.5 border-b border-[#161616] bg-black ">
+        <div class="flex items-center gap-7">
+            <div class=" w-max flex items-center gap-3.5 overflow-visible">
+                <a href="#" class=" 2xl:max-w-[230px] xl:max-w-[200px] lg:max-w-[180px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="105" height="34" viewBox="0 0 105 34" fill="none">
+                        <path
+                            d="M42 23.1602V10.8352H46.7065C47.9028 10.8352 48.863 11.1186 49.587 11.701C50.3111 12.2834 50.6732 13.0704 50.6732 14.0778C50.6732 14.3454 50.6259 14.6288 50.5472 14.9278C50.3741 15.4945 49.7917 16.3445 48.8945 16.738C49.7445 17.0056 50.3426 17.4306 50.7046 17.9815C51.0667 18.5325 51.2398 19.1149 51.2398 19.713C51.2398 21.7908 49.713 23.1602 46.8639 23.1602H42ZM43.9204 12.5825V16.0454H46.3444C47.9343 16.0454 48.737 15.3056 48.737 14.2825C48.737 13.2593 48.0287 12.5825 46.4546 12.5825H43.9204ZM43.9204 17.7454V21.413H46.8954C48.4537 21.413 49.3037 20.6732 49.3037 19.5556C49.3037 18.4852 48.4695 17.7454 46.7695 17.7454H43.9204Z"
+                            fill="white" />
+                        <path
+                            d="M60.9735 19.5084H54.5985C54.6143 20.138 54.8661 20.6575 55.3541 21.0825C55.842 21.4917 56.4087 21.6963 57.0541 21.6963C58.1087 21.6963 58.8643 21.2556 59.3207 20.3899L60.6744 21.2871C59.9661 22.5936 58.5967 23.3176 57.0855 23.3176C55.842 23.3176 54.7874 22.9084 53.9374 22.0741C53.1031 21.2399 52.6781 20.1852 52.6781 18.9417C52.6781 17.7297 53.0874 16.7065 53.8902 15.8565C54.693 15.0065 55.7004 14.5815 56.9124 14.5815C58.1874 14.5815 59.1948 14.975 59.9189 15.7778C60.643 16.5806 61.005 17.6195 61.005 18.926C61.005 19.1778 60.9893 19.3667 60.9735 19.5084ZM56.9124 16.1871C55.7633 16.1871 54.8661 16.9426 54.693 18.0917H59.1004C59.0374 16.9112 58.1087 16.1871 56.9124 16.1871Z"
+                            fill="white" />
+                        <path
+                            d="M61.5992 14.7547H63.6298L66.1011 20.9723L68.5724 14.7547H70.54L67.0298 23.1602H65.1566L61.5992 14.7547Z"
+                            fill="white" />
+                        <path
+                            d="M79.5119 19.5084H73.1369C73.1527 20.138 73.4045 20.6575 73.8925 21.0825C74.3805 21.4917 74.9471 21.6963 75.5925 21.6963C76.6471 21.6963 77.4027 21.2556 77.8592 20.3899L79.2129 21.2871C78.5045 22.5936 77.1351 23.3176 75.624 23.3176C74.3805 23.3176 73.3258 22.9084 72.4758 22.0741C71.6416 21.2399 71.2166 20.1852 71.2166 18.9417C71.2166 17.7297 71.6258 16.7065 72.4286 15.8565C73.2314 15.0065 74.2388 14.5815 75.4508 14.5815C76.7258 14.5815 77.7332 14.975 78.4573 15.7778C79.1814 16.5806 79.5434 17.6195 79.5434 18.926C79.5434 19.1778 79.5277 19.3667 79.5119 19.5084ZM75.4508 16.1871C74.3018 16.1871 73.4045 16.9426 73.2314 18.0917H77.6388C77.5758 16.9112 76.6471 16.1871 75.4508 16.1871Z"
+                            fill="white" />
+                        <path d="M81.4675 23.1602V10.3473H83.3406V23.1602H81.4675Z" fill="white" />
+                        <path
+                            d="M85.9114 12.8973C85.4235 12.4093 85.4235 11.6538 85.9114 11.1658C86.3994 10.6621 87.155 10.6621 87.6429 11.1658C88.1309 11.6538 88.1309 12.4093 87.6429 12.8973C87.155 13.3852 86.3994 13.3852 85.9114 12.8973ZM87.7216 14.7547V23.1602H85.8485V14.7547H87.7216Z"
+                            fill="white" />
+                        <path
+                            d="M95.1091 10.426V12.0315C94.9202 11.9843 94.6998 11.9686 94.4322 11.9686C93.3618 11.9686 92.8267 12.5195 92.8267 13.6371V14.7547H95.0619V16.4075H92.8267V23.1602H90.9378V16.4075H89.3952V14.7547H90.9378V13.5741C90.9378 11.4963 92.1813 10.3 94.2433 10.3C94.5267 10.3 94.81 10.3473 95.1091 10.426Z"
+                            fill="white" />
+                        <path
+                            d="M97.7267 14.7547L100.34 20.2639L102.764 14.7547H104.794L99.0175 27.3H97.0184L99.3323 22.2158L95.586 14.7547H97.7267Z"
+                            fill="white" />
+                        <path
+                            d="M0 10C0 4.47715 4.47715 0 10 0H24C29.5228 0 34 4.47715 34 10V24C34 29.5228 29.5228 34 24 34H10C4.47715 34 0 29.5228 0 24V10Z"
+                            fill="#F99D1A" />
+                        <path
+                            d="M26.8521 16.3283C27.8259 16.6009 27.8259 17.9815 26.8521 18.2542L17.5608 20.8557C17.3845 20.9051 17.1979 20.9051 17.0216 20.8557L7.73037 18.2542C6.75654 17.9815 6.75654 16.6009 7.73037 16.3283L17.0216 13.7267C17.1979 13.6773 17.3845 13.6773 17.5608 13.7267L26.8521 16.3283Z"
+                            fill="black" />
+                        <path
+                            d="M18.2542 26.8521C17.9815 27.8259 16.6009 27.8259 16.3282 26.8521L14.7509 21.2188L17.3256 20.9488L14.4488 20.1397L13.7267 17.5608C13.6773 17.3845 13.6773 17.1979 13.7267 17.0216L16.3282 7.73037C16.6009 6.75654 17.9815 6.75654 18.2542 7.73037L19.8382 13.3877L17.302 13.6537L20.1358 14.4506L20.8557 17.0216C20.9051 17.1979 20.9051 17.3845 20.8557 17.5608L18.2542 26.8521Z"
+                            fill="black" />
+                    </svg>
+                </a>
+                <div class="wrapper-dropdown w-56 " id="dropdown">
+                    <button
+                        class="dropbtn w-full flex items-center justify-between   rounded-lg font-medium p-px text-base text-white transition-all duration-300 bg-gradient-to-r from-[#F99D1A33] to-[#99999933] ">
+                        <div class="w-full bg-black rounded-[7px]">
+                            <div
+                                class="flex items-center justify-between rounded-lg px-2 py-[7px] w-full bg-gradient-to-r from-[#F99D1A2B] to-[#0000002B]">
+                                <div class="selected-display flex items-center gap-1.5">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.5 6.12753V13.8725C17.5 14.0541 17.4016 14.2213 17.2428 14.3096L10.2428 18.1984C10.0918 18.2823 9.90815 18.2823 9.75715 18.1984L2.75716 14.3096C2.59844 14.2213 2.49999 14.0541 2.49999 13.8725L2.49997 6.12753C2.49997 5.94595 2.59842 5.77864 2.75715 5.69046L9.75715 1.80157C9.90815 1.71767 10.0918 1.71767 10.2428 1.80157L17.2428 5.69046C17.4015 5.77864 17.5 5.94595 17.5 6.12753Z"
+                                            stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M2.94037 6.07797L9.75717 9.86508C9.90817 9.949 10.0918 9.949 10.2428 9.86508L17.0833 6.06481"
+                                            stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10 17.5V10" stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M9.74283 9.85708L3.24283 6.24601C2.90956 6.06087 2.5 6.30185 2.5 6.68309V13.8725C2.5 14.0541 2.59844 14.2213 2.75717 14.3096L9.25717 17.9207C9.59042 18.1058 10 17.8648 10 17.4836V10.2942C10 10.1126 9.90158 9.94533 9.74283 9.85708Z"
+                                            fill="#F99D1A" stroke="#F99D1A" stroke-width="1.5"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class=" text-sm font-medium leading-[18px]" id="destination">Text to
+                                        3D</span>
+
+                                </div>
+                                <svg class="arrow rotate-0  transition-all duration-300" id="drp-arrow"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <path
+                                        d="M2.38 5.19727L6.18333 9.0006C6.6325 9.44977 7.3675 9.44977 7.81667 9.0006L11.62 5.19727"
+                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                    </button>
+
+                    <div
+                        class="dropdown absolute top-[57px] max-w-[220px] z-20 invisible opacity-0 w-full rounded-xl transition-all duration-300">
+                        <ul class="flex flex-col gap-1 rounded-lg p-1 bg-[#0C0C0C] w-full border border-[#99999933]">
+                            <li>
+                                <a href="index.html">
+                                    <div
+                                        class="flex items-center gap-1.5 text-lg py-2.5 px-3 bg-gradient-to-r from-transparent via-[#0C0C0C] to-[#0C0C0C] rounded-[5px] transition-all duration-700 hover:from-[#F99D1A2B] hover:via-[#0000002B] hover:to-[#0000002B]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M17.5 6.12753V13.8725C17.5 14.0541 17.4016 14.2213 17.2429 14.3096L10.2429 18.1984C10.0919 18.2823 9.90818 18.2823 9.75718 18.1984L2.75719 14.3096C2.59847 14.2213 2.50002 14.0541 2.50002 13.8725L2.5 6.12753C2.5 5.94595 2.59845 5.77864 2.75718 5.69046L9.75718 1.80157C9.90818 1.71767 10.0919 1.71767 10.2429 1.80157L17.2429 5.69046C17.4015 5.77864 17.5 5.94595 17.5 6.12753Z"
+                                                stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M2.94037 6.07797L9.75717 9.86508C9.90817 9.949 10.0918 9.949 10.2428 9.86508L17.0833 6.0648"
+                                                stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M10 17.5V10" stroke="#F99D1A" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M9.74283 9.85709L3.24283 6.24601C2.90956 6.06087 2.5 6.30185 2.5 6.68309V13.8725C2.5 14.0541 2.59844 14.2213 2.75717 14.3096L9.25717 17.9207C9.59042 18.1058 10 17.8648 10 17.4836V10.2942C10 10.1126 9.90158 9.94534 9.74283 9.85709Z"
+                                                fill="#F99D1A" stroke="#F99D1A" stroke-width="1.5"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <h4 class="text-white text-sm leading-[18px] font-medium">Text to 3D</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="image-to-3d.html">
+                                    <div
+                                        class="flex items-center gap-1.5 text-lg py-2.5 px-3 bg-gradient-to-r from-transparent via-[#0C0C0C] to-[#0C0C0C] rounded-[5px] transition-all duration-700 hover:from-[#F99D1A2B] hover:via-[#0000002B] hover:to-[#0000002B]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M17.5 3V17C17.5 17.2762 17.2762 17.5 17 17.5H3C2.72386 17.5 2.5 17.2762 2.5 17V3C2.5 2.72386 2.72386 2.5 3 2.5H17C17.2762 2.5 17.5 2.72386 17.5 3Z"
+                                                stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M13.3334 8.33333C12.4129 8.33333 11.6667 7.58714 11.6667 6.66667C11.6667 5.74619 12.4129 5 13.3334 5C14.2539 5 15 5.74619 15 6.66667C15 7.58714 14.2539 8.33333 13.3334 8.33333Z"
+                                                stroke="#F99D1A" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M7.26698 10.3558L3.18898 12.1649C2.46605 12.4856 2 13.2022 2 13.993V15C2 16.1046 2.89543 17 4 17H16.3745C17.2722 17 18 16.2722 18 15.3745C18 14.7268 17.6155 14.1409 17.0213 13.8832L8.87387 10.3491C8.36086 10.1266 7.77813 10.129 7.26698 10.3558Z"
+                                                fill="#F99D1A" />
+                                        </svg>
+                                        <h4 class="text-white text-sm leading-[18px] font-medium">Image to 3D</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ai-texturing.html">
+                                    <div
+                                        class="flex items-center gap-1.5 text-lg py-2.5 px-3 bg-gradient-to-r from-transparent via-[#0C0C0C] to-[#0C0C0C] rounded-[5px] transition-all duration-700 hover:from-[#F99D1A2B] hover:via-[#0000002B] hover:to-[#0000002B]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <g clip-path="url(#clip0_12193_793)">
+                                                <path d="M12.9171 3.19432C7.2998 8.8116 4.09507 12.0163 3.19486 12.9165"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M16.8058 7.08334C11.1885 12.7006 7.9838 15.9054 7.08359 16.8056"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M15.8331 4.16667C9.09239 10.9074 5.24671 14.7531 4.16646 15.8333"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M8.05582 4.16687C5.8089 6.41378 4.52701 7.69568 4.16693 8.05576"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M15.8335 11.9445C13.5866 14.1914 12.3047 15.4733 11.9446 15.8334"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M5.13895 3.19452C4.01549 4.31798 3.37454 4.95892 3.1945 5.13896"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                                <path
+                                                    d="M16.8058 14.8612C15.6824 15.9846 15.0414 16.6256 14.8614 16.8056"
+                                                    stroke="#F99D1A" stroke-width="1.4" stroke-linecap="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_12193_793">
+                                                    <rect width="20" height="20" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <h4 class="text-white text-sm leading-[18px] font-medium">AI Texturing</h4>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="xl:flex hidden items-center gap-7 relative">
+                <li><a href="#" class="header-links py-0 border-none active">Community
+                        <div class="abs-line"></div>
+                    </a></li>
+                <li><a href="#" class="header-links relative py-0 border-none">My Assets
+                        <div class="abs-line -left-1"></div>
+                    </a></li>
+                <li><a href="#" class="header-links relative py-0 border-none">API
+                        <div class="abs-line w-10 -left-2"></div>
+                    </a></li>
+                <li><a href="#" class="header-links relative py-0 border-none">Resources
+                        <div class="abs-line -left-1"></div>
+                    </a></li>
+                <li><a href="#" class="header-links relative py-0 border-none">Careers
+                        <div class="abs-line -left-1 w-16"></div>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="flex items-center gap-2 ">
+            <button
+                class="group border border-[#F99D1A] rounded-lg flex items-center gap-4 p-2 transition-all duration-500 hover:bg-[#191003]">
+                <div class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M16 8.02351L8 0.143158V8.02351H16Z" fill="url(#paint0_linear_202_419)" />
+                        <path d="M0 8.02351L7.99993 15.9038V8.02351H0Z" fill="url(#paint1_linear_202_419)" />
+                        <path d="M7.99993 0.143158L0 8.02351H7.99993V0.143158Z" fill="url(#paint2_linear_202_419)" />
+                        <path d="M8 8.02351V15.9038L16 8.02351H8Z" fill="url(#paint3_linear_202_419)" />
+                        <path opacity="0.25" d="M7.9812 1.14445V2.01589L14.6164 7.92613L7.9812 1.14445Z"
+                            fill="#FDFFD2" />
+                        <path opacity="0.5"
+                            d="M7.78351 2.87813L7.69882 7.68976L2.99768 7.78435L7.31329 7.22813L7.78351 2.87813Z"
+                            fill="#FDFFD2" />
+                        <path opacity="0.5" d="M5.927 8.22514H7.74817L7.78345 14.8099L7.487 8.54497L5.927 8.22514Z"
+                            fill="#FDFFD2" />
+                        <path opacity="0.5"
+                            d="M0.442383 7.78435C0.442383 7.78435 5.52686 4.0237 6.54929 2.02687L6.59763 1.93247L0.442383 7.78435Z"
+                            fill="#FDFFD2" />
+                        <path
+                            d="M7.99998 9.83135C8.07087 9.27429 8.10347 8.71727 8.12879 8.1602C8.46861 8.17029 8.80843 8.17826 9.1482 8.17906C9.53096 8.18208 9.91368 8.17774 10.2964 8.16916C10.6791 8.1603 11.0619 8.1454 11.4447 8.12272C11.8274 8.10037 12.2101 8.07019 12.5929 8.02351C12.2101 7.97683 11.8274 7.94669 11.4447 7.9243C11.0619 7.90157 10.6792 7.88667 10.2964 7.87785C9.91368 7.86922 9.53096 7.86488 9.1482 7.86795C8.81853 7.8687 8.48891 7.87634 8.15924 7.88601C8.15627 6.61844 8.14938 5.35092 8.12482 4.08336C8.11405 3.42666 8.0971 2.76995 8.07838 2.1133C8.05373 1.50456 8.03717 0.895767 8.0062 0.287022C8.28523 0.546269 8.56411 0.805613 8.84778 1.06029C9.15682 1.3399 9.4639 1.6215 9.77878 1.89541C9.50071 1.58524 9.21484 1.28275 8.93098 0.978332C8.64822 0.672781 8.36033 0.372324 8.0725 0.0717713L8.00376 0L7.92746 0.0717713L6.90445 1.03416L5.89159 2.0065C5.22081 2.65914 4.55242 3.3141 3.89078 3.97575C2.56682 5.29835 1.26134 6.63919 4.67469e-05 8.02351C1.40538 6.78103 2.76658 5.49511 4.10925 4.19096C4.78089 3.53916 5.44584 2.88077 6.10839 2.22006L7.0955 1.22235L7.58093 0.721633C7.72401 0.574044 7.97527 0.679993 7.96723 0.883882C7.9511 1.29369 7.93813 1.70345 7.92152 2.1133C7.9028 2.77 7.88591 3.4267 7.87509 4.08336C7.85364 5.18956 7.86264 6.29582 7.86436 7.40203C7.8648 7.67151 7.64254 7.89049 7.36897 7.89016C6.24597 7.8887 5.12297 7.87988 3.99997 7.90105C3.3333 7.91161 2.66663 7.9283 2.00001 7.94674C1.33334 7.97272 0.666669 7.98805 0 8.02355C0.666669 8.05906 1.33334 8.07439 2.00001 8.10037C2.66667 8.1188 3.33334 8.1355 3.99997 8.14606C5.29065 8.17039 6.58139 8.17718 7.87207 8.18048C7.89735 8.73071 7.92994 9.28103 7.99998 9.83135Z"
+                            fill="white" />
+                        <path
+                            d="M13.9661 9.96027C13.2927 10.6103 12.6167 11.2578 11.9498 11.9142L9.94412 13.8787L8.01036 15.7971C8.06483 15.1889 8.0778 14.1365 8.07991 13.5861C8.07733 13.002 8.06287 12.4179 7.99997 11.8338C7.93707 12.4179 7.92262 13.002 7.92003 13.5861C7.92175 14.0307 7.93056 14.8026 7.96254 15.4036C7.96991 15.5421 7.80041 15.6169 7.69974 15.52L6.24798 14.1228C5.64617 13.5467 5.04149 12.9735 4.43298 12.4041C5.01349 13.0012 5.59777 13.5946 6.18498 14.1851L7.95139 15.9519L7.99949 16L8.04875 15.9518L10.0558 13.9887L12.0502 12.0131C12.7166 11.3561 13.3739 10.6902 14.0338 10.0268C14.6946 9.36435 15.3481 8.69468 16 8.02351C15.3185 8.66568 14.6387 9.30941 13.9661 9.96027Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear_202_419" x1="7.09999" y1="3.41273" x2="15.0423"
+                                y2="9.51141" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFB752" />
+                                <stop offset="0.2162" stop-color="#FFAD39" />
+                                <stop offset="0.2473" stop-color="#F99D1A" />
+                                <stop offset="0.5453" stop-color="#D38413" />
+                                <stop offset="0.7807" stop-color="#C47A11" />
+                                <stop offset="0.9229" stop-color="#AC6C0F" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_202_419" x1="2.06115" y1="13.8735" x2="7.77409"
+                                y2="8.0738" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFBE73" />
+                                <stop offset="0.4077" stop-color="#F99D1A" />
+                                <stop offset="1" stop-color="#C77C11" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_202_419" x1="3.99996" y1="4.08332" x2="7.93968"
+                                y2="8.08284" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFB750" />
+                                <stop offset="0.9804" stop-color="#F99D1A" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_202_419" x1="8" y1="11.9636" x2="16" y2="11.9636"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F99D1A" />
+                                <stop offset="0.3939" stop-color="#E89219" />
+                                <stop offset="0.9804" stop-color="#BF7815" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-sm leading-[18px] font-medium text-white">1800</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <g clip-path="url(#clip0_217_466)">
+                        <path
+                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                            stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 6V12" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 9H12" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_217_466">
+                            <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <img src="assets/images/nav-user-avatar.png" alt="">
+        </div>
+    </nav>
+
+    <!--Main Content Page-->
+    <div class="w-full h-full pt-28 px-[34px]">
+        <div class="flex items-center justify-between mb-[34px]">
+            <div class="block w-full">
+                <h4 class="text-2xl font-medium leading-[30px] text-white">My Assets</h4>
+                <p class="mt-2 text-sm leading-[18px] text-[#B1B1B1]">Access all your 3D creations in one convenient
+                    place.</p>
+            </div>
+            <div class="flex items-center gap-6 justify-end w-full">
+                <div class="relative w-full max-w-[460px]">
+                    <svg class="absolute top-[11px] left-3.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 18 18" fill="none">
+                        <path
+                            d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
+                            stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.5 16.5L15 15" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <input type="search" name="search" id="search" placeholder="What are you looking for?"
+                        class="w-full max-w-[460px] p-[9px] pl-11 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg pr-3.5 text-sm leading-[22px] text-white placeholder:text-[#B1B1B1]">
+                </div>
+                <button type="button"
+                    class="py-[9px] pr-3.5 pl-5 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg flex items-center gap-1.5 text-sm font-medium leading-[22px] text-[#F99D1A] transition-all duration-500 hover:bg-[#262626]">Generation
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button type="button"
+                    class="py-[9px] pr-3.5 pl-5 whitespace-nowrap border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg flex items-center gap-1.5 text-sm font-medium leading-[22px] text-[#F99D1A] transition-all duration-500 hover:bg-[#262626]">All
+                    Time
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-[38px]">
+            <div class="w-full max-w-[1192px]">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3.5 group ">
+                        <div class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
+                            <img src="assets/images/assets-1.png" alt="">
+                        </div>
+                        <div class="block">
+                            <h5 class="text-sm font-medium leading-[18px] mb-0.5 text-white">Megatron</h5>
+                            <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full max-w-[480px] 2xl:max-w-[626px] bg-[#0C0C0C] p-1 ">
+                <div class="relative bg-black rounded-[14px] aspect-square w-full flex items-center justify-center">
+                    <img src="assets/images/assets-big-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MAIN JS-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
