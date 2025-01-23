@@ -31,7 +31,61 @@
  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
  <meta name="theme-color" content="#ffffff">    
  <style>
-  
+    .toggle-container {
+      position: relative;
+      width: 342px;
+      height: 42px;
+      background-color: #121313;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .toggle-slider {
+        position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 48%;
+    height: 35px;
+    background-color: #F99D1A;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    }
+
+    .toggle-container input {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .toggle-labels {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: white;
+      font-weight: 400;
+      line-height: 16px;
+      z-index: 2;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    .toggle-container input:checked ~ .toggle-slider {
+      transform: translateX(100%);
+    }
+    .toggle-labels span{
+        width: 50%;
+    }
  </style>
 </head>
 
@@ -917,24 +971,25 @@
                         class="relative z-10 w-1/2 flex justify-center block py-2 px-2.5 font-medium text-white   text-center ">Yearly</span>
                 </div>
             </label> -->
-            <div class="switch-wrapper">
-                <input id="monthly" type="radio" name="switch" checked>
-                <input id="yearly" type="radio" name="switch">
-                <label for="monthly">Monthly</label>
-                <label for="yearly">Yearly</label>
-                <span class="highlighter"></span>
+            <div class="toggle-container">
+                <input id="pricingToggle" type="checkbox">
+                <div class="toggle-slider"></div>
+                <div class="toggle-labels">
+                  <span>Monthly</span>
+                  <span>Yearly</span>
+                </div>
               </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
                 <div class="bg-gradient-to-b from-[rgba(255,255,255,0.14)] to-white/0 p-px  rounded-2xl">
                     <div class="bg-black rounded-2xl h-full">
                         <div class="p-5 bg-gradient-to-b from-white/5 to-white/0 rounded-2xl">
-                            <div class="border-b border-[#2C2B2A] pb-8 flex flex-col gap-4">
+                            <div class="border-b border-[#2C2B2A] pb-8 flex flex-col gap-4 ">
                                 <div class="flex flex-col gap-1.5">
                                     <h4 class="text-xl font-semibold text-white">Free</h4>
                                     <span class="text-sm font-medium leading-4 text-[#B1B1B1]">No credit card
                                         needed</span>
                                 </div>
-                                <h3 class="font-medium text-white text-3xl price" data-monthly="0" data-yearly="100">$0</h3>
+                                <h3 class="font-medium text-white text-3xl price" data-monthly="0" data-yearly="100">$0 </h3>
                             </div>
                             <ul class="flex flex-col gap-4 py-6">
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
@@ -993,9 +1048,11 @@
                                     <span class="text-sm font-medium leading-4 text-[#B1B1B1]">$1.60/100 credits .
                                         $192.00/ year</span>
                                 </div>
-                                <h3 class="font-medium text-white text-3xl flex items-end gap-2">$16 <span
-                                        class="text-base font-medium leading-4 text-white pb-1 block">Per month</span>
-                                </h3>
+                                <div class="flex items-center">
+                                    <h3 class="font-medium text-white text-3xl flex items-end gap-2 price" data-monthly="0" data-yearly="110">$16 
+                                    </h3>
+                                    <span class="postfix text-base font-medium leading-4 text-white pb-1 block">Per month</span>
+                                </div>        
                             </div>
                             <button
                                 class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md">Subscribe
@@ -1297,20 +1354,25 @@ arrow: true,
 
  </script>
  <script>
+  // JavaScript to handle pricing updates
   const toggle = document.getElementById("pricingToggle");
-const prices = document.querySelectorAll(".price");
+    const prices = document.querySelectorAll(".price");
+    const postfixes = document.querySelectorAll(".postfix");
 
-toggle.addEventListener("change", () => {
-    const isYearly = toggle.checked;
+    toggle.addEventListener("change", () => {
+      const isYearly = toggle.checked;
 
-    // Update pricing text
-    prices.forEach(price => {
+      // Update pricing and postfix text
+      prices.forEach(price => {
         const monthlyPrice = price.getAttribute("data-monthly");
         const yearlyPrice = price.getAttribute("data-yearly");
-        price.textContent = `$${isYearly ? yearlyPrice : monthlyPrice} / ${isYearly ? "Yearly" : "Monthly"}`;
-    });
-});
+        price.textContent = `$${isYearly ? yearlyPrice : monthlyPrice}`;
+      });
 
+      postfixes.forEach(postfix => {
+        postfix.textContent = isYearly ? "Per yearly" : "Per monthly";
+      });
+    });
  </script>
 </body>
 

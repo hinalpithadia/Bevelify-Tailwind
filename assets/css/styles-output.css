@@ -2489,6 +2489,10 @@ svg.final stop {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+
 .bg-\[linear-gradient\(136deg\2c rgba\(255\2c 255\2c 255\2c 0\.01\)0\%\2c rgba\(250\2c 157\2c 26\2c 0\.01\)93\.42\%\)\] {
   background-image: linear-gradient(136deg,rgba(255,255,255,0.01)0%,rgba(250,157,26,0.01)93.42%);
 }
@@ -4640,11 +4644,6 @@ svg.final stop {
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .xl\:py-9 {
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
   }
 
   .xl\:pb-0 {

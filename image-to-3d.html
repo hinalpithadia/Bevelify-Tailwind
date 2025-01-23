@@ -171,9 +171,9 @@
                                 </a>
                             </div>
                             <div
-                                class="p-px bg-gradient-to-bl from-[#292114] to-[#2c2c2c] relative z-[2] rounded-xl transition-all duration-500 hover:from-[#7a633d] hover:to-[#404040]  focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-[#F99d1a] focus-within:border-transparent">
+                                class="p-px bg-gradient-to-bl from-[#292114] to-[#2c2c2c] relative z-[2] rounded-xl transition-all duration-500 hover:from-[#7a633d] hover:to-[#404040]  focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-[#F99d1a] focus-within:border-transparent relative">
                                 <div class=" rounded-xl bg-black w-full gap-2.5 flex flex-col ">
-                                    <label for="dropzone-file" class="h-[220px] flex flex-col items-center justify-center xl:py-9 px-2 w-full   cursor-pointer  ">
+                                    <label for="dropzone-file" class="h-[220px] flex flex-col items-center justify-center  px-2 w-full   cursor-pointer  ">
                                         <div class="mb-2.5 flex items-center justify-center">
                                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M22 40.3334V23.8334M22 23.8334L28.4167 30.25M22 23.8334L15.5833 30.25" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -188,9 +188,20 @@
                                             Maximum file size: 20MB</p>
                                         <input id="dropzone-file" type="file" class="hidden">
                                     </label>
+                                    <div for="dropzone-file" class="opacity-0 absolute top-0 left-0 z-10 h-[220px] flex flex-col items-center justify-center  px-2 w-full   cursor-pointer  bg-black/50 rounded-xl">
+                                        <div class="mb-2.5 flex items-center flex-col gap-1 justify-center">
+                                            <svg width="34" height="34" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22 40.3334V23.8334M22 23.8334L28.4167 30.25M22 23.8334L15.5833 30.25" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M36.6667 32.28C39.4051 31.2071 42.1667 28.7629 42.1667 23.8333C42.1667 16.5 36.0556 14.6666 33 14.6666C33 11 33 3.66663 22 3.66663C11 3.66663 11 11 11 14.6666C7.94445 14.6666 1.83334 16.5 1.83334 23.8333C1.83334 28.7629 4.59486 31.2071 7.33334 32.28" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <p class="text-sm text-white font-medium">Re-upload</p>
+                                        </div>
+                                       
+                                        <input id="dropzone-file" type="file" class="hidden">
+                                    </div>
                                 </div>
                             </div>
-                         
+                           
                         </div>
                     </li>
                     <li class="pb-4 border-b border-[#2C2B2A]">
