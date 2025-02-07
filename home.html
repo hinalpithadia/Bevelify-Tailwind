@@ -2033,7 +2033,8 @@
     </div>
   </div>
     <div class="overlay-modal w-full h-screen z-[500] bg-black/80 fixed top-0 left-0 opacity-0 invisible"></div>
-    <!-- MAIN JS-->
+    <canvas id="riveCanvas"></canvas>
+    <!--MAIN JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
@@ -2052,8 +2053,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"
     integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
 
-    <script src="assets/js/main.js"></script>
+ 
+    <script>    
+      const rive = new rive.Rive({
+            src: "assets/images/bevelify.riv",  // Path to your .riv file
+            canvas: document.getElementById("riveCanvas"),
+            autoplay: true, // Auto-play animation
+            stateMachines: "State Machine 1", // Change this if needed
+            onLoad: () => {
+                console.log("Rive animation loaded!");
+            }
+        });
+    </script>
     <script>
         
  // Function to initialize a 3D model in a specific canvas
