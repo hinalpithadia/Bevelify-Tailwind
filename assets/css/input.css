@@ -527,4 +527,11 @@
 .color_1 {
   background: radial-gradient(50% 50% at 50% 50%, rgba(249, 157, 26, 0.00) 0%, rgba(249, 157, 26, 0.10) 100%);
 }
+.middle-panel::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.middle-panel::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 }
