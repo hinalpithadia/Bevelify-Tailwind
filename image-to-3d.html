@@ -537,7 +537,7 @@
             <!--Main Content Page-->
             <div class="w-full h-full pt-px flex">
                 <div
-                    class="w-full flex flex-col gap-3.5 lg:max-w-[370px] xl:max-w-[400px] 2xl:max-w-[500px] h-[calc(100vh-57px)] bg-[#0C0C0C] overflow-y-auto p-3.5">
+                    class="w-full flex flex-col gap-3.5 lg:max-w-[370px] xl:max-w-[400px] 2xl:max-w-[500px] h-[calc(100vh-57px)] bg-[#0C0C0C] overflow-y-auto overflow-x-hidden p-3.5 ">
                     <div class="flex items-center gap-2.5">
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
@@ -575,12 +575,100 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pt-3 pb-3.5 bg-black rounded-xl w-full h-full flex  ">
+                    <div class="pt-3 pb-3.5 rounded-xl w-full  flex  ">
                         <!-- <p class="text-base text-[#4D4D4D] font-medium">No more generations here</p> -->
-                        <div class="grid grid-cols-2 gap-2 px-3 w-full">
+                        <div class="flex flex-wrap gap-2 px-1 justify-between w-full h-auto">
                             
-                            <div class="group/card  transition-all duration-300 flex flex-col gap-2">
-                                <div class="w-full h-40 relative z-[1] flex items-center justify-center rounded-[10px] border-[0.5px] border-[#1E1E1E] bg-[#0C0C0C] shadow-[0px_4px_7px_0px_rgba(0,0,0,0.40)_inset] transition-all duration-500 hover:border-[#F99D1A] ">
+                            <div class="group   transition-all duration-300 flex flex-col gap-2">
+                                <div class="w-[210px] h-[210px] relative z-[1] flex items-center justify-center rounded-[10px]  bg-[#1a1a1a] transition-all duration-500 hover:border-[#F99D1A] ">
+                                    <img src="assets/images/bevelify-avatar_color.png" alt="">
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex flex-col gap-1.5">
+                                        <h5 class="text-base leading-5 text-white">Team Collaboration</h5>
+                                        <p class="text-xs text-[#B1B1B1] text-opacity-70">Created 3rd January, 2024</p>
+                                    </div>
+
+                                    <div class="wrapper-dropdown !relative " id="dropdown">
+                                        <button class="dropbtn relative z-0 select-none whitespace-nowrap transition duration-100 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base w-7 h-7 rounded-lg text-xs font-normal active:opacity-70 border border-transparent bg-transparent text-label-base focus-visible:ring-label-title hover:bg-bg-translucent hover:text-label-title cursor-pointer items-center justify-center flex-none hidden group-hover:flex">
+                                            <span class="flex flex-none items-center size-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.02736 12.001L6.97736 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M12.041 12.001L11.991 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M17.0547 12.001L17.0047 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                </svg></span>
+                                        </button>
+                                      
+                                        <div class="dropdown invisible opacity-0 !absolute top-[30px] !left-[-80px] w-max transition-all duration-300 rotated">
+                                            <div class="flex flex-col gap-1 w-max p-1 border border-[#2C2C2C] bg-[#0C0C0C] rounded-lg">
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 3V5.63636C16 6.38948 16.6105 7 17.3636 7H20" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M7 11H13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 15H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 7H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M18.0746 13.995L14.8423 17.272C14.6397 17.4773 14.5385 17.5799 14.4712 17.7046C14.4039 17.8293 14.3741 17.9695 14.3145 18.2498L14.0011 19.7236C13.9718 19.8612 13.9572 19.93 13.9968 19.9681C14.0364 20.0062 14.1058 19.99 14.2445 19.9576L15.7466 19.6069C16.021 19.5428 16.1582 19.5108 16.2799 19.4441C16.4016 19.3774 16.5017 19.2794 16.7018 19.0834L19.9889 15.8644C20.2082 15.6496 20.3179 15.5422 20.3845 15.4296C20.5613 15.1307 20.5677 14.7626 20.4013 14.4581C20.3387 14.3433 20.2327 14.2324 20.0209 14.0104C19.7953 13.774 19.6825 13.6558 19.5641 13.5854C19.2495 13.3983 18.8564 13.3952 18.5386 13.5773C18.419 13.6458 18.3042 13.7622 18.0746 13.995Z" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M19 17L17 15" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M11 21H10C7.17157 21 5.75736 21 4.87868 20.1213C4 19.2426 4 17.8284 4 15V9C4 6.17157 4 4.75736 4.87868 3.87868C5.75736 3 7.17157 3 10 3H15.3431C16.1606 3 16.5694 3 16.9369 3.15224C17.3045 3.30448 17.5935 3.59351 18.1716 4.17157L18.8284 4.82843C19.4065 5.40647 19.6955 5.69552 19.8478 6.06306C20 6.4306 20 6.83935 20 7.65685V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Rename</a>
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 7L5.29949 14.7868C5.41251 17.7252 5.46902 19.1944 6.40719 20.0972C7.34537 21 8.81543 21 11.7555 21H12.2433C15.1842 21 16.6547 21 17.5928 20.0972C18.531 19.1944 18.5875 17.7252 18.7006 14.7868L19 7" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M10 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M14 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M20.4706 4.43329C18.6468 4.27371 17.735 4.19392 16.8229 4.13611C13.6109 3.93249 10.3891 3.93249 7.17707 4.13611C6.26506 4.19392 5.35318 4.27371 3.52942 4.43329" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M13.7647 3.95212C13.7647 3.95212 13.3993 2.98339 11.6471 2.9834C9.8949 2.9834 9.52942 3.95211 9.52942 3.95211" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Delete
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <div class="group transition-all duration-300 flex flex-col gap-2">
+                                <div class="w-[210px] h-[210px] relative z-[1] flex items-center justify-center rounded-[10px]  bg-[#1a1a1a] transition-all duration-500 hover:border-[#F99D1A] ">
+                                    <img src="assets/images/bevelify-avatar_color.png" alt="">
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex flex-col gap-1.5">
+                                        <h5 class="text-base leading-5 text-white">Team Collaboration</h5>
+                                        <p class="text-xs text-[#B1B1B1] text-opacity-70">Created 3rd January, 2024</p>
+                                    </div>
+
+                                    <div class="wrapper-dropdown !relative " id="dropdown">
+                                        <button class="dropbtn relative z-0 select-none whitespace-nowrap transition duration-100 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base w-7 h-7 rounded-lg text-xs font-normal active:opacity-70 border border-transparent bg-transparent text-label-base focus-visible:ring-label-title hover:bg-bg-translucent hover:text-label-title cursor-pointer items-center justify-center flex-none hidden group-hover:flex">
+                                            <span class="flex flex-none items-center size-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.02736 12.001L6.97736 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M12.041 12.001L11.991 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M17.0547 12.001L17.0047 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                </svg></span>
+                                        </button>
+                                      
+                                        <div class="dropdown invisible opacity-0 !absolute top-[30px] !left-[-80px] w-max transition-all duration-300 rotated">
+                                            <div class="flex flex-col gap-1 w-max p-1 border border-[#2C2C2C] bg-[#0C0C0C] rounded-lg">
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 3V5.63636C16 6.38948 16.6105 7 17.3636 7H20" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M7 11H13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 15H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 7H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M18.0746 13.995L14.8423 17.272C14.6397 17.4773 14.5385 17.5799 14.4712 17.7046C14.4039 17.8293 14.3741 17.9695 14.3145 18.2498L14.0011 19.7236C13.9718 19.8612 13.9572 19.93 13.9968 19.9681C14.0364 20.0062 14.1058 19.99 14.2445 19.9576L15.7466 19.6069C16.021 19.5428 16.1582 19.5108 16.2799 19.4441C16.4016 19.3774 16.5017 19.2794 16.7018 19.0834L19.9889 15.8644C20.2082 15.6496 20.3179 15.5422 20.3845 15.4296C20.5613 15.1307 20.5677 14.7626 20.4013 14.4581C20.3387 14.3433 20.2327 14.2324 20.0209 14.0104C19.7953 13.774 19.6825 13.6558 19.5641 13.5854C19.2495 13.3983 18.8564 13.3952 18.5386 13.5773C18.419 13.6458 18.3042 13.7622 18.0746 13.995Z" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M19 17L17 15" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M11 21H10C7.17157 21 5.75736 21 4.87868 20.1213C4 19.2426 4 17.8284 4 15V9C4 6.17157 4 4.75736 4.87868 3.87868C5.75736 3 7.17157 3 10 3H15.3431C16.1606 3 16.5694 3 16.9369 3.15224C17.3045 3.30448 17.5935 3.59351 18.1716 4.17157L18.8284 4.82843C19.4065 5.40647 19.6955 5.69552 19.8478 6.06306C20 6.4306 20 6.83935 20 7.65685V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Rename</a>
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 7L5.29949 14.7868C5.41251 17.7252 5.46902 19.1944 6.40719 20.0972C7.34537 21 8.81543 21 11.7555 21H12.2433C15.1842 21 16.6547 21 17.5928 20.0972C18.531 19.1944 18.5875 17.7252 18.7006 14.7868L19 7" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M10 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M14 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M20.4706 4.43329C18.6468 4.27371 17.735 4.19392 16.8229 4.13611C13.6109 3.93249 10.3891 3.93249 7.17707 4.13611C6.26506 4.19392 5.35318 4.27371 3.52942 4.43329" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M13.7647 3.95212C13.7647 3.95212 13.3993 2.98339 11.6471 2.9834C9.8949 2.9834 9.52942 3.95211 9.52942 3.95211" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Delete
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <div class="group transition-all duration-300 flex flex-col gap-2">
+                                <div class="w-[210px] h-[210px] relative z-[1] flex items-center justify-center rounded-[10px]  bg-[#1a1a1a] transition-all duration-500 hover:border-[#F99D1A] ">
                                     <img src="assets/images/bevelify-avatar_color.png" alt="">
                                 </div>
                                 <div class="flex justify-between items-center">
@@ -623,7 +711,50 @@
                                   
                                 </div>
                             </div>
-    
+                            <div class="group transition-all duration-300 flex flex-col gap-2">
+                                <div class="w-[210px] h-[210px] relative z-[1] flex items-center justify-center rounded-[10px]  bg-[#1a1a1a] transition-all duration-500 hover:border-[#F99D1A] ">
+                                    <img src="assets/images/bevelify-avatar_color.png" alt="">
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex flex-col gap-1.5">
+                                        <h5 class="text-base leading-5 text-white">Team Collaboration</h5>
+                                        <p class="text-xs text-[#B1B1B1] text-opacity-70">Created 3rd January, 2024</p>
+                                    </div>
+
+                                    <div class="wrapper-dropdown !relative " id="dropdown">
+                                        <button class="dropbtn relative z-0 select-none whitespace-nowrap transition duration-100 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base w-7 h-7 rounded-lg text-xs font-normal active:opacity-70 border border-transparent bg-transparent text-label-base focus-visible:ring-label-title hover:bg-bg-translucent hover:text-label-title cursor-pointer items-center justify-center flex-none hidden group-hover/card:flex">
+                                            <span class="flex flex-none items-center size-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.02736 12.001L6.97736 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M12.041 12.001L11.991 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                <path d="M17.0547 12.001L17.0047 12.001" stroke="white" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                </svg></span>
+                                        </button>
+                                      
+                                        <div class="dropdown invisible opacity-0 !absolute top-[30px] !left-[-80px] w-max transition-all duration-300 rotated">
+                                            <div class="flex flex-col gap-1 w-max p-1 border border-[#2C2C2C] bg-[#0C0C0C] rounded-lg">
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 3V5.63636C16 6.38948 16.6105 7 17.3636 7H20" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M7 11H13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 15H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M7 7H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M18.0746 13.995L14.8423 17.272C14.6397 17.4773 14.5385 17.5799 14.4712 17.7046C14.4039 17.8293 14.3741 17.9695 14.3145 18.2498L14.0011 19.7236C13.9718 19.8612 13.9572 19.93 13.9968 19.9681C14.0364 20.0062 14.1058 19.99 14.2445 19.9576L15.7466 19.6069C16.021 19.5428 16.1582 19.5108 16.2799 19.4441C16.4016 19.3774 16.5017 19.2794 16.7018 19.0834L19.9889 15.8644C20.2082 15.6496 20.3179 15.5422 20.3845 15.4296C20.5613 15.1307 20.5677 14.7626 20.4013 14.4581C20.3387 14.3433 20.2327 14.2324 20.0209 14.0104C19.7953 13.774 19.6825 13.6558 19.5641 13.5854C19.2495 13.3983 18.8564 13.3952 18.5386 13.5773C18.419 13.6458 18.3042 13.7622 18.0746 13.995Z" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M19 17L17 15" stroke="currentColor" stroke-width="1.6" class="my-path"></path>
+                                                    <path d="M11 21H10C7.17157 21 5.75736 21 4.87868 20.1213C4 19.2426 4 17.8284 4 15V9C4 6.17157 4 4.75736 4.87868 3.87868C5.75736 3 7.17157 3 10 3H15.3431C16.1606 3 16.5694 3 16.9369 3.15224C17.3045 3.30448 17.5935 3.59351 18.1716 4.17157L18.8284 4.82843C19.4065 5.40647 19.6955 5.69552 19.8478 6.06306C20 6.4306 20 6.83935 20 7.65685V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Rename</a>
+                                                <a href="#" class="2xl:text-sm text-xs font-medium text-white py-2 px-2 transition-all duration-300 rounded-md min-w-[100px] hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] flex items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 7L5.29949 14.7868C5.41251 17.7252 5.46902 19.1944 6.40719 20.0972C7.34537 21 8.81543 21 11.7555 21H12.2433C15.1842 21 16.6547 21 17.5928 20.0972C18.531 19.1944 18.5875 17.7252 18.7006 14.7868L19 7" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M10 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M14 13V16" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M20.4706 4.43329C18.6468 4.27371 17.735 4.19392 16.8229 4.13611C13.6109 3.93249 10.3891 3.93249 7.17707 4.13611C6.26506 4.19392 5.35318 4.27371 3.52942 4.43329" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    <path d="M13.7647 3.95212C13.7647 3.95212 13.3993 2.98339 11.6471 2.9834C9.8949 2.9834 9.52942 3.95211 9.52942 3.95211" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path"></path>
+                                                    </svg>Delete
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
                             <!-- <p class="text-base text-[#4D4D4D] font-medium">No more generations here</p> -->
                         </div>
                     </div>
