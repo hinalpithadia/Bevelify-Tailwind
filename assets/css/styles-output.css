@@ -637,6 +637,10 @@ svg.final stop {
   transform: rotate(0deg) !important;
 }
 
+.wrapper-dropdown.active .dropbtn{
+  opacity: 1;
+}
+
 .wrapper-dropdown.active .dropdown {
   opacity: 1;
   visibility: visible;
