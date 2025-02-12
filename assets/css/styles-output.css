@@ -1699,14 +1699,6 @@ svg.final stop {
   height: 100vh;
 }
 
-.h-\[215px\] {
-  height: 215px;
-}
-
-.h-\[210px\] {
-  height: 210px;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1863,14 +1855,6 @@ svg.final stop {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[215px\] {
-  width: 215px;
-}
-
-.w-\[210px\] {
-  width: 210px;
 }
 
 .min-w-\[100px\] {
@@ -4185,6 +4169,11 @@ svg.final stop {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:border-\[\#2f2f2f\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(47 47 47 / var(--tw-border-opacity, 1));
+}
+
 .hover\:border-\[\#3c3c3c\]:hover {
   --tw-border-opacity: 1;
   border-color: rgb(60 60 60 / var(--tw-border-opacity, 1));
@@ -4207,11 +4196,6 @@ svg.final stop {
 
 .hover\:border-white\/20:hover {
   border-color: rgb(255 255 255 / 0.2);
-}
-
-.hover\:border-\[\#2f2f2f\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(47 47 47 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-\[\#191003\]:hover {
@@ -4413,6 +4397,12 @@ svg.final stop {
 .group:hover .group-hover\:scale-125 {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
