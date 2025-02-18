@@ -325,6 +325,62 @@
                     <input type="search" name="search" id="search" placeholder="What are you looking for?"
                         class="w-full max-w-[460px] p-[9px] pl-11 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg pr-3.5 text-sm leading-[22px] text-white placeholder:text-[#B1B1B1]">
                 </div>
+                <div class="wrapper-dropdown dropdown-3 w-28 relative" id="dropdown">
+                    <button
+                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium p-3.5 pr-2.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-500 hover:bg-[#262626] ">
+                        <div class="flex items-center justify-between w-[calc(100%-100px)] gap-4">
+                           
+                            <span id="destination"
+                                class="selected-display text-sm leading-[18px] font-medium text-[#F99D1A]">Generation
+                            </span>
+                        </div>
+                        <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </button>
+                    <div
+                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-12 transition-all duration-300 w-full p-1">
+                        <ul class=" w-full block">
+                            <li>
+                                <div
+                                    class="flex items-center  rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] text-white cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">Popular</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">New</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Top</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Featured</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Following</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Trending</h4>
+                                </div>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
                 <button type="button"
                     class="py-[9px] pr-3.5 max-[500px]:w-full pl-5 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg flex justify-center items-center gap-1.5 text-sm font-medium leading-[22px] text-[#F99D1A] transition-all duration-500 hover:bg-[#262626]">Generation
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -344,9 +400,9 @@
         </div>
 
         <div class="flex flex-col lg:flex-row items-start justify-start gap-[38px] relative">
-            <div class="lg:w-[calc(100%-512px)] 2xl:w-[calc(100%-658px)]">
-                <div class="flex max-lg:justify-center  items-start flex-wrap w-full gap-6">
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+            <div class="w-full lg:w-[calc(100%-512px)] 2xl:w-[calc(100%-658px)]">
+                <div class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 w-full gap-6">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -356,7 +412,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-2.png" alt="">
@@ -366,7 +422,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-3.png" alt="">
@@ -376,7 +432,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-4.png" alt="">
@@ -386,7 +442,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -396,7 +452,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -406,7 +462,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -416,7 +472,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -426,7 +482,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -436,7 +492,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -446,7 +502,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -456,7 +512,7 @@
                             <p class="text-xs leading-4 text-[#B1B1B1]">2 days ago</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3.5 group w-full min-w-[200px] max-w-[274px] ">
+                    <div class="flex flex-col gap-3.5 group w-full ">
                         <div
                             class="bg-[#0C0C0C] min-h-[342px] flex items-center justify-center rounded-[14px] border border-transparent transition-all duration-500 group-hover:border-[#F99D1A]">
                             <img src="assets/images/assets-1.png" alt="">
@@ -468,7 +524,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" w-full max-w-[480px] 2xl:max-w-[626px] bg-[#0C0C0C] p-1 h-auto min-h-[85vh] rounded-xl sticky top-7">
+            <div class=" w-full max-w-[480px] 2xl:max-w-[626px] bg-[#0C0C0C] p-1 h-auto  rounded-xl sticky top-24">
                 <div class="relative bg-black rounded-[14px] h-[505px] w-full flex items-center justify-center">
                     <img src="assets/images/assets-1-big.png" alt="">
                     <div class="absolute top-2.5 left-2.5 flex flex-col gap-4">
@@ -925,76 +981,77 @@
                     </div>
                 </div>
                 <div class="px-5 py-6 flex flex-col gap-6">
-                    <div class="flex flex-col gap-3 pb-6 border-b border-[#2C2C2C]">
-                        <div class="flex items-center justify-between">
-                            <p class="text-base leading-5 font-medium text-[#B1B1B1]">Prompt</p>
-                            <button
-                                class="flex items-center gap-1.5 text-xs text-[#FA9D1A] transition-all duration-500 hover:text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M10.6654 8.59992V11.3999C10.6654 13.7333 9.73203 14.6666 7.3987 14.6666H4.5987C2.26536 14.6666 1.33203 13.7333 1.33203 11.3999V8.59992C1.33203 6.26659 2.26536 5.33325 4.5987 5.33325H7.3987C9.73203 5.33325 10.6654 6.26659 10.6654 8.59992Z"
-                                        stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M14.6654 4.59992V7.39992C14.6654 9.73325 13.732 10.6666 11.3987 10.6666H10.6654V8.59992C10.6654 6.26659 9.73203 5.33325 7.3987 5.33325H5.33203V4.59992C5.33203 2.26659 6.26536 1.33325 8.5987 1.33325H11.3987C13.732 1.33325 14.6654 2.26659 14.6654 4.59992Z"
-                                        stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                Copy Prompt
-                            </button>
+                    <div class="flex items-center gap-6 divide-x divide-[#161616]">
+                        <div class="w-full flex flex-col gap-3 pr-3">
+                            <div class="flex items-center justify-between">
+                                <p class="text-base leading-5 font-medium text-[#B1B1B1]">Prompt</p>
+                                <button
+                                    class="flex items-center gap-1.5 text-xs text-[#FA9D1A] transition-all duration-500 hover:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M10.6654 8.59992V11.3999C10.6654 13.7333 9.73203 14.6666 7.3987 14.6666H4.5987C2.26536 14.6666 1.33203 13.7333 1.33203 11.3999V8.59992C1.33203 6.26659 2.26536 5.33325 4.5987 5.33325H7.3987C9.73203 5.33325 10.6654 6.26659 10.6654 8.59992Z"
+                                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M14.6654 4.59992V7.39992C14.6654 9.73325 13.732 10.6666 11.3987 10.6666H10.6654V8.59992C10.6654 6.26659 9.73203 5.33325 7.3987 5.33325H5.33203V4.59992C5.33203 2.26659 6.26536 1.33325 8.5987 1.33325H11.3987C13.732 1.33325 14.6654 2.26659 14.6654 4.59992Z"
+                                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Copy Prompt
+                                </button>
+                            </div>
+                            <p class="text-base text-white">Describe your desired style of the object, e.g... ancient
+                                style,
+                                HDR, highest quality, ultra detailed.</p>
                         </div>
-                        <p class="text-base text-white">Describe your desired style of the object, e.g... ancient style,
-                            HDR, highest quality, ultra detailed.</p>
-                    </div>
-                    <div class="flex items-center pb-6 border-b border-[#2C2C2C]">
-                        <div class="w-full">
-                            <p class="text-base leading-5 font-medium text-[#B1B1B1] mb-3">Seed</p>
-                            <p class="text-base text-white">1238220002</p>
+                        <div class="w-full pl-6 max-w-[217px] ">
+                            <div class="flex items-center justify-between mb-6">
+                                <p class="text-base leading-5 font-medium text-[#B1B1B1] text-right">Date</p>
+                                <p class="text-base text-white text-right">01 Jan 2025</p>
+                            </div>
+                            <div class="flex items-center flex-col gap-3">
+                                <button
+                                    class="w-full  flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#191919] text-sm leading-[22px] font-medium text-white rounded-lg transition-all duration-500 hover:bg-[#383838]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <path
+                                            d="M2.62313 15.3751C3.24562 15.9976 4.25062 15.9976 4.87312 15.3751L14.6231 5.62508C15.2456 5.00258 15.2456 3.99758 14.6231 3.37508C14.0006 2.75258 12.9956 2.75258 12.3731 3.37508L2.62313 13.1251C2.00063 13.7476 2.00063 14.7526 2.62313 15.3751Z"
+                                            stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13.5078 6.74243L11.2578 4.49243" stroke="currentColor"
+                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M6.375 1.83L7.5 1.5L7.17 2.625L7.5 3.75L6.375 3.42L5.25 3.75L5.58 2.625L5.25 1.5L6.375 1.83Z"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M3.375 6.33L4.5 6L4.17 7.125L4.5 8.25L3.375 7.92L2.25 8.25L2.58 7.125L2.25 6L3.375 6.33Z"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.625 10.08L15.75 9.75L15.42 10.875L15.75 12L14.625 11.67L13.5 12L13.83 10.875L13.5 9.75L14.625 10.08Z"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Remix
+                                </button>
+                                <button
+                                    class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <path
+                                            d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25"
+                                            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12.75 6L9 2.25L5.25 6" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9 2.25V11.25" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Publish
+                                </button>
+                            </div>
                         </div>
-                        <div class="w-full pl-[22px] border-l border-[#2C2C2C]">
-                            <p class="text-base leading-5 font-medium text-[#B1B1B1] mb-3">Date</p>
-                            <p class="text-base text-white">01 Jan 2025</p>
-                        </div>
                     </div>
-                    <div class="flex items-center pt-[24px] gap-6">
-                        <button
-                            class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#191919] text-sm leading-[22px] font-medium text-white rounded-lg transition-all duration-500 hover:bg-[#383838]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <path
-                                    d="M2.62313 15.3751C3.24562 15.9976 4.25062 15.9976 4.87312 15.3751L14.6231 5.62508C15.2456 5.00258 15.2456 3.99758 14.6231 3.37508C14.0006 2.75258 12.9956 2.75258 12.3731 3.37508L2.62313 13.1251C2.00063 13.7476 2.00063 14.7526 2.62313 15.3751Z"
-                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.5078 6.74243L11.2578 4.49243" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M6.375 1.83L7.5 1.5L7.17 2.625L7.5 3.75L6.375 3.42L5.25 3.75L5.58 2.625L5.25 1.5L6.375 1.83Z"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M3.375 6.33L4.5 6L4.17 7.125L4.5 8.25L3.375 7.92L2.25 8.25L2.58 7.125L2.25 6L3.375 6.33Z"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M14.625 10.08L15.75 9.75L15.42 10.875L15.75 12L14.625 11.67L13.5 12L13.83 10.875L13.5 9.75L14.625 10.08Z"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Remix
-                        </button>
-                        <button
-                            class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <path
-                                    d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25"
-                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12.75 6L9 2.25L5.25 6" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M9 2.25V11.25" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            Publish
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

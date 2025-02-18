@@ -946,6 +946,24 @@ svg.final stop {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.modal-rename {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 576px;
+  height: auto;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1000;
+  overflow: auto;
+}
+
 @media (max-width: 600px) {
   .modal-home {
     margin: 10px;
@@ -1152,6 +1170,76 @@ svg.final stop {
   background: transparent;
 }
 
+/*submenu*/
+
+.sub-menu-parent {
+  position: relative;
+  cursor: pointer;
+}
+
+.sub-menu {
+  opacity: 1;
+  transform: scale(1, 0);
+  padding: 4px;
+  transform-origin: top;
+  transition: all 300ms ease-in-out 0s;
+  z-index: 100;
+  list-style-type: none;
+  position: absolute;
+  top: 40px;
+  left: -100px;
+  margin: 0;
+  background: #0C0C0C;
+  border:1px solid rgba(153, 153, 153, 0.20);
+  text-align: left;
+  border-radius: 8px;
+  max-width: 290px;
+}
+
+.sub-menu li a {
+  padding: 4px 14px 4px 4px;
+  margin-right: 0px;
+  clear: both;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  transition: 0.3s all ease-out;
+  position: relative;
+}
+
+.sub-menu li a:before{
+  content: '';
+  position: absolute;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(249, 157, 26, 0.24) 0%, rgba(12, 12, 12, 0.24) 100%);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 0.3s all ease-out;
+}
+
+.sub-menu li a:hover::before{
+  opacity: 1;
+}
+
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:hover .sub-menu {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+@media(max-width:768px){
+  .sub-menu {
+    position: relative;
+    opacity: 1;
+    transform:scale(1);
+    left: 0;
+    right: 0;
+    margin:10px auto;
+    top: 0;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1309,6 +1397,10 @@ svg.final stop {
   top: 0.625rem;
 }
 
+.top-24 {
+  top: 6rem;
+}
+
 .top-3\.5 {
   top: 0.875rem;
 }
@@ -1319,10 +1411,6 @@ svg.final stop {
 
 .top-5 {
   top: 1.25rem;
-}
-
-.top-7 {
-  top: 1.75rem;
 }
 
 .top-\[-140px\] {
@@ -1646,6 +1734,14 @@ svg.final stop {
   height: 1.125rem;
 }
 
+.h-\[110px\] {
+  height: 110px;
+}
+
+.h-\[120px\] {
+  height: 120px;
+}
+
 .h-\[18px\] {
   height: 18px;
 }
@@ -1674,6 +1770,10 @@ svg.final stop {
   height: 439px;
 }
 
+.h-\[48px\] {
+  height: 48px;
+}
+
 .h-\[505px\] {
   height: 505px;
 }
@@ -1692,10 +1792,6 @@ svg.final stop {
 
 .h-\[76px\] {
   height: 76px;
-}
-
-.h-\[80px\] {
-  height: 80px;
 }
 
 .h-\[96px\] {
@@ -1749,10 +1845,6 @@ svg.final stop {
 
 .min-h-\[342px\] {
   min-height: 342px;
-}
-
-.min-h-\[85vh\] {
-  min-height: 85vh;
 }
 
 .min-h-\[94px\] {
@@ -1823,10 +1915,6 @@ svg.final stop {
   width: 200px;
 }
 
-.w-\[220px\] {
-  width: 220px;
-}
-
 .w-\[300px\] {
   width: 300px;
 }
@@ -1837,6 +1925,10 @@ svg.final stop {
 
 .w-\[34px\] {
   width: 34px;
+}
+
+.w-\[48px\] {
+  width: 48px;
 }
 
 .w-\[60px\] {
@@ -1853,6 +1945,10 @@ svg.final stop {
 
 .w-\[96px\] {
   width: 96px;
+}
+
+.w-\[calc\(100\%-100px\)\] {
+  width: calc(100% - 100px);
 }
 
 .w-\[calc\(100\%-24px\)\] {
@@ -1886,10 +1982,6 @@ svg.final stop {
 
 .min-w-\[160px\] {
   min-width: 160px;
-}
-
-.min-w-\[200px\] {
-  min-width: 200px;
 }
 
 .min-w-\[210px\] {
@@ -1940,6 +2032,10 @@ svg.final stop {
   max-width: 1920px;
 }
 
+.max-w-\[217px\] {
+  max-width: 217px;
+}
+
 .max-w-\[220px\] {
   max-width: 220px;
 }
@@ -1950,10 +2046,6 @@ svg.final stop {
 
 .max-w-\[254px\] {
   max-width: 254px;
-}
-
-.max-w-\[274px\] {
-  max-width: 274px;
 }
 
 .max-w-\[316px\] {
@@ -2272,6 +2364,11 @@ svg.final stop {
   border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
 }
 
+.divide-\[\#161616\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(22 22 22 / var(--tw-divide-opacity, 1));
+}
+
 .divide-\[\#1E1E1E\] > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(30 30 30 / var(--tw-divide-opacity, 1));
@@ -2335,6 +2432,10 @@ svg.final stop {
 
 .rounded-\[34px\] {
   border-radius: 34px;
+}
+
+.rounded-\[4px\] {
+  border-radius: 4px;
 }
 
 .rounded-\[5px\] {
@@ -2546,6 +2647,11 @@ svg.final stop {
 .bg-\[\#000000\] {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#0B0B0B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 11 11 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#0C0C0C\] {
@@ -3386,10 +3492,6 @@ svg.final stop {
   padding-left: 15px;
 }
 
-.pl-\[22px\] {
-  padding-left: 22px;
-}
-
 .pr-0 {
   padding-right: 0px;
 }
@@ -3476,10 +3578,6 @@ svg.final stop {
 
 .pt-\[18px\] {
   padding-top: 18px;
-}
-
-.pt-\[24px\] {
-  padding-top: 24px;
 }
 
 .pt-\[39px\] {
@@ -3966,9 +4064,9 @@ svg.final stop {
   position: absolute;
 }
 
-.before\:bottom-\[-112\%\]::before {
+.before\:bottom-\[-84\%\]::before {
   content: var(--tw-content);
-  bottom: -112%;
+  bottom: -84%;
 }
 
 .before\:bottom-\[-97px\]::before {
@@ -4533,10 +4631,6 @@ svg.final stop {
     align-items: center;
   }
 
-  .max-lg\:justify-center {
-    justify-content: center;
-  }
-
   .max-lg\:gap-8 {
     gap: 2rem;
   }
@@ -4685,6 +4779,10 @@ svg.final stop {
 
   .lg\:w-\[547px\] {
     width: 547px;
+  }
+
+  .lg\:w-\[calc\(100\%-300px\)\] {
+    width: calc(100% - 300px);
   }
 
   .lg\:w-\[calc\(100\%-320px\)\] {
@@ -4857,6 +4955,10 @@ svg.final stop {
     display: none;
   }
 
+  .xl\:h-\[220px\] {
+    height: 220px;
+  }
+
   .xl\:h-\[80px\] {
     height: 80px;
   }
@@ -4875,6 +4977,10 @@ svg.final stop {
 
   .xl\:w-1\/2 {
     width: 50%;
+  }
+
+  .xl\:w-\[220px\] {
+    width: 220px;
   }
 
   .xl\:w-\[80px\] {
@@ -4954,6 +5060,11 @@ svg.final stop {
     padding-top: 11px;
   }
 
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .xl\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -5018,6 +5129,10 @@ svg.final stop {
 
   .\32xl\:max-w-\[626px\] {
     max-width: 626px;
+  }
+
+  .\32xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .\32xl\:p-12 {
