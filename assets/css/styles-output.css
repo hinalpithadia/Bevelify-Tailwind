@@ -1693,11 +1693,6 @@ svg.final stop {
   display: none;
 }
 
-.size-4 {
-  width: 1rem;
-  height: 1rem;
-}
-
 .h-1\.5 {
   height: 0.375rem;
 }
@@ -2649,6 +2644,11 @@ svg.final stop {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#0B0B0B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(11 11 11 / var(--tw-bg-opacity, 1));
@@ -2738,6 +2738,11 @@ svg.final stop {
   background-color: rgb(249 157 26 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#FF3030\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[rgba\(0\2c 0\2c 0\2c 0\.56\)\] {
   background-color: rgba(0,0,0,0.56);
 }
@@ -2782,16 +2787,6 @@ svg.final stop {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-\[\#000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#FF3030\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[linear-gradient\(136deg\2c rgba\(255\2c 255\2c 255\2c 0\.01\)0\%\2c rgba\(250\2c 157\2c 26\2c 0\.01\)93\.42\%\)\] {
@@ -4394,6 +4389,11 @@ svg.final stop {
   background-color: rgb(250 157 26 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#FF3030\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#bc730a\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(188 115 10 / var(--tw-bg-opacity, 1));
@@ -4415,11 +4415,6 @@ svg.final stop {
 
 .hover\:bg-white\/20:hover {
   background-color: rgb(255 255 255 / 0.2);
-}
-
-.hover\:bg-\[\#FF3030\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:from-\[\#7a633d\]:hover {
