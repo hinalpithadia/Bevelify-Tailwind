@@ -30,70 +30,10 @@
  <meta name="msapplication-TileColor" content="#ffffff">
  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
  <meta name="theme-color" content="#ffffff">    
- <style>
-    .toggle-container {
-      position: relative;
-      width: 342px;
-      height: 42px;
-      background-color: #121313;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      overflow: hidden;
-      margin: auto;
-    }
 
-    .toggle-slider {
-        position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 48%;
-    height: 35px;
-    background-color: #F99D1A;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    }
-
-    .toggle-container input {
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-      cursor: pointer;
-    }
-
-    .toggle-labels {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-      color: white;
-      font-weight: 400;
-      line-height: 16px;
-      z-index: 2;
-      pointer-events: none;
-      text-align: center;
-    }
-
-    .toggle-container input:checked ~ .toggle-slider {
-      transform: translateX(100%);
-    }
-    .toggle-labels span{
-        width: 50%;
-    }
- </style>
 </head>
 
 <body class="bg-black">
-
-    <!--SideBar-->
-
-
 
     <!--header-->
     <nav
@@ -386,7 +326,8 @@
             <div class="w-full max-w-[190px] pt-6">
                 <h4 class="text-2xl leading-[30px] font-semibold text-white mb-6">Settings</h4>
                 <ul class="flex flex-col gap-2.5">
-                    <li class="p-[9px] flex items-center gap-2 text-sm font-medium leading-[18px] text-[#B1B1B1]">
+                    <li class="p-[9px]  text-sm font-medium leading-[18px] text-[#B1B1B1]">
+                        <a href="Setting1.html" class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path
                                 d="M3.33594 13.3333V12.6667C3.33594 10.0893 5.42528 8 8.0026 8C10.5799 8 12.6693 10.0893 12.6693 12.6667V13.3333"
@@ -396,10 +337,11 @@
                                 stroke="#B1B1B1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         Profile
+                    </a>
                     </li>
                     <li class="bg-gradient-to-r from-[#F99D1A] via-[#f99d1a29] to-black p-px rounded-md">
-                        <div
-                            class="p-[9px] rounded-md flex items-center gap-2 text-sm font-medium text-[#F99D1A] leading-[18px] bg-gradient-to-r from-black/80 via-black to-black">
+                        <a
+                            href="Setting2.html" class="p-[9px] rounded-md flex items-center gap-2 text-sm font-medium text-[#F99D1A] leading-[18px] bg-gradient-to-r from-black/80 via-black to-black">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                 fill="none">
                                 <path
@@ -412,7 +354,7 @@
                                 <path d="M2 7.33337H14" stroke="#F99D1A" stroke-width="1.2" />
                             </svg>
                             Subscription
-                        </div>
+                        </a>
                     </li>
 
                 </ul>
@@ -992,8 +934,8 @@
                 <input id="pricingToggle" type="checkbox">
                 <div class="toggle-slider"></div>
                 <div class="toggle-labels">
-                  <span>Monthly</span>
-                  <span>Yearly</span>
+                  <span class="monthly">Monthly</span>
+                  <span class="yearly">Yearly</span>
                 </div>
               </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
