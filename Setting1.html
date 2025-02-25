@@ -324,7 +324,7 @@
                 <h4 class="text-2xl leading-[30px] font-semibold text-white mb-6">Settings</h4>
                 <ul class="flex flex-col gap-2.5">
                     <li class="bg-gradient-to-r from-[#F99D1A] via-[#f99d1a29] to-black p-px rounded-md">
-                        <div
+                        <a href="Setting1.html"
                             class="p-[9px] rounded-md flex items-center gap-2 text-sm font-medium text-[#F99D1A] leading-[18px] bg-gradient-to-r from-black/80 via-black to-black">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                 fill="none">
@@ -338,9 +338,10 @@
                                     stroke-linejoin="round" />
                             </svg>
                             Profile
-                        </div>
+                        </a>
                     </li>
-                    <li class="p-[9px] flex items-center gap-2 text-sm font-medium leading-[18px] text-[#B1B1B1]">
+                    <li class="p-[9px]  text-sm font-medium leading-[18px] text-[#B1B1B1]">
+                       <a href="Setting2.html" class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path
                                 d="M12.6667 14H3.33333C2.59695 14 2 13.4031 2 12.6667V3.33333C2 2.59695 2.59695 2 3.33333 2H12.6667C13.4031 2 14 2.59695 14 3.33333V12.6667C14 13.4031 13.4031 14 12.6667 14Z"
@@ -352,6 +353,7 @@
                             <path d="M2 7.33337H14" stroke="#B1B1B1" stroke-width="1.2" />
                         </svg>
                         Subscription
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -426,16 +428,9 @@
                         </div>
                         
                     </div>
-
-                    <div class="w-full h-px bg-[#161616]"></div>
-
-                    <div class="flex items-center gap-4">
-                        <div class="w-full">
-                            <p class="text-lg leading-6 font-semibold text-white mb-1.5">Delete Account</p>
-                            <p class="text-xs leading-4 text-[#B1B1B1]">Deleting your account will permanently erase all your assets and cannot be reversed.</p>
-                        </div>
-                        <button type="button" class="py-2 px-3.5 rounded-lg bg-[#A51919] text-white text-sm font-medium leading-[18px] whitespace-nowrap">Delete Account</button>
-                    </div>
+                    <button type="submit" class="w-max flex items-center justify-center gap-1.5 py-[9px] px-8 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]">
+                        Save
+                    </button>
                 </form>
             </div>
         </div>
