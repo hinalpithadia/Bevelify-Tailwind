@@ -371,6 +371,23 @@
   z-index: 1000;
   overflow: auto;
 }
+.modal-assets {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1000;
+  overflow: auto;
+}
 @media (max-width: 600px) {
   .modal-home {
     margin: 10px;
@@ -641,7 +658,7 @@ transition: 0.3s all ease-out;
     top: 0;
   }
 }
-.toggle-container {
+/* .toggle-container {
   position: relative;
   width: 342px;
   height: 42px;
@@ -653,8 +670,8 @@ transition: 0.3s all ease-out;
   cursor: pointer;
   overflow: hidden;
   margin: auto;
-}
-
+} */
+/* 
 .toggle-slider {
     position: absolute;
 top: 4px;
@@ -664,8 +681,8 @@ height: 35px;
 background-color: #F99D1A;
 border-radius: 8px;
 transition: transform 0.3s ease;
-}
-
+} */
+/* 
 .toggle-container input {
   opacity: 0;
   width: 100%;
@@ -673,9 +690,9 @@ transition: transform 0.3s ease;
   position: absolute;
   z-index: 1;
   cursor: pointer;
-}
+} */
 
-.toggle-labels {
+/* .toggle-labels {
   position: relative;
   width: 100%;
   display: flex;
@@ -688,7 +705,7 @@ transition: transform 0.3s ease;
   z-index: 2;
   pointer-events: none;
   text-align: center;
-}
+} */
 
 .toggle-container input:checked ~ .toggle-slider {
   transform: translateX(103%);
@@ -712,4 +729,40 @@ input:checked ~ .toggle-labels .monthly {
     input:not(:checked) ~ .toggle-labels .yearly {
         color: white;
     }
+    .tags-input-wrapper{
+      background: transparent;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap:8px;
+       }
+  .tags-input-wrapper input{
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 140px;
+      margin-left: 8px;
+      color: #F99D1A!important;
+  }
+  .tags-input-wrapper:last-child{
+    color: white;
+  }
+
+  .tags-input-wrapper .tag{
+    display: inline-block;
+    background-color: #121313;
+    color: #F99D1A;
+    border-radius: 8px;
+    padding: 6px 8px 6px 12px;
+    border: 1px solid #2C2C2C;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap:6px;
+  }
+  .tags-input-wrapper .tag a {
+      display: inline-block;
+      cursor: pointer;
+  }
 }

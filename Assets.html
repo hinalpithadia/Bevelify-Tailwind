@@ -306,13 +306,13 @@
 
     <!--Main Content Page-->
     <div class="w-full h-full pt-28 px-4 lg:px-[34px]">
-        <div class="flex flex-col sm:flex-row max-sm:gap-5 items-center justify-between mb-[34px]">
+        <div class="flex flex-col lg:flex-row max-lg:gap-5 lg:items-center justify-between mb-[34px]">
             <div class="block w-full">
                 <h4 class="text-2xl font-medium leading-[30px] text-white">My Assets</h4>
                 <p class="mt-2 text-sm leading-[18px] text-[#B1B1B1]">Access all your 3D creations in one convenient
                     place.</p>
             </div>
-            <div class="flex flex-col min-[500px]:flex-row items-center gap-6 justify-end w-full">
+            <div class="flex flex-col lg:flex-row lg:items-center gap-6 justify-end w-full">
                 <div class="relative w-full max-[500px]:w-full max-w-[460px]">
                     <svg class="absolute top-[11px] left-3.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                         viewBox="0 0 18 18" fill="none">
@@ -323,23 +323,20 @@
                             stroke-linejoin="round" />
                     </svg>
                     <input type="search" name="search" id="search" placeholder="What are you looking for?"
-                        class="w-full max-w-[460px] p-[9px] pl-11 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg pr-3.5 text-sm leading-[22px] text-white placeholder:text-[#B1B1B1]">
+                        class="w-full lg:max-w-[460px] max-w-max p-[9px] pl-11 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg pr-3.5 text-sm leading-[22px] text-white placeholder:text-[#B1B1B1]">
                 </div>
-                <div class="wrapper-dropdown dropdown-3 w-28 relative" id="dropdown">
+                <div class="wrapper-dropdown dropdown-3 relative" id="dropdown">
                     <button
-                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium p-3.5 pr-2.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-500 hover:bg-[#262626] ">
-                        <div class="flex items-center justify-between w-[calc(100%-100px)] gap-4">
-                           
+                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium py-3 px-3.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-500 hover:bg-[#262626] ">
                             <span id="destination"
                                 class="selected-display text-sm leading-[18px] font-medium text-[#F99D1A]">Generation
                             </span>
-                        </div>
-                        <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                     </button>
                     <div
-                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-12 transition-all duration-300 w-full p-1">
+                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-10 transition-all duration-300 w-full p-1">
                         <ul class=" w-full block">
                             <li>
                                 <div
@@ -381,25 +378,64 @@
     
                     </div>
                 </div>
-                <button type="button"
-                    class="py-[9px] pr-3.5 max-[500px]:w-full pl-5 border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg flex justify-center items-center gap-1.5 text-sm font-medium leading-[22px] text-[#F99D1A] transition-all duration-500 hover:bg-[#262626]">Generation
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <button type="button"
-                    class="py-[9px] pr-3.5 max-[500px]:w-full pl-5 whitespace-nowrap border border-[#2C2B2A] bg-[#0C0C0C] rounded-lg flex justify-center items-center gap-1.5 text-sm font-medium leading-[22px] text-[#F99D1A] transition-all duration-500 hover:bg-[#262626]">All
-                    Time
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
+               
+                <div class="wrapper-dropdown dropdown-3 relative" id="dropdown">
+                    <button
+                        class="dropbtn-rel w-full flex items-center justify-between gap-1.5  font-medium py-3 px-3.5 border border-[#2C2B2A] rounded-xl bg-[#0C0C0C] text-sm leading-[18px] text-white transition-all duration-500 hover:bg-[#262626] ">
+                            <span id="destination"
+                                class="selected-display text-sm leading-[18px] font-medium text-[#F99D1A]">All Time
+                            </span>
+                            <svg class="arrow-svg transition-all duration-300 -rotate-0 pointer-events-none flex-shrink-0" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5039 6.75265L9.00372 11.2528L4.50089 6.75" stroke="#F99D1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                    </button>
+                    <div
+                        class="dropdown invisible z-10 opacity-0 mt-4 rounded-lg bg-[#0C0C0C] border border-[rgba(153,153,153,0.20)] absolute top-10 transition-all duration-300 w-full p-1">
+                        <ul class=" w-full block">
+                            <li>
+                                <div
+                                    class="flex items-center  rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] text-white cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">Popular</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class=" text-sm leading-[18px] font-medium">New</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Top</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Featured</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Following</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div
+                                    class="flex items-center text-white rounded-md py-2.5 px-3.5 transition-all duration-300 hover:bg-[rgba(249,157,26,0.10)] hover:text-[#F99D1A] cursor-pointer">
+                                    <h4 class="text-sm leading-[18px] font-medium">Trending</h4>
+                                </div>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-start justify-start gap-[38px] relative">
+        <div class="flex flex-col-reverse lg:flex-row items-start justify-start gap-[38px] relative">
             <div class="w-full lg:w-[calc(100%-512px)] 2xl:w-[calc(100%-658px)]">
                 <div class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 w-full gap-6">
                     <div class="flex flex-col gap-3.5 group w-full ">
@@ -524,7 +560,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" w-full max-w-[480px] 2xl:max-w-[626px] bg-[#0C0C0C] p-1 h-auto  rounded-xl sticky top-24">
+            <div class=" w-full lg:max-w-[480px] 2xl:max-w-[626px] bg-[#0C0C0C] p-1 h-auto  rounded-xl lg:sticky top-24">
                 <div class="relative bg-black rounded-[14px] h-[505px] w-full flex items-center justify-center">
                     <img src="assets/images/assets-1-big.png" alt="">
                     <div class="absolute top-2.5 left-2.5 flex flex-col gap-4">
@@ -981,7 +1017,7 @@
                     </div>
                 </div>
                 <div class="px-5 py-6 flex flex-col gap-6">
-                    <div class="flex items-center gap-6 divide-x divide-[#161616]">
+                    <div class="flex lg:flex-row flex-col items-center gap-6 divide-x divide-[#161616]">
                         <div class="w-full flex flex-col gap-3 pr-3">
                             <div class="flex items-center justify-between">
                                 <p class="text-base leading-5 font-medium text-[#B1B1B1]">Prompt</p>
@@ -1005,7 +1041,7 @@
                                 style,
                                 HDR, highest quality, ultra detailed.</p>
                         </div>
-                        <div class="w-full pl-6 max-w-[217px] ">
+                        <div class="w-full lg:pl-6 lg:max-w-[217px] ">
                             <div class="flex items-center justify-between mb-6">
                                 <p class="text-base leading-5 font-medium text-[#B1B1B1] text-right">Date</p>
                                 <p class="text-base text-white text-right">01 Jan 2025</p>
@@ -1034,7 +1070,7 @@
                                     Remix
                                 </button>
                                 <button
-                                    class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]">
+                                    class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]" data-modal-target="assets-modal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                         fill="none">
                                         <path
@@ -1056,14 +1092,76 @@
             </div>
         </div>
     </div>
-
-
+    <div class="modalTrigger modal-assets bg-[#0C0C0C] border border-white/20 max-h-max rounded-3xl p-1.5" id="assets-modal">
+        <span
+          class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-[#F99D1A] absolute top-4 right-4 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path
+              d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+              stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+    
+        </span>
+        <div class="w-full flex justify-between items-center">
+            <div class="w-1/2 bg-black rounded-2xl h-full min-h-[700px] flex justify-center items-center">
+                <img src="assets/images/assets-1-big.png" alt="image"/>
+            </div>
+            <div class="w-1/2 p-5">
+                <h4 class="mb-7 text-xl text-white font-medium leading-6">Publish to Bevelify</h4>
+                <form action="#" class="w-full">
+                    <div class="relative mb-4">
+                        <label class="block mb-2.5 text-white text-base leading-[20px] font-medium">Title
+                        </label>
+                        <input type="text"
+                          class="block w-full px-4 py-2 text-sm leading-[26px] font-normal text-white bg-black border border-[#2C2C2C] rounded-lg placeholder-[#b1b1b1] outline-none hover:border-white/20 focus:border-[#F99D1A] transition-all duration-200"
+                          placeholder="Describe your desired style of the object" required="">
+                      </div>
+                      <div class="relative mb-4">
+                        <label class="block mb-2.5 text-white text-base leading-[20px] font-medium">Description
+                        </label>
+                        <textarea class="h-[144px] block w-full px-4 py-2 text-sm leading-[26px] font-normal text-white bg-black border border-[#2C2C2C] rounded-lg placeholder-[#b1b1b1] outline-none hover:border-white/20 focus:border-[#F99D1A] transition-all duration-200" placeholder="Describe your desired style of the object, e.g... ancient style, HDR, highest..."></textarea>
+                      </div>
+                      <div class="relative mb-4">
+                        <label class="block mb-2.5 text-white text-base leading-[20px] font-medium">Tag
+                        </label>
+                        <div class="tag-container flex items-center flex-wrap min-h-[50px] px-2 py-2 bg-black border border-[#2C2C2C] rounded-lg hover:border-white/20 focus:border-[#F99D1A] transition-all duration-200" id="tagContainer">
+                            <input type="text" id="tag-input1">
+                        </div>
+                      </div>
+                      <div class="relative mb-8">
+                        <label class="block mb-2.5 text-white text-base leading-[20px] font-medium">Categories
+                        </label>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Animals</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Architecture</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Art & Abstract</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Characters</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Culture & History</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Electronics</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Fashion & Style</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Food & Drink</span>
+                            <span class="py-2 px-3 bg-black border border-[#2C2C2C] rounded-lg text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#121313]">Furniture & Home</span>
+                        </div>
+                      </div>
+                      <button class="w-full flex items-center justify-center gap-1.5 py-[9px] px-5 bg-[#F99D1A] text-sm leading-[22px] font-medium text-black rounded-lg transition-all duration-500 hover:bg-[#E18E17]" data-modal-target="assets-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.75 6L9 2.25L5.25 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9 2.25V11.25" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        Publish to Bevelify
+                    </button>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="overlay-modal w-full h-screen z-[500] bg-black/80 fixed top-0 left-0 opacity-0 invisible"></div>
 
     <!-- MAIN JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/main.js"></script>
-
+      <script src="assets/js/taginput.js"></script>
     <script src="assets/js/tooltip.js"></script>
 </body>
 

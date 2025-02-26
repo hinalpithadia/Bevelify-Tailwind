@@ -105,15 +105,14 @@
           </div>
         </div>
         <div class="flex flex-col gap-14">
-            <label class="relative flex justify-center cursor-pointer items-center">
-                <input type="checkbox" value=""  checked class="peer sr-only" />
-                <div
-                  class="relative peer flex items-center gap-4  bg-[#121313] after:absolute after:left-1 after: after:h-[80%] after:w-1/2 after:rounded-lg after:bg-[#F99D1A] after:transition-all after:content-['']  peer-checked:after:translate-x-[95%] peer-focus:outline-none  text-white  rounded-xl p-1 lg:w-[342px] w-full mx-auto"
-                >
-                  <span class="relative z-10 w-1/2 flex justify-center block py-2 px-2.5 font-medium text-white   text-center ">Monthly</span>
-                  <span class="relative z-10 w-1/2 flex justify-center block py-2 px-2.5 font-medium text-white   text-center ">Yearly</span>
-                </div>
-              </label>
+          <div class="toggle-container w-full max-w-[342px] h-[42px] bg-[#121313] relative rounded-lg inline-flex items-center justify-center cursor-pointer overflow-hidden m-auto">
+            <input id="pricingToggle" type="checkbox" class="opacity-0 w-full h-full absolute cursor-pointer">
+            <div class="toggle-slider absolute top-[4px] left-[4px] width-[48%] h-[35px] bg-[#F99D1A] rounded-md transition-all duration-500"></div>
+            <div class="toggle-labels relative w-full flex justify-between items-center text-sm text-white font-normal z-30 pointer-events-none text-center">
+              <span class="monthly">Monthly</span>
+              <span class="yearly">Yearly</span>
+            </div>
+          </div>
               <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
                 <div class="bg-gradient-to-b from-[rgba(255,255,255,0.14)] to-white/0 p-px  rounded-2xl">
                     <div class="bg-black rounded-2xl h-full">
