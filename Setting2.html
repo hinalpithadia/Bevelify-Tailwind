@@ -921,12 +921,12 @@
         </div>
         <div class="flex flex-col gap-14">
             
-            <div class="toggle-container">
-                <input id="pricingToggle" type="checkbox">
-                <div class="toggle-slider"></div>
-                <div class="toggle-labels">
-                  <span class="monthly">Monthly</span>
-                  <span class="yearly">Yearly</span>
+            <div class="toggle-container w-full max-w-[342px] h-[42px] bg-[#121313] relative rounded-lg inline-flex items-center justify-center cursor-pointer overflow-hidden m-auto">
+                <input id="pricingToggle" type="checkbox" class="opacity-0 w-full h-full absolute cursor-pointer">
+                <div class="toggle-slider absolute z-30 top-[4px] left-[4px] w-[48%] h-[35px] bg-[#F99D1A] rounded-md transition-all duration-500"></div>
+                <div class="toggle-labels relative w-full flex justify-between items-center text-sm text-white font-normal z-30 pointer-events-none text-center">
+                  <span class="monthly w-1/2">Monthly</span>
+                  <span class="yearly w-1/2">Yearly</span>
                 </div>
               </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">

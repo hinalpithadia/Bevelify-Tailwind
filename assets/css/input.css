@@ -658,62 +658,11 @@ transition: 0.3s all ease-out;
     top: 0;
   }
 }
-/* .toggle-container {
-  position: relative;
-  width: 342px;
-  height: 42px;
-  background-color: #121313;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  overflow: hidden;
-  margin: auto;
-} */
-/* 
-.toggle-slider {
-    position: absolute;
-top: 4px;
-left: 4px;
-width: 48%;
-height: 35px;
-background-color: #F99D1A;
-border-radius: 8px;
-transition: transform 0.3s ease;
-} */
-/* 
-.toggle-container input {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-} */
-
-/* .toggle-labels {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  color: white;
-  font-weight: 400;
-  line-height: 16px;
-  z-index: 2;
-  pointer-events: none;
-  text-align: center;
-} */
 
 .toggle-container input:checked ~ .toggle-slider {
   transform: translateX(103%);
 }
 
-.toggle-labels span{
-    width: 50%;
-}
 input:checked ~ .toggle-labels .monthly {
         color: white;
     }
