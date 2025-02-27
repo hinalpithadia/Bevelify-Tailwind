@@ -2156,10 +2156,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 360px;
 }
 
-.max-w-\[392px\] {
-  max-width: 392px;
-}
-
 .max-w-\[460px\] {
   max-width: 460px;
 }
@@ -3715,6 +3711,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -3751,11 +3752,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -3940,6 +3936,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-transparent {
@@ -4849,10 +4850,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     margin-top: 0px;
   }
 
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
   .lg\:flex {
     display: flex;
   }
@@ -4893,6 +4890,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
     max-width: 370px;
   }
 
+  .lg\:max-w-\[392px\] {
+    max-width: 392px;
+  }
+
   .lg\:max-w-\[460px\] {
     max-width: 460px;
   }
@@ -4907,10 +4908,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
   .lg\:max-w-xs {
     max-width: 20rem;
-  }
-
-  .lg\:max-w-\[392px\] {
-    max-width: 392px;
   }
 
   .lg\:grid-cols-12 {
@@ -4986,10 +4983,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     padding: 0px;
   }
 
-  .lg\:p-2 {
-    padding: 0.5rem;
-  }
-
   .lg\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -5027,17 +5020,8 @@ input:not(:checked) ~ .toggle-labels .yearly {
     padding-left: 1.5rem;
   }
 
-  .lg\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
   .lg\:text-left {
     text-align: left;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   @media (min-width: 1024px) {
@@ -5045,6 +5029,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
       font-size: 3rem;
       line-height: 1;
     }
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .lg\:text-xl {
