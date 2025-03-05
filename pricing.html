@@ -35,7 +35,7 @@
 
   <body class="bg-black">
     <!--navbar-->
-    <nav class="navbar bg-black fixed top-0 w-full z-30">
+    <nav class="navbar bg-black fixed top-0 w-full z-50">
       <div class="lg:px-3 px-0 py-2.5">
           <div class="w-full flex  flex-col lg:flex-row">
               <div class="px-3 xl:px-0 flex justify-between items-center lg:flex-row">
@@ -105,7 +105,8 @@
           </div>
         </div>
         <div class="flex flex-col gap-14">
-          <div class="toggle-container w-full max-w-[342px] h-[42px] bg-[#121313] relative rounded-lg inline-flex items-center justify-center cursor-pointer overflow-hidden m-auto">
+          <div class="toggle-container w-full max-w-[342px] h-[42px] bg-[#121313] relative rounded-lg inline-flex items-center justify-center cursor-pointer overflow-hidden m-auto overflow-visible">
+            <div class="absolute py-1 px-1.5 text-xs text-black bg-[#F99D1A] -top-6 rounded-t-lg right-16 font-medium">20% off</div>
             <input id="pricingToggle" type="checkbox" class="opacity-0 w-full h-full absolute cursor-pointer">
             <div class="toggle-slider absolute z-30 top-[4px] left-[4px] w-[48%] h-[35px] bg-[#F99D1A] rounded-md transition-all duration-500"></div>
             <div class="toggle-labels relative w-full flex justify-between items-center text-sm text-white font-normal z-30 pointer-events-none text-center">
@@ -113,47 +114,47 @@
               <span class="yearly w-1/2">Yearly</span>
             </div>
           </div>
-              <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
+              <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
                 <div class="bg-gradient-to-b from-[rgba(255,255,255,0.14)] to-white/0 p-px  rounded-2xl">
                     <div class="bg-black rounded-2xl h-full">
                         <div class="p-5 bg-gradient-to-b from-white/5 to-white/0 rounded-2xl">
-                            <div class="border-b border-[#2C2B2A] pb-8 flex flex-col gap-4">
+                            <div class="pb-8 flex flex-col gap-4">
                                 <div class="flex flex-col gap-1.5">
                                     <h4 class="text-xl font-semibold text-white">Free</h4>
-                                    <span class="text-sm font-medium leading-4 text-[#B1B1B1]">No credit card needed</span>
                                 </div>
                                 <h3 class="font-medium text-white text-3xl">$0</h3>
                             </div>
+                            <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Get Started</button>
                             <ul class="flex flex-col gap-4 py-6">
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        200 credits per month                                        
+                                       <span class="text-[#F99D1A]"> 100 </span> credits per month                                      
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        1 task waiting in queue                                      
+                                        <span class="text-[#F99D1A]"> 01 </span>task waiting in queue         
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Limited queue priority                                
+                                        <span class="text-[#F99D1A]">Lowest</span> queue priority                                
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        API access                                     
+                                        Assets are under CC BY 4.0 license                                    
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Polycount Options: 10K/30K                                      
+                                        Low, Medium, High Polycount                             
                                 </li>
                             </ul>
                         </div>
@@ -165,69 +166,64 @@
                             <div class="pb-8 flex flex-col gap-4">
                                 <div class="flex flex-col gap-1.5">
                                     <h4 class="text-xl font-semibold text-transparent bg-clip-text bg-[linear-gradient(263deg,#DC8F51_13.95%,#FFDBBD_46.91%,#DC8F51_76.61%)]">Bronze</h4>
-                                    <span class="text-sm font-medium leading-4 text-[#B1B1B1]">$1.60/100 credits . $192.00/ year</span>
+                                   
                                 </div>
-                                <h3 class="font-medium text-white text-3xl flex items-end gap-2">$16 <span class="text-base font-medium leading-4 text-white pb-1 block">Per month</span></h3>
+                                <h3 class="font-medium text-white text-3xl flex items-end gap-2">$16 <span class="text-base font-medium leading-4 text-white pb-1 block">month</span></h3>
                             </div>
-                            <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md">Subscribe Now</button>
+                            <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Now</button>
                             <ul class="flex flex-col gap-4 py-6">
                                 <li class="flex items-center gap-1.5 text-sm font-normal text-[#B1B1B1] leading-6">
-                                    Best for individual creators                                        
+                                  Best for individual creators                               
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        1,000 credits per month                                        
+                                        <span class="text-[#F99D1A]">1,000</span> credits per month  (-50 model)                                       
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        10 tasks waiting in queue                                   
+                                        <span class="text-[#F99D1A]">10</span> tasks waiting in queue                                  
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Standard priority                               
+                                        <span class="text-[#F99D1A]">Normal</span> priority                              
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Assets are private & customer owned                                    
+                                        Assets are private & customer owned                                
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        API access                                    
+                                        Low, Medium, High Polycount                                  
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        4 free retries for image to 3D                                    
+                                        Low, Normal, HD, FHD Texture Size                                   
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Polycount options: 3K/20K/30K/100K                              
+                                        Polycount options: 3K/20K/30K/100K                             
                                 </li>
                                 <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        AI texture editing                             
+                                        Cancel Anytime                            
                                 </li>
-                                <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        Download community models                        
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -238,69 +234,64 @@
                           <div class="pb-8 flex flex-col gap-4">
                               <div class="flex flex-col gap-1.5">
                                   <h4 class="text-xl font-semibold text-xl font-semibold text-transparent bg-clip-text bg-[linear-gradient(263deg,#AEBCBB_13.95%,#FFF_46.91%,#AEBCBB_76.61%)]">Silver</h4>
-                                  <span class="text-sm font-medium leading-4 text-[#B1B1B1]">$1.20/100 credits . $576.00/year</span>
+                                 
                               </div>
-                              <h3 class="font-medium text-white text-3xl flex items-end gap-2">$48 <span class="text-base font-medium leading-4 text-white pb-1 block">Per month</span></h3>
+                              <h3 class="font-medium text-white text-3xl flex items-end gap-2">$48 <span class="text-base font-medium leading-4 text-white pb-1 block">month</span></h3>
                           </div>
-                          <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md">Subscribe Now</button>
+                          <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Now</button>
                           <ul class="flex flex-col gap-4 py-6">
-                            <li class="flex items-center gap-1.5 text-xs font-normal text-[#B1B1B1] leading-5">
-                              Best for individual creators                                      
+                            <li class="flex items-center gap-1.5 text-sm font-normal text-[#B1B1B1] leading-5">
+                              Best for Small Studio                                 
                             </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
-                                      1,000 credits per month                                       
+                                     <span class="text-[#F99D1A]"> 4,000 </span>credits per month (-200 model)                                     
                               </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
-                                      10 tasks waiting in queue                                     
+                                      <span class="text-[#F99D1A]"> 20 </span>tasks waiting in queue    
                               </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
-                                      Standard priority                              
+                                      <span class="text-[#F99D1A]"> High </span> Priority                              
                               </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
-                                      Assets are private & customer owned                                 
+                                      Assets are private & customer owned                             
                               </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
-                                      API access                                     
+                                      Low, Medium, High Polycount                                    
                               </li>
                               <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    4 free retries for image to 3D                                     
+                                    Low, Normal, HD, FHD Texture Size                                     
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
-                                  Polycount options: 3K/20K/30K/100K                              
+                                  Polycount options: 3K/20K/30K/100K                        
                           </li>
                           <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                AI texture editing                           
+                                Cancel Anytime                          
                         </li>
-                        <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                              Download community models                         
-                      </li>
+                       
                           </ul>
                       </div>
                   </div>
@@ -311,74 +302,214 @@
                         <div class="pb-8 flex flex-col gap-4">
                             <div class="flex flex-col gap-1.5">
                                 <h4 class="text-xl font-semibold text-transparent bg-clip-text bg-[linear-gradient(263deg,#DC8F51_13.95%,#FFDBBD_46.91%,#DC8F51_76.61%)]">Gold</h4>
-                                <span class="text-sm font-medium leading-4 text-[#B1B1B1]">$1,152.00/year</span>
+                               
                             </div>
-                            <h3 class="font-medium text-white text-3xl flex items-end gap-2">$96<span class="text-base font-medium leading-4 text-white pb-1 block">Per month</span></h3>
+                            <h3 class="font-medium text-white text-3xl flex items-end gap-2">$96<span class="text-base font-medium leading-4 text-white pb-1 block">month</span></h3>
                         </div>
-                        <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md">Subscribe Now</button>
+                        <button class="py-2 px-3 bg-[#F99D1A] w-full text-black text-xs font-medium leading-4 rounded-md transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Now</button>
                         <ul class="flex flex-col gap-4 py-6">
                             <li class="flex items-center gap-1.5 text-sm font-normal text-[#B1B1B1] leading-6">
-                                Best for individual creators                                        
+                              Best for Large Company                                   
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    1,000 credits per month                                        
+                                    <span class="text-[#F99D1A]">10,000</span> credits per month (-500 model)                                       
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    10 tasks waiting in queue                                   
+                                    <span class="text-[#F99D1A]">Unlimited</span>  tasks waiting in queue
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    Standard priority                               
+                                    <span class="text-[#F99D1A]">Top In Queue</span>   Priority                              
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    Assets are private & customer owned                                    
+                                    Assets are private & customer owned                                 
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    API access                                    
+                                    Low, Medium, High Polycount                                   
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    4 free retries for image to 3D                                    
+                                    Low, Normal, HD, FHD Texture Size                             
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    Polycount options: 3K/20K/30K/100K                              
+                                    Polycount options: 3K/20K/30K/100K                           
                             </li>
                             <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    AI texture editing                             
+                                    Cancel Anytime                            
                             </li>
-                            <li class="flex items-center gap-1.5 text-xs font-normal text-white leading-5">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.5 6.5L4.5 8.5L9.5 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    Download community models                        
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
             </div>
               </div>
+        </div>
+      </div>
+    </div>
+    <div class="block relative py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class=" mb-20">
+          <h4 class="text-xl text-white font-medium text-center">Or buy additional credits (available to subscribers only).</h4>
+        </div>
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
+          <div class="border border-white/10 rounded-b-xl p-5 pt-10 relative bg-[radial-gradient(50%_100%_at_50%_0%,_rgba(249,_157,_26,_0.12)_0%,_rgba(249,_157,_26,_0)_100%)] after:content-['']  after:w-full after:absolute after:top-0 after:left-0 after:bg-[rgba(249,157,26,0.5)] after:h-[1px]">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-2.5 items-center">
+                <h4 class="text-[32px] leading-8 font-semibold text-[#F99D1A]">$6</h4>
+                <div class="flex items-center gap-1.5"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8.02321L8 0.142822V8.02321H16Z" fill="url(#paint0_linear_14206_1011)"/>
+                  <path d="M0 8.02344L7.99996 15.9038V8.02344H0Z" fill="url(#paint1_linear_14206_1011)"/>
+                  <path d="M7.99996 0.142822L0 8.02321H7.99996V0.142822Z" fill="url(#paint2_linear_14206_1011)"/>
+                  <path d="M8 8.02344V15.9038L16 8.02344H8Z" fill="url(#paint3_linear_14206_1011)"/>
+                  <path opacity="0.25" d="M7.98438 1.14404V2.01548L14.6196 7.92576L7.98438 1.14404Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M7.78585 2.87793L7.70116 7.68958L3 7.78417L7.31563 7.22795L7.78585 2.87793Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M5.92188 8.2251H7.74305L7.77834 14.8099L7.48188 8.54494L5.92188 8.2251Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M0.445312 7.78427C0.445312 7.78427 5.52981 4.02361 6.55224 2.02677L6.60059 1.93237L0.445312 7.78427Z" fill="#FDFFD2"/>
+                  <path d="M8.00001 9.83139C8.07091 9.27433 8.1035 8.7173 8.12882 8.16024C8.46865 8.17033 8.80847 8.1783 9.14824 8.1791C9.531 8.18212 9.91372 8.17778 10.2965 8.1692C10.6792 8.16033 11.0619 8.14543 11.4447 8.12275C11.8275 8.1004 12.2102 8.07022 12.5929 8.02354C12.2102 7.97686 11.8275 7.94673 11.4447 7.92433C11.062 7.9016 10.6792 7.8867 10.2965 7.87789C9.91372 7.86926 9.531 7.86492 9.14824 7.86798C8.81857 7.86873 8.48895 7.87638 8.15927 7.88604C8.15631 6.61847 8.14941 5.35094 8.12486 4.08337C8.11408 3.42667 8.09713 2.76997 8.07842 2.11331C8.05377 1.50456 8.03721 0.895771 8.00623 0.287023C8.28526 0.546271 8.56414 0.805616 8.84782 1.06029C9.15686 1.33991 9.46394 1.6215 9.77882 1.89542C9.50075 1.58524 9.21488 1.28276 8.93101 0.978337C8.64825 0.672784 8.36037 0.372326 8.07253 0.0717716L8.00379 0L7.92749 0.0717716L6.90448 1.03416L5.89162 2.00651C5.22083 2.65916 4.55244 3.31412 3.89079 3.97577C2.56683 5.29837 1.26135 6.63922 4.67471e-05 8.02354C1.40538 6.78106 2.76659 5.49514 4.10927 4.19098C4.78092 3.53918 5.44587 2.88078 6.10842 2.22007L7.09553 1.22236L7.58097 0.721636C7.72405 0.574047 7.97531 0.679996 7.96727 0.883886C7.95113 1.29369 7.93816 1.70346 7.92155 2.11331C7.90284 2.77001 7.88594 3.42672 7.87512 4.08337C7.85368 5.18959 7.86267 6.29585 7.8644 7.40206C7.86483 7.67154 7.64257 7.89052 7.369 7.89019C6.246 7.88873 5.12299 7.87991 3.99998 7.90108C3.33331 7.91165 2.66664 7.92834 2.00001 7.94677C1.33334 7.97276 0.666671 7.98808 0 8.02359C0.666671 8.05909 1.33334 8.07442 2.00001 8.1004C2.66669 8.11884 3.33336 8.13553 3.99998 8.14609C5.29067 8.17042 6.58141 8.17721 7.87211 8.18051C7.89738 8.73075 7.92998 9.28107 8.00001 9.83139Z" fill="white"/>
+                  <path d="M13.9629 9.96021C13.2894 10.6102 12.6134 11.2577 11.9465 11.9141L9.94084 13.8786L8.00708 15.7971C8.06155 15.1888 8.07452 14.1365 8.07663 13.586C8.07405 13.0019 8.05959 12.4178 7.99669 11.8338C7.93379 12.4179 7.91933 13.0019 7.91675 13.586C7.91847 14.0306 7.92728 14.8026 7.95926 15.4036C7.96663 15.5421 7.79713 15.6168 7.69646 15.5199L6.24469 14.1227C5.64288 13.5466 5.0382 12.9734 4.42969 12.404C5.01019 13.0012 5.59448 13.5945 6.18169 14.185L7.9481 15.9519L7.99621 16L8.04547 15.9518L10.0526 13.9887L12.0469 12.013C12.7133 11.356 13.3707 10.6902 14.0305 10.0268C14.6913 9.36428 15.3448 8.69462 15.9968 8.02344C15.3153 8.66562 14.6355 9.30935 13.9629 9.96021Z" fill="white"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_14206_1011" x1="7.09999" y1="3.41241" x2="15.0423" y2="9.51111" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB752"/>
+                  <stop offset="0.2162" stop-color="#FFAD39"/>
+                  <stop offset="0.2473" stop-color="#F99D1A"/>
+                  <stop offset="0.5453" stop-color="#D38413"/>
+                  <stop offset="0.7807" stop-color="#C47A11"/>
+                  <stop offset="0.9229" stop-color="#AC6C0F"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_14206_1011" x1="2.06116" y1="13.8734" x2="7.77413" y2="8.07373" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFBE73"/>
+                  <stop offset="0.4077" stop-color="#F99D1A"/>
+                  <stop offset="1" stop-color="#C77C11"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_14206_1011" x1="3.99998" y1="4.08301" x2="7.93972" y2="8.08254" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB750"/>
+                  <stop offset="0.9804" stop-color="#F99D1A"/>
+                  </linearGradient>
+                  <linearGradient id="paint3_linear_14206_1011" x1="8" y1="11.9636" x2="16" y2="11.9636" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F99D1A"/>
+                  <stop offset="0.3939" stop-color="#E89219"/>
+                  <stop offset="0.9804" stop-color="#BF7815"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+                  <span class="text-xl text-white font-medium">300 Credits</span></div>
+              </div>
+              <button class="py-2.5 px-3 bg-[#F99D1A] w-full text-black text-sm font-medium leading-4 rounded-md h-10 transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Credits Now</button>
+            </div>
+          </div>
+          <div class="border border-white/10 rounded-b-xl p-5 pt-10 relative bg-[radial-gradient(50%_100%_at_50%_0%,_rgba(249,_157,_26,_0.12)_0%,_rgba(249,_157,_26,_0)_100%)] after:content-['']  after:w-full after:absolute after:top-0 after:left-0 after:bg-[rgba(249,157,26,0.5)] after:h-[1px]">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-2.5 items-center">
+                <h4 class="text-[32px] leading-8 font-semibold text-[#F99D1A]">$18</h4>
+                <div class="flex items-center gap-1.5"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8.02321L8 0.142822V8.02321H16Z" fill="url(#paint0_linear_14206_1011)"/>
+                  <path d="M0 8.02344L7.99996 15.9038V8.02344H0Z" fill="url(#paint1_linear_14206_1011)"/>
+                  <path d="M7.99996 0.142822L0 8.02321H7.99996V0.142822Z" fill="url(#paint2_linear_14206_1011)"/>
+                  <path d="M8 8.02344V15.9038L16 8.02344H8Z" fill="url(#paint3_linear_14206_1011)"/>
+                  <path opacity="0.25" d="M7.98438 1.14404V2.01548L14.6196 7.92576L7.98438 1.14404Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M7.78585 2.87793L7.70116 7.68958L3 7.78417L7.31563 7.22795L7.78585 2.87793Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M5.92188 8.2251H7.74305L7.77834 14.8099L7.48188 8.54494L5.92188 8.2251Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M0.445312 7.78427C0.445312 7.78427 5.52981 4.02361 6.55224 2.02677L6.60059 1.93237L0.445312 7.78427Z" fill="#FDFFD2"/>
+                  <path d="M8.00001 9.83139C8.07091 9.27433 8.1035 8.7173 8.12882 8.16024C8.46865 8.17033 8.80847 8.1783 9.14824 8.1791C9.531 8.18212 9.91372 8.17778 10.2965 8.1692C10.6792 8.16033 11.0619 8.14543 11.4447 8.12275C11.8275 8.1004 12.2102 8.07022 12.5929 8.02354C12.2102 7.97686 11.8275 7.94673 11.4447 7.92433C11.062 7.9016 10.6792 7.8867 10.2965 7.87789C9.91372 7.86926 9.531 7.86492 9.14824 7.86798C8.81857 7.86873 8.48895 7.87638 8.15927 7.88604C8.15631 6.61847 8.14941 5.35094 8.12486 4.08337C8.11408 3.42667 8.09713 2.76997 8.07842 2.11331C8.05377 1.50456 8.03721 0.895771 8.00623 0.287023C8.28526 0.546271 8.56414 0.805616 8.84782 1.06029C9.15686 1.33991 9.46394 1.6215 9.77882 1.89542C9.50075 1.58524 9.21488 1.28276 8.93101 0.978337C8.64825 0.672784 8.36037 0.372326 8.07253 0.0717716L8.00379 0L7.92749 0.0717716L6.90448 1.03416L5.89162 2.00651C5.22083 2.65916 4.55244 3.31412 3.89079 3.97577C2.56683 5.29837 1.26135 6.63922 4.67471e-05 8.02354C1.40538 6.78106 2.76659 5.49514 4.10927 4.19098C4.78092 3.53918 5.44587 2.88078 6.10842 2.22007L7.09553 1.22236L7.58097 0.721636C7.72405 0.574047 7.97531 0.679996 7.96727 0.883886C7.95113 1.29369 7.93816 1.70346 7.92155 2.11331C7.90284 2.77001 7.88594 3.42672 7.87512 4.08337C7.85368 5.18959 7.86267 6.29585 7.8644 7.40206C7.86483 7.67154 7.64257 7.89052 7.369 7.89019C6.246 7.88873 5.12299 7.87991 3.99998 7.90108C3.33331 7.91165 2.66664 7.92834 2.00001 7.94677C1.33334 7.97276 0.666671 7.98808 0 8.02359C0.666671 8.05909 1.33334 8.07442 2.00001 8.1004C2.66669 8.11884 3.33336 8.13553 3.99998 8.14609C5.29067 8.17042 6.58141 8.17721 7.87211 8.18051C7.89738 8.73075 7.92998 9.28107 8.00001 9.83139Z" fill="white"/>
+                  <path d="M13.9629 9.96021C13.2894 10.6102 12.6134 11.2577 11.9465 11.9141L9.94084 13.8786L8.00708 15.7971C8.06155 15.1888 8.07452 14.1365 8.07663 13.586C8.07405 13.0019 8.05959 12.4178 7.99669 11.8338C7.93379 12.4179 7.91933 13.0019 7.91675 13.586C7.91847 14.0306 7.92728 14.8026 7.95926 15.4036C7.96663 15.5421 7.79713 15.6168 7.69646 15.5199L6.24469 14.1227C5.64288 13.5466 5.0382 12.9734 4.42969 12.404C5.01019 13.0012 5.59448 13.5945 6.18169 14.185L7.9481 15.9519L7.99621 16L8.04547 15.9518L10.0526 13.9887L12.0469 12.013C12.7133 11.356 13.3707 10.6902 14.0305 10.0268C14.6913 9.36428 15.3448 8.69462 15.9968 8.02344C15.3153 8.66562 14.6355 9.30935 13.9629 9.96021Z" fill="white"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_14206_1011" x1="7.09999" y1="3.41241" x2="15.0423" y2="9.51111" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB752"/>
+                  <stop offset="0.2162" stop-color="#FFAD39"/>
+                  <stop offset="0.2473" stop-color="#F99D1A"/>
+                  <stop offset="0.5453" stop-color="#D38413"/>
+                  <stop offset="0.7807" stop-color="#C47A11"/>
+                  <stop offset="0.9229" stop-color="#AC6C0F"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_14206_1011" x1="2.06116" y1="13.8734" x2="7.77413" y2="8.07373" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFBE73"/>
+                  <stop offset="0.4077" stop-color="#F99D1A"/>
+                  <stop offset="1" stop-color="#C77C11"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_14206_1011" x1="3.99998" y1="4.08301" x2="7.93972" y2="8.08254" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB750"/>
+                  <stop offset="0.9804" stop-color="#F99D1A"/>
+                  </linearGradient>
+                  <linearGradient id="paint3_linear_14206_1011" x1="8" y1="11.9636" x2="16" y2="11.9636" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F99D1A"/>
+                  <stop offset="0.3939" stop-color="#E89219"/>
+                  <stop offset="0.9804" stop-color="#BF7815"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+                  <span class="text-xl text-white font-medium">1000 Credits </span></div>
+              </div>
+              <button class="py-2.5 px-3 bg-[#F99D1A] w-full text-black text-sm font-medium leading-4 rounded-md h-10 transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Credits Now</button>
+            </div>
+          </div>
+          <div class="border border-white/10 rounded-b-xl p-5 pt-10 relative bg-[radial-gradient(50%_100%_at_50%_0%,_rgba(249,_157,_26,_0.12)_0%,_rgba(249,_157,_26,_0)_100%)] after:content-['']  after:w-full after:absolute after:top-0 after:left-0 after:bg-[rgba(249,157,26,0.5)] after:h-[1px]">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-2.5 items-center">
+                <h4 class="text-[32px] leading-8 font-semibold text-[#F99D1A]">$36</h4>
+                <div class="flex items-center gap-1.5">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8.02321L8 0.142822V8.02321H16Z" fill="url(#paint0_linear_14206_1011)"/>
+                  <path d="M0 8.02344L7.99996 15.9038V8.02344H0Z" fill="url(#paint1_linear_14206_1011)"/>
+                  <path d="M7.99996 0.142822L0 8.02321H7.99996V0.142822Z" fill="url(#paint2_linear_14206_1011)"/>
+                  <path d="M8 8.02344V15.9038L16 8.02344H8Z" fill="url(#paint3_linear_14206_1011)"/>
+                  <path opacity="0.25" d="M7.98438 1.14404V2.01548L14.6196 7.92576L7.98438 1.14404Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M7.78585 2.87793L7.70116 7.68958L3 7.78417L7.31563 7.22795L7.78585 2.87793Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M5.92188 8.2251H7.74305L7.77834 14.8099L7.48188 8.54494L5.92188 8.2251Z" fill="#FDFFD2"/>
+                  <path opacity="0.5" d="M0.445312 7.78427C0.445312 7.78427 5.52981 4.02361 6.55224 2.02677L6.60059 1.93237L0.445312 7.78427Z" fill="#FDFFD2"/>
+                  <path d="M8.00001 9.83139C8.07091 9.27433 8.1035 8.7173 8.12882 8.16024C8.46865 8.17033 8.80847 8.1783 9.14824 8.1791C9.531 8.18212 9.91372 8.17778 10.2965 8.1692C10.6792 8.16033 11.0619 8.14543 11.4447 8.12275C11.8275 8.1004 12.2102 8.07022 12.5929 8.02354C12.2102 7.97686 11.8275 7.94673 11.4447 7.92433C11.062 7.9016 10.6792 7.8867 10.2965 7.87789C9.91372 7.86926 9.531 7.86492 9.14824 7.86798C8.81857 7.86873 8.48895 7.87638 8.15927 7.88604C8.15631 6.61847 8.14941 5.35094 8.12486 4.08337C8.11408 3.42667 8.09713 2.76997 8.07842 2.11331C8.05377 1.50456 8.03721 0.895771 8.00623 0.287023C8.28526 0.546271 8.56414 0.805616 8.84782 1.06029C9.15686 1.33991 9.46394 1.6215 9.77882 1.89542C9.50075 1.58524 9.21488 1.28276 8.93101 0.978337C8.64825 0.672784 8.36037 0.372326 8.07253 0.0717716L8.00379 0L7.92749 0.0717716L6.90448 1.03416L5.89162 2.00651C5.22083 2.65916 4.55244 3.31412 3.89079 3.97577C2.56683 5.29837 1.26135 6.63922 4.67471e-05 8.02354C1.40538 6.78106 2.76659 5.49514 4.10927 4.19098C4.78092 3.53918 5.44587 2.88078 6.10842 2.22007L7.09553 1.22236L7.58097 0.721636C7.72405 0.574047 7.97531 0.679996 7.96727 0.883886C7.95113 1.29369 7.93816 1.70346 7.92155 2.11331C7.90284 2.77001 7.88594 3.42672 7.87512 4.08337C7.85368 5.18959 7.86267 6.29585 7.8644 7.40206C7.86483 7.67154 7.64257 7.89052 7.369 7.89019C6.246 7.88873 5.12299 7.87991 3.99998 7.90108C3.33331 7.91165 2.66664 7.92834 2.00001 7.94677C1.33334 7.97276 0.666671 7.98808 0 8.02359C0.666671 8.05909 1.33334 8.07442 2.00001 8.1004C2.66669 8.11884 3.33336 8.13553 3.99998 8.14609C5.29067 8.17042 6.58141 8.17721 7.87211 8.18051C7.89738 8.73075 7.92998 9.28107 8.00001 9.83139Z" fill="white"/>
+                  <path d="M13.9629 9.96021C13.2894 10.6102 12.6134 11.2577 11.9465 11.9141L9.94084 13.8786L8.00708 15.7971C8.06155 15.1888 8.07452 14.1365 8.07663 13.586C8.07405 13.0019 8.05959 12.4178 7.99669 11.8338C7.93379 12.4179 7.91933 13.0019 7.91675 13.586C7.91847 14.0306 7.92728 14.8026 7.95926 15.4036C7.96663 15.5421 7.79713 15.6168 7.69646 15.5199L6.24469 14.1227C5.64288 13.5466 5.0382 12.9734 4.42969 12.404C5.01019 13.0012 5.59448 13.5945 6.18169 14.185L7.9481 15.9519L7.99621 16L8.04547 15.9518L10.0526 13.9887L12.0469 12.013C12.7133 11.356 13.3707 10.6902 14.0305 10.0268C14.6913 9.36428 15.3448 8.69462 15.9968 8.02344C15.3153 8.66562 14.6355 9.30935 13.9629 9.96021Z" fill="white"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_14206_1011" x1="7.09999" y1="3.41241" x2="15.0423" y2="9.51111" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB752"/>
+                  <stop offset="0.2162" stop-color="#FFAD39"/>
+                  <stop offset="0.2473" stop-color="#F99D1A"/>
+                  <stop offset="0.5453" stop-color="#D38413"/>
+                  <stop offset="0.7807" stop-color="#C47A11"/>
+                  <stop offset="0.9229" stop-color="#AC6C0F"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_14206_1011" x1="2.06116" y1="13.8734" x2="7.77413" y2="8.07373" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFBE73"/>
+                  <stop offset="0.4077" stop-color="#F99D1A"/>
+                  <stop offset="1" stop-color="#C77C11"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_14206_1011" x1="3.99998" y1="4.08301" x2="7.93972" y2="8.08254" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB750"/>
+                  <stop offset="0.9804" stop-color="#F99D1A"/>
+                  </linearGradient>
+                  <linearGradient id="paint3_linear_14206_1011" x1="8" y1="11.9636" x2="16" y2="11.9636" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F99D1A"/>
+                  <stop offset="0.3939" stop-color="#E89219"/>
+                  <stop offset="0.9804" stop-color="#BF7815"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+                  <span class="text-xl text-white font-medium">2,500  Credits</span></div>
+              </div>
+              <button class="py-2.5 px-3 bg-[#F99D1A] w-full text-black text-sm font-medium leading-4 rounded-md h-10 transition-all duration-300 hover:shadow-[0px_5px_10px_0px_rgba(249,157,26,0.1)]">Buy Credits Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -392,231 +523,158 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-12 w-full lg:max-w-[920px] mx-auto">
           <div class="accordion-group w-full flex-col justify-start items-start gap-8 flex" data-accordion="default-accordion">
-            <div class="w-full border-b border-[#191919] pb-12 mb-12 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
-                  <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
-                    <h3 class="text-white text-2xl font-semibold  leading-9">General Report</h3>
-                    <p class="text-[#B1B1B1] text-base font-normal leading-relaxed">A general report provides a concise overview of key findings and conclusions on a specific subject.</p>
-                  </div>
-                  <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
-                      <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-one-with-arrow-always-open">
-                        <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-one-with-arrow-always-open">
-                          <h5 class="text-start">Where can I find my order history? </h5>
-                          <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                              </svg>
-                              
-                          </a>
-                        </button>
-                        <div id="basic-collapse-one-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-one-with-arrow-always-open">
-                          <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                        You can view your order history by logging into your account and navigating to the "Order History" section.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-two-with-arrow-always-open">
-                        <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-two-with-arrow-always-open">
-                          <h5 class="text-start">Which is better short term or long term? </h5>
-                          <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                              </svg>
-                              
-                          </a>
-                        </button>
-                        <div id="basic-collapse-two-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-two-with-arrow-always-open">
-                          <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                        You can view your order history by logging into your account and navigating to the "Order History" section.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-three-with-arrow-always-open">
-                        <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-three-with-arrow-always-open">
-                          <h5 class="text-start">How do I delete my account?</h5>
-                          <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                              </svg>
-                              
-                          </a>
-                        </button>
-                        <div id="basic-collapse-three-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-three-with-arrow-always-open">
-                          <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                        You can view your order history by logging into your account and navigating to the "Order History" section.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-four-with-arrow-always-open">
-                        <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-four-with-arrow-always-open">
-                          <h5 class="text-start">Which is safe investment?</h5>
-                          <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                              </svg>
-                              
-                          </a>
-                        </button>
-                        <div id="basic-collapse-four-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-four-with-arrow-always-open">
-                          <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                        You can view your order history by logging into your account and navigating to the "Order History" section.
-                          </p>
-                        </div>
-                      </div>
-                  </div>
-            </div>
-            <div class="w-full border-b border-[#191919] pb-12 mb-12 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
-              <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
-                <h3 class="text-white text-2xl font-semibold  leading-9">Our Service</h3>
-                <p class="text-[#B1B1B1] text-base font-normal leading-relaxed">Our service delivers tailored solutions to meet your unique needs efficiently and effectively.</p>
-              </div>
-              <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
-
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-one-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-one-with-arrow-always-open">
-                    <h5 class="text-start">How can I provide feedback on the services I received?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-one-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-one-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-two-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-two-with-arrow-always-open">
-                    <h5 class="text-start">Are there any additional fees for your services?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-two-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-two-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-three-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-three-with-arrow-always-open">
-                    <h5 class="text-start">How can I request a service appointment?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-three-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-three-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
+            <div class="flex flex-col gap-5 h-full w-full">
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-one-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-one-with-arrow-always-open">
+                  <h5 class="text-start">What makes Bevelify different?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-one-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-one-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    Bevelify is an AI-powered 3D generation toolbox that transforms text or images into 3D assets with ease, streamlining your workflow.</p>
+                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-5">
+                    Designed for 3D artists, game developers, and 3D printing enthusiasts, Bevelify leverages cutting-edge AI to produce high-quality models and textures in minutes. No prior 3D modeling experience is required just input your idea, and within seconds, your first 3D asset comes to life.
+                  </p>
                 </div>
               </div>
-            </div>
-            <div class="w-full border-b border-[#191919] pb-12 mb-12 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
-              <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
-                <h3 class="text-white text-2xl font-semibold  leading-9">Support</h3>
-                <p class="text-[#B1B1B1] text-base font-normal leading-relaxed">Our support team is here to assist you with any questions or issues you may have.</p>
-              </div>
-              <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-one-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-one-with-arrow-always-open">
-                    <h5 class="text-start">How can I contact customer support?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-one-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-one-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-two-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-two-with-arrow-always-open">
-                    <h5 class="text-start">What are your support hours?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-two-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-two-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-three-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-three-with-arrow-always-open">
-                    <h5 class="text-start">How can I track the progress of my support request?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-three-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-three-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-four-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-four-with-arrow-always-open">
-                    <h5 class="text-start">How do I follow up on an existing support case?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-four-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-four-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion rounded-xl bg-transparent border border-transparent accordion-active:border-gray-900 p-5" id="basic-heading-five-with-arrow-always-open">
-                  <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-five-with-arrow-always-open">
-                    <h5 class="text-start">How do I cancel or modify a support appointment?</h5>
-                    <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
-                      <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
-                        </svg>
-                        
-                    </a>
-                  </button>
-                  <div id="basic-collapse-five-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" style="" aria-labelledby="basic-heading-five-with-arrow-always-open">
-                    <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
-                  You can view your order history by logging into your account and navigating to the "Order History" section.
-                    </p>
-                  </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-two-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-two-with-arrow-always-open">
+                  <h5 class="text-start">Is my asset safe?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-two-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-two-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    Yes, we prioritize data security. When using our web app, your data is safely stored with Amazon Web Services in the United States. We will never share your data or use it for training without your explicit consent.</p>
                 </div>
               </div>
-            </div>
-      </div>
-         
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-three-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-three-with-arrow-always-open">
+                  <h5 class="text-start">Can I use my generated assets for commercial projects?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-three-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-three-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    Yes. Under our Terms of Use, you own the assets created through our platform, provided that you have used materials that do not violate the copyrights of others in the process of generating your model. If you are on a premium plan, you own all assets you create with Meshy. If you are on a free plan, we grant you a CC BY 4.0 license instead.</p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-four-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-four-with-arrow-always-open">
+                  <h5 class="text-start">How long does a Generation take?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-four-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-four-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    Creating a 3D model usually takes between 15 to 25 seconds, though the exact time may vary depending on the complexity of your request and server load.</p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-five-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-five-with-arrow-always-open">
+                  <h5 class="text-start">What is the process for creating a 3D model?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-five-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-five-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    You can generate a 3D model by either entering a text prompt or uploading an image as a reference. Our platform is built for simplicity and ease of use, allowing you to effortlessly bring your ideas to life.</p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-six-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-six-with-arrow-always-open">
+                  <h5 class="text-start">How many credits are required per task?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-six-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-six-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    For Image to 3D and Text to 3D generation, each task costs 20 credits. </p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-seven-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-seven-with-arrow-always-open">
+                  <h5 class="text-start">How do credits work?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-seven-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-seven-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    On the Bevelify platform, credits serve as an internal currency or token. They can be used to access and pay for various services offered by Bevelify. Users can spend credits to generate 3D models or show appreciation for others' work through tipping.</p>
+                 <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-5">
+                  For more details on billing and other common questions, please visit our Billing FAQ page in the Help Center.</p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-eight-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-eight-with-arrow-always-open">
+                  <h5 class="text-start">Can I receive free credits?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-eight-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-eight-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    Absolutely! Free users receive 100 credits every month, which automatically reset at 00:00 (UTC) on the first day of each month. You can also earn additional credits daily by sharing your creations with the community, posting on Discord, and inviting friends to join Bevelify.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion rounded-xl bg-transparent border border-[#191919] accordion-active:border-gray-900 p-5" id="basic-heading-nine-with-arrow-always-open">
+                <button class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-[#B1B1B1] w-full transition-all duration-500  accordion-active:text-white  always-open" aria-controls="basic-collapse-nine-with-arrow-always-open">
+                  <h5 class="text-start">How can I upgrade my subscription plan?</h5>
+                  <a href="" class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.20312 11.9997C2.20312 6.58732 6.59073 2.19971 12.0031 2.19971C17.4155 2.19971 21.8031 6.58732 21.8031 11.9997C21.8031 17.4121 17.4155 21.7997 12.0031 21.7997C6.59073 21.7997 2.20312 17.4121 2.20312 11.9997ZM12.8032 7.99951C12.8032 7.55768 12.445 7.19951 12.0032 7.19951C11.5613 7.19951 11.2032 7.55768 11.2032 7.99951L11.2032 11.1995H8.00317C7.56135 11.1995 7.20317 11.5577 7.20317 11.9995C7.20317 12.4413 7.56135 12.7995 8.00317 12.7995H11.2032V15.9995C11.2032 16.4413 11.5613 16.7995 12.0032 16.7995C12.445 16.7995 12.8032 16.4413 12.8032 15.9995V12.7995H16.0032C16.445 12.7995 16.8032 12.4413 16.8032 11.9995C16.8032 11.5577 16.445 11.1995 16.0032 11.1995H12.8032V7.99951Z" fill="currentColor" />
+                      </svg>
+                      
+                  </a>
+                </button>
+                <div id="basic-collapse-nine-with-arrow-always-open" class="accordion-content w-full px-0 overflow-hidden active" aria-labelledby="basic-heading-nine-with-arrow-always-open">
+                  <p class="text-base font-normal leading-6 text-[#B1B1B1] pt-3.5">
+                    You can upgrade your subscription whenever you like, with changes taking effect instantly.</p>
+<p class="text-base font-normal leading-6 text-[#B1B1B1] pt-5">
+To do so, navigate to the Settings - Subscription page. In the “Subscription Details” section, click on the “Upgrade” button. This will redirect you to the  payment management page, where you can select a new plan seamlessly.
+                  </p>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
- 
+ </div>
     
    
     <!--footer section-->
