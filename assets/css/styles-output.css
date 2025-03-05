@@ -3201,12 +3201,12 @@ input:not(:checked) ~ .toggle-labels .yearly {
   stroke: #6D6D6D;
 }
 
-.stroke-white {
-  stroke: #fff;
-}
-
 .stroke-black {
   stroke: #000;
+}
+
+.stroke-white {
+  stroke: #fff;
 }
 
 .p-0 {
