@@ -280,5 +280,23 @@ function animateText(selector) {
   );
 }
 
+// JavaScript to handle pricing updates
+const toggle = document.getElementById("pricingToggle");
+const prices = document.querySelectorAll(".price");
+const postfixes = document.querySelectorAll(".postfix");
 
+toggle.addEventListener("change", () => {
+  const isYearly = toggle.checked;
+
+  // Update pricing and postfix text
+  prices.forEach(price => {
+    const monthlyPrice = price.getAttribute("data-monthly");
+    const yearlyPrice = price.getAttribute("data-yearly");
+    price.textContent = `$${isYearly ? yearlyPrice : monthlyPrice}`;
+  });
+
+  postfixes.forEach(postfix => {
+    postfix.textContent = isYearly ? "/ month" : "/ month";
+  });
+});
 

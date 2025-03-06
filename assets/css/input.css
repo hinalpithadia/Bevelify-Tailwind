@@ -314,6 +314,46 @@
       -o-transition: 0.3s all ease-out;
       transition: 0.3s all ease-out;
   }
+  .modal-pricing {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1150px;
+    max-height: calc(100vh - 80px);
+    height: 100%;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1000;
+    overflow: hidden;
+}
+.modal-content{
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+.modal-content::-webkit-scrollbar-track
+{
+  border-radius: 30px;
+	background-color: transparent;
+}
+
+.modal-content::-webkit-scrollbar
+{
+	width: 6px;
+  border-radius: 30px;
+	background-color: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb
+{
+  border-radius: 30px;
+	background-color: #555;
+}
   .modal-home {
     position: fixed;
     left: 50%;
