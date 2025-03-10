@@ -2507,6 +2507,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   gap: 5px;
 }
 
+.gap-\[8\] {
+  gap: 8;
+}
+
 .gap-y-8 {
   row-gap: 2rem;
 }
@@ -3526,6 +3530,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-bottom: 9px;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -3935,6 +3944,30 @@ input:not(:checked) ~ .toggle-labels .yearly {
   line-height: 1.25;
 }
 
+.leading-\[70px\] {
+  line-height: 70px;
+}
+
+.leading-\[80px\] {
+  line-height: 80px;
+}
+
+.leading-\[100px\] {
+  line-height: 100px;
+}
+
+.leading-\[0px\] {
+  line-height: 0px;
+}
+
+.\!leading-\[80px\] {
+  line-height: 80px !important;
+}
+
+.\!leading-\[70px\] {
+  line-height: 70px !important;
+}
+
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -4029,6 +4062,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   color: rgb(34 197 94 / var(--tw-text-opacity, 1));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
 .text-transparent {
   color: transparent;
 }
@@ -4044,11 +4082,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-opacity-70 {
