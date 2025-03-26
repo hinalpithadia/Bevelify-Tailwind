@@ -2159,10 +2159,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 48rem;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -2505,10 +2501,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .gap-\[5px\] {
   gap: 5px;
-}
-
-.gap-\[8\] {
-  gap: 8;
 }
 
 .gap-y-8 {
@@ -3530,11 +3522,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-bottom: 9px;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -3545,10 +3532,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .pb-14 {
@@ -3860,6 +3843,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   text-transform: capitalize;
 }
 
+.\!leading-\[70px\] {
+  line-height: 70px !important;
+}
+
 .leading-4 {
   line-height: 1rem;
 }
@@ -3882,6 +3869,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .leading-9 {
   line-height: 2.25rem;
+}
+
+.leading-\[100px\] {
+  line-height: 100px;
 }
 
 .leading-\[16px\] {
@@ -3944,30 +3935,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   line-height: 1.25;
 }
 
-.leading-\[70px\] {
-  line-height: 70px;
-}
-
-.leading-\[80px\] {
-  line-height: 80px;
-}
-
-.leading-\[100px\] {
-  line-height: 100px;
-}
-
-.leading-\[0px\] {
-  line-height: 0px;
-}
-
-.\!leading-\[80px\] {
-  line-height: 80px !important;
-}
-
-.\!leading-\[70px\] {
-  line-height: 70px !important;
-}
-
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -4000,11 +3967,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .text-\[\#B1B1B1\] {
   --tw-text-opacity: 1;
   color: rgb(177 177 177 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#D1D5DB\] {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#F99D1A\] {
@@ -4880,10 +4842,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     display: none;
   }
 
-  .max-lg\:items-center {
-    align-items: center;
-  }
-
   .max-lg\:gap-5 {
     gap: 1.25rem;
   }
@@ -4983,14 +4941,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     grid-column: span 4 / span 4;
   }
 
-  .lg\:col-span-5 {
-    grid-column: span 5 / span 5;
-  }
-
-  .lg\:col-span-7 {
-    grid-column: span 7 / span 7;
-  }
-
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
   }
@@ -5080,10 +5030,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     max-width: 20rem;
   }
 
-  .lg\:grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -5134,15 +5080,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
   .lg\:gap-9 {
     gap: 2.25rem;
-  }
-
-  .lg\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
-  .lg\:gap-y-0 {
-    row-gap: 0px;
   }
 
   .lg\:overflow-visible {
