@@ -1577,6 +1577,22 @@ input:not(:checked) ~ .toggle-labels .yearly {
   top: 57px;
 }
 
+.-left-5 {
+  left: -1.25rem;
+}
+
+.-left-7 {
+  left: -1.75rem;
+}
+
+.-left-10 {
+  left: -2.5rem;
+}
+
+.-left-16 {
+  left: -4rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1795,10 +1811,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .mt-\[18px\] {
   margin-top: 18px;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .line-clamp-1 {
@@ -2270,6 +2282,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-\[320px\] {
+  max-width: 320px;
 }
 
 .flex-none {
@@ -2825,6 +2841,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#02331c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 51 28 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#0B0B0B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(11 11 11 / var(--tw-bg-opacity, 1));
@@ -2963,16 +2984,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-emerald-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 253 245 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#02331c\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 51 28 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[linear-gradient\(136deg\2c rgba\(255\2c 255\2c 255\2c 0\.01\)0\%\2c rgba\(250\2c 157\2c 26\2c 0\.01\)93\.42\%\)\] {
@@ -3557,6 +3568,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-bottom: 9px;
 }
 
+.\!py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -4044,6 +4060,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
@@ -4081,9 +4102,9 @@ input:not(:checked) ~ .toggle-labels .yearly {
   color: rgb(255 255 255 / 0.8);
 }
 
-.text-emerald-500 {
+.text-\[\#696969\] {
   --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+  color: rgb(105 105 105 / var(--tw-text-opacity, 1));
 }
 
 .text-opacity-70 {
@@ -4252,6 +4273,16 @@ input:not(:checked) ~ .toggle-labels .yearly {
   src: url(../font/Manrope/Manrope-VariableFont_wght.ttf);
 }
 
+.selected-display .before\:border::before {
+  content: var(--tw-content);
+  border:none;
+}
+
+.selected-display .before\:border img::before{
+  content: var(--tw-content);
+  display: none;
+}
+
 .wrapper-dropdown.dropdown-2 .selected-display .hover\:text-white:hover{
   color:rgb(249, 157, 26 )!important;
 }
@@ -4350,6 +4381,31 @@ input:not(:checked) ~ .toggle-labels .yearly {
   top: 3.5rem;
 }
 
+.before\:left-10::before {
+  content: var(--tw-content);
+  left: 2.5rem;
+}
+
+.before\:left-\[48\%\]::before {
+  content: var(--tw-content);
+  left: 48%;
+}
+
+.before\:left-\[46\%\]::before {
+  content: var(--tw-content);
+  left: 46%;
+}
+
+.before\:left-\[40\%\]::before {
+  content: var(--tw-content);
+  left: 40%;
+}
+
+.before\:left-\[45\%\]::before {
+  content: var(--tw-content);
+  left: 45%;
+}
+
 .before\:m-auto::before {
   content: var(--tw-content);
   margin: auto;
@@ -4383,6 +4439,33 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
+}
+
+.before\:border::before {
+  content: var(--tw-content);
+  border-width: 1px;
+}
+
+.before\:border-t::before {
+  content: var(--tw-content);
+  border-top-width: 1px;
+}
+
+.before\:border-\[\]::before {
+  content: var(--tw-content);
+  border-color: ;
+}
+
+.before\:border-\[\#484848\]::before {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(72 72 72 / var(--tw-border-opacity, 1));
+}
+
+.before\:border-t-\[\#484848\]::before {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-top-color: rgb(72 72 72 / var(--tw-border-opacity, 1));
 }
 
 .before\:bg-\[linear-gradient\(180deg\2c rgba\(68\2c 43\2c 7\2c 1\)0\%\2c rgba\(25\2c 16\2c 3\2c 1\)100\%\)\]::before {
