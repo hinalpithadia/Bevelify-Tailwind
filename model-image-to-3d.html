@@ -128,7 +128,7 @@
           <span class="text-xs text-white font-medium">Text to 3D</span>
         </div>
         <h1
-          class="lg:text-5xl text-4xl  !leading-[70px] font-semibold  text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text max-w-[650px] mx-auto mb-5">
+          class="lg:text-5xl text-4xl  !leading-[60px] font-semibold  text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text max-w-[650px] mx-auto mb-5">
           Turn Images into 3D Models with <span class="text-[#F99D1A]">Image to 3D</span>
 
         </h1>
@@ -603,7 +603,7 @@
     <div class="w-full h-px bg-gradient-to-r from-white/0 via-white/10 to-white/0"></div>
     <div class="flex flex-col items-center gap-11 mb-20">   
       <div class="flex items-center flex-col gap-3 pt-16">
-            <h2 id="text-anim" class="lg:text-5xl text-4xl leading-[100px] font-medium  text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text text-center">Ready to Bring Your Ideas to Life? </h2>
+            <h2 id="text-anim" class="lg:text-5xl text-4xl !leading-[80px] font-medium  text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text text-center">Ready to Bring Your Ideas to Life? </h2>
             <p class="max-w-xl text-center mx-auto text-lg text-[#B1B1B1] font-normal leading-8 max-lg:text-center">Start creating stunning 3D models in minutes with our powerful AI generator. Whether it’s <span class="text-[#F99D1A]">Text to 3D</span> or <span class="text-[#F99D1A]">Image to 3D.</span> Try it now and transform your imagination into reality!</p>
         </div>
         <div class="flex items-center gap-5">
@@ -945,97 +945,9 @@
     integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/main.js"></script> -->
   <script src="assets/js/accordion.js"></script>
-  <script>
-
-    // Function to initialize a 3D model in a specific canvas
-    function init3D(canvas) {
-      const scene = new THREE.Scene();
-      const textureLoader = new THREE.TextureLoader();
-      const sizes = {
-        width: canvas.offsetWidth,
-        height: canvas.offsetHeight,
-      };
-      // Camera
-      const camera = new THREE.PerspectiveCamera(
-        7,
-        sizes.width / sizes.height,
-        1,
-        100
-      );
-      camera.position.set(10, 0, 10);
-      scene.add(camera);
-      // Controls
-      const controls = new THREE.OrbitControls(camera, canvas);
-      controls.enableDamping = true;
-      controls.autoRotate = true;
-      controls.rotateSpeed = 0.7;
-      controls.enableZoom = true;
-      controls.enablePan = false;
-      controls.minDistance = 10;
-      controls.maxDistance = 10;
-      controls.minPolarAngle = Math.PI / 10;
-      controls.maxPolarAngle = Math.PI / 1;
-      controls.minAzimuthAngle = -Math.PI / 1;
-      controls.maxAzimuthAngle = Math.PI / 1;
-      // Renderer
-      const renderer = new THREE.WebGLRenderer({
-        canvas: canvas,
-        antialias: true,
-        alpha: true,
-      });
-      renderer.setSize(sizes.width, sizes.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      // Materials
-      const texturePath = canvas.getAttribute("data-texture");
-      const bakedTexture = textureLoader.load(texturePath);
-      bakedTexture.flipY = false;
-      bakedTexture.encoding = THREE.sRGBEncoding;
-      const bakedMaterial = new THREE.MeshBasicMaterial({
-        map: bakedTexture,
-        side: THREE.DoubleSide,
-      });
-      // Load model
-      const modelPath = canvas.getAttribute("data-model");
-      const loader = new THREE.GLTFLoader();
-      let model;
-      loader.load(
-        modelPath,
-        (gltf) => {
-          model = gltf.scene;
-          model.traverse((child) => (child.material = bakedMaterial));
-          scene.add(model);
-        },
-        (xhr) => {
-          console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-        }
-      );
-      // Resize handler
-      window.addEventListener("resize", () => {
-        sizes.width = canvas.offsetWidth;
-        sizes.height = canvas.offsetHeight;
-        camera.aspect = sizes.width / sizes.height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(sizes.width, sizes.height);
-      });
-      // Animation
-      const tick = () => {
-        if (model) {
-          model.rotation.y += 0.01; // Rotate the model
-        }
-        controls.update();
-        renderer.render(scene, camera);
-        requestAnimationFrame(tick);
-      };
-      tick();
-    }
-    // Initialize 3D models for all canvas elements
-    document.querySelectorAll(".webgl").forEach((canvas) => {
-      init3D(canvas);
-    });
-  </script>
+ 
   <script>
     $(document).ready(function () {
       $('.hero-slider').slick({

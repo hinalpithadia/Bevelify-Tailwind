@@ -251,6 +251,33 @@ document.addEventListener('click', function (event) {
   }
 });
 
+$(document).ready(function () {
+  const $tabs = $(".tablink");
+  const $slider = $(".slider-bg");
+
+  function moveSlider(index) {
+    const target = $tabs.eq(index).closest("li");
+    const position = target.position();
+
+    gsap.to($slider, {
+      x: position.left,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  }
+
+  $tabs.on("click", function () {
+    $tabs.removeClass("active");
+    $(this).addClass("active");
+
+    const index = $(this).closest("li").index();
+    moveSlider(index);
+  });
+
+  // Initial slider position (in case Monthly is default)
+  moveSlider($(".tablink.active").closest("li").index());
+});
+
 // =============== gsap js ======================== 
 
 document.addEventListener("DOMContentLoaded", function () {
