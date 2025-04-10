@@ -291,6 +291,12 @@
       line-height: 18px;
       transition: all .6s ease-in-out;
     }
+    .nav-link.active{
+      color: #fff;
+    }
+    .nav-link.active:before{
+      opacity: 1;
+    }
     .nav-link:hover{
       color: #fff;
     }

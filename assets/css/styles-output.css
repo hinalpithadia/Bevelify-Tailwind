@@ -880,6 +880,14 @@ svg.final stop {
   transition: all .6s ease-in-out;
 }
 
+.nav-link.active{
+  color: #fff;
+}
+
+.nav-link.active:before{
+  opacity: 1;
+}
+
 .nav-link:hover{
   color: #fff;
 }
@@ -1827,10 +1835,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .\!flex {
@@ -3903,8 +3907,12 @@ input:not(:checked) ~ .toggle-labels .yearly {
   text-transform: capitalize;
 }
 
-.\!leading-\[70px\] {
-  line-height: 70px !important;
+.\!leading-\[60px\] {
+  line-height: 60px !important;
+}
+
+.\!leading-\[80px\] {
+  line-height: 80px !important;
 }
 
 .leading-4 {
@@ -3929,10 +3937,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .leading-9 {
   line-height: 2.25rem;
-}
-
-.leading-\[100px\] {
-  line-height: 100px;
 }
 
 .leading-\[16px\] {
@@ -3993,22 +3997,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.\!leading-\[100px\] {
-  line-height: 100px !important;
-}
-
-.leading-\[80px\] {
-  line-height: 80px;
-}
-
-.\!leading-\[80px\] {
-  line-height: 80px !important;
-}
-
-.\!leading-\[60px\] {
-  line-height: 60px !important;
 }
 
 .tracking-wide {
