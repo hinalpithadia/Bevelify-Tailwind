@@ -1614,6 +1614,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   bottom: 2.25rem;
 }
 
+.-left-12 {
+  left: -3rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -2604,6 +2608,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.whitespace-pre {
+  white-space: pre;
 }
 
 .break-all {
