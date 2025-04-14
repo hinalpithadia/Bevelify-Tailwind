@@ -916,7 +916,7 @@ svg.final stop {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 1150px;
+  max-width: 1160px;
   max-height: calc(100vh - 80px);
   height: 100%;
   display: none;
@@ -1363,6 +1363,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .tags-input-wrapper .tag a {
   display: inline-block;
   cursor: pointer;
+}
+
+.right-btns .active{
+  border:1px solid #f99d1a;
 }
 
 .sr-only {
