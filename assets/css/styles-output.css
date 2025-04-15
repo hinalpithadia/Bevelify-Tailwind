@@ -1438,6 +1438,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   left: -0.25rem;
 }
 
+.-left-12 {
+  left: -3rem;
+}
+
 .-left-16 {
   left: -4rem;
 }
@@ -1468,6 +1472,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .bottom-8 {
   bottom: 2rem;
+}
+
+.bottom-9 {
+  bottom: 2.25rem;
 }
 
 .left-0 {
@@ -1608,18 +1616,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .top-\[57px\] {
   top: 57px;
-}
-
-.bottom-9 {
-  bottom: 2.25rem;
-}
-
-.-left-12 {
-  left: -3rem;
-}
-
-.left-8 {
-  left: 2rem;
 }
 
 .z-0 {
@@ -2014,6 +2010,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   height: 100vh;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -2180,6 +2180,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   width: 1px;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -2315,6 +2319,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-none {

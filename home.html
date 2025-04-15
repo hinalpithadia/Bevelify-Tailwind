@@ -31,6 +31,17 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <style>
+      .hero-slider .slick-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-slider {
+  min-height: 300px; /* adjust as needed */
+}
+    </style>
   </head>
 
   <body class="bg-black">
@@ -1475,7 +1486,7 @@
                     </div>
                   </div>  
                   <div class="bg-gradient-to-b from-white/10 to-transparent p-[1px] rounded-3xl lg:col-span-2">  
-                    <div class="bg-[#0D0D0D] overflow-hidden relative rounded-3xl px-6 flex flex-col gap-8">
+                    <div class="bg-[#0D0D0D] overflow-hidden relative rounded-3xl px-6 flex flex-col gap-12">
                           <div class="relative flex justify-center pt-8 h-[240px] before:[''] before:absolute before:bg-[radial-gradient(45.76%_47.71%_at_50.95%_44.17%,rgba(13,13,13,0.00)_0%,#0D0D0D_100%)] before:top-0 before:left-0 before:w-full before:h-full">
                             <svg width="auto" height="180" viewBox="0 0 790 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                               <rect x="-115.5" y="0.5" width="149" height="179" rx="15.5" fill="url(#paint0_linear_13112_8408)" fill-opacity="0.3" stroke="url(#paint1_linear_13112_8408)"/>
@@ -1577,7 +1588,7 @@
           <div class="flex flex-col lg:flex-row max-lg:gap-8 items-center justify-center mb-14">
               <div class="flex  flex-col items-center gap-3">
                   <h2 id="text-anim" class="text-5xl leading-[60px] font-medium text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text text-center">What Users Say About Us?</h2>
-                  <p class="max-w-5xl text-center mx-auto text-lg text-[#B1B1B1] font-normal leading-8 max-lg:text-center">Hear from our amazing community! See how creators worldwide are using our AI-powered tools to bring their 3D ideas to life.</p>
+                  <p class="max-w-2xl text-center mx-auto text-lg text-[#B1B1B1] font-normal leading-8 max-lg:text-center">Hear from our amazing community! See how creators worldwide are using our AI-powered tools to bring their 3D ideas to life.</p>
               </div>
           </div>
       </div>
@@ -1731,7 +1742,7 @@
         <div class="flex flex-col items-center gap-11 mb-20">   
           <div class="flex items-center flex-col gap-3 pt-16">
                 <h2 id="text-anim" class="text-5xl leading-[60px] font-medium  text-transparent bg-gradient-to-b from-white to-[#828282] bg-clip-text text-center">Ready to Bring Your Ideas to Life?</h2>
-                <p class="max-w-xl text-center mx-auto text-lg text-[#B1B1B1] font-normal leading-8 max-lg:text-center">Start creating stunning 3D models in minutes with our powerful AI generator. Whether it’s <span class="text-[#F99D1A]">Text to 3D</span> or <span class="text-[#F99D1A]">Image to 3D.</span> Try it now and transform your imagination into reality!</p>
+                <p class="max-w-3xl text-center mx-auto text-lg text-[#B1B1B1] font-normal leading-8 max-lg:text-center">Start creating stunning 3D models in minutes with our powerful AI generator. Whether it’s <span class="text-[#F99D1A]">Text to 3D</span> or <span class="text-[#F99D1A]">Image to 3D.</span> Try it now and transform your imagination into reality!</p>
             </div>
             <div class="flex items-center gap-5">
               <button class="py-2.5 px-[18px] bg-[#F99D1A] rounded-lg text-sm text-black font-medium leading-6 transition-all duration-500 hover:bg-[#bc730a]">Start
@@ -2119,8 +2130,47 @@
     integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="https://unpkg.com/@rive-app/canvas"></script> -->
-    <script src="assets/js/main.js"></script>
- 
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script>
+      $(document).ready(function(){
+        $('.hero-slider').slick({
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          draggable: false,
+          centerMode: true,
+          arrows: false,
+          dots: false,
+          speed: 1200,
+          centerPadding: '140px',
+          infinite: true,
+          autoplaySpeed: 2000,
+          autoplay: false,
+            responsive: [
+            {
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: '40px',
+              }
+            },
+          ]
+        });
+  
+      });
+    
+     </script>
     <!-- <script>    
       const rive = new rive.Rive({
             src: "assets/images/bevelify.riv",  // Path to your .riv file
@@ -2221,46 +2271,7 @@ document.querySelectorAll(".webgl").forEach((canvas) => {
   init3D(canvas);
 });
     </script>
-   <script>
-    $(document).ready(function(){
-      $('.hero-slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        draggable: false,
-        centerMode: true,
-        arrows: false,
-        dots: false,
-        speed: 1200,
-        centerPadding: '140px',
-        infinite: true,
-        autoplaySpeed: 2000,
-        autoplay: true,
-          responsive: [
-          {
-            breakpoint: 1500,
-            settings: {
-              slidesToShow: 3,
-            }
-          },
-          {
-            breakpoint: 1100,
-            settings: {
-              slidesToShow: 1,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              centerPadding: '40px',
-            }
-          },
-        ]
-      });
-
-    });
-  
-   </script>
+   
    <script>
     $(document).ready(function(){
       $('.testimonial-slider').slick({
