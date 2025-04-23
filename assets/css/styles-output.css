@@ -2010,10 +2010,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   height: 100vh;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
@@ -2037,6 +2033,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .min-h-\[110px\] {
   min-height: 110px;
+}
+
+.min-h-\[260px\] {
+  min-height: 260px;
 }
 
 .min-h-\[342px\] {
@@ -2180,10 +2180,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   width: 1px;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -2276,6 +2272,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 470px;
 }
 
+.max-w-\[480px\] {
+  max-width: 480px;
+}
+
 .max-w-\[547px\] {
   max-width: 547px;
 }
@@ -2288,8 +2288,16 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 710px;
 }
 
+.max-w-\[744px\] {
+  max-width: 744px;
+}
+
 .max-w-\[750px\] {
   max-width: 750px;
+}
+
+.max-w-\[797px\] {
+  max-width: 797px;
 }
 
 .max-w-\[824px\] {
@@ -2319,10 +2327,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
 }
 
 .flex-none {
@@ -2554,6 +2558,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .gap-\[50px\] {
   gap: 50px;
+}
+
+.gap-\[56px\] {
+  gap: 56px;
 }
 
 .gap-\[5px\] {
@@ -2867,6 +2875,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   border-color: rgb(255 255 255 / 0.2);
 }
 
+.border-\[\#232323\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(35 35 35 / var(--tw-border-opacity, 1));
+}
+
 .\!bg-\[\#2C2B2A\] {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(44 43 42 / var(--tw-bg-opacity, 1)) !important;
@@ -2915,6 +2928,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .bg-\[\#131313\] {
   --tw-bg-opacity: 1;
   background-color: rgb(19 19 19 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#141414\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#161616\] {
@@ -3730,6 +3748,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-left: 1rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -3760,6 +3782,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .pt-1\.5 {
@@ -3828,6 +3854,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pt-\[39px\] {
   padding-top: 39px;
+}
+
+.pt-\[56px\] {
+  padding-top: 56px;
 }
 
 .pt-px {
@@ -4025,6 +4055,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
 }
 
 .tracking-wide {
@@ -5281,6 +5315,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:leading-\[60px\] {
+    line-height: 60px;
   }
 
   .lg\:shadow-none {
