@@ -2788,6 +2788,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   border-color: rgb(30 30 30 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#232323\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(35 35 35 / var(--tw-border-opacity, 1));
+}
+
 .border-\[\#292114\] {
   --tw-border-opacity: 1;
   border-color: rgb(41 33 20 / var(--tw-border-opacity, 1));
@@ -2873,11 +2878,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .border-white\/20 {
   border-color: rgb(255 255 255 / 0.2);
-}
-
-.border-\[\#232323\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(35 35 35 / var(--tw-border-opacity, 1));
 }
 
 .\!bg-\[\#2C2B2A\] {
@@ -4029,6 +4029,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   line-height: 30px;
 }
 
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
 .leading-\[60px\] {
   line-height: 60px;
 }
@@ -4055,10 +4059,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.leading-\[40px\] {
-  line-height: 40px;
 }
 
 .tracking-wide {
@@ -4384,6 +4384,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   .xl\:hidden {
     display: none;
   }
+}
+
+.wrapper-dropdown.dropdown-2 .selected-display .\[\&\.active\]\:text-white.active{
+  color:rgb(249, 157, 26 )!important;
 }
 
 .placeholder\:text-\[\#4D4D4D\]::-moz-placeholder {
@@ -5580,6 +5584,31 @@ input:not(:checked) ~ .toggle-labels .yearly {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity, 1));
   }
+}
+
+.\[\&\.active\]\:bg-blue-400.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
+}
+
+.\[\&\.active\]\:bg-\[\#F99D1A\].active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 157 26 / var(--tw-bg-opacity, 1));
+}
+
+.\[\&\.active\]\:text-\[\#F99D1A\].active {
+  --tw-text-opacity: 1;
+  color: rgb(249 157 26 / var(--tw-text-opacity, 1));
+}
+
+.\[\&\.active\]\:text-white.active {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.\[\&\.active\]\:text-black.active {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .\[\&\:\:-webkit-slider-thumb\]\:h-\[18px\]::-webkit-slider-thumb {
