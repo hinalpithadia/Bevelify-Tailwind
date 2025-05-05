@@ -1233,14 +1233,6 @@ svg.final stop {
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1));
 }
 
-.slider-bottom {
-  transform: rotate(180deg);
-}
-
-.slider-bottom .slick-slide {
-  transform: rotate(-180deg);
-}
-
 .color_1 {
   background: radial-gradient(50% 50% at 50% 50%, rgba(249, 157, 26, 0.00) 0%, rgba(249, 157, 26, 0.10) 100%);
 }
@@ -1470,6 +1462,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   bottom: 0.75rem;
 }
 
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .bottom-8 {
   bottom: 2rem;
 }
@@ -1616,10 +1612,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .top-\[57px\] {
   top: 57px;
-}
-
-.bottom-6 {
-  bottom: 1.5rem;
 }
 
 .z-0 {
@@ -3653,6 +3645,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-bottom: 2.5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -3871,10 +3867,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pt-px {
   padding-top: 1px;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-left {
@@ -4899,6 +4891,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.active\:text-\[\#F99D1A\]:active {
+  --tw-text-opacity: 1;
+  color: rgb(249 157 26 / var(--tw-text-opacity, 1));
+}
+
 .active\:opacity-70:active {
   opacity: 0.7;
 }
@@ -5603,6 +5600,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .\[\&\.active\]\:text-black.active {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.\[\&\.active\]\:text-\[\#F99D1A\].active {
+  --tw-text-opacity: 1;
+  color: rgb(249 157 26 / var(--tw-text-opacity, 1));
 }
 
 .\[\&\:\:-webkit-slider-thumb\]\:h-\[18px\]::-webkit-slider-thumb {
