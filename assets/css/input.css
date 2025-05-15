@@ -434,8 +434,30 @@
   z-index: 1000;
   overflow: auto;
 }
+.modal-follow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1000;
+  overflow: auto;
+}
 @media (max-width: 600px) {
   .modal-home {
+    margin: 10px;
+  }
+  .modal-follow {
+    width: 100%;
+    max-width:100%;
     margin: 10px;
   }
 }
@@ -457,6 +479,12 @@
   background-color: #F99D1A;
   color: #000;
 } */
+ [data-tab].active.tab-active\:text-orange{
+  color: #F99D1A;
+ }
+  [data-tab].active.tab-active\:text-orange{
+  background: #121313;
+ }
 #tab-switcher li a{
   position: relative;
 }
@@ -773,4 +801,21 @@ input:checked ~ .toggle-labels .monthly {
   .right-btns .active{
     border:1px solid #f99d1a;
   }
+  .follow-list::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.follow-list::-webkit-scrollbar
+{
+	width: 0px;
+	background-color: transparent;
+}
+
+.follow-list::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
 }
