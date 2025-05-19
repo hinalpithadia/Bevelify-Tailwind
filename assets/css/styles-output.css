@@ -1051,6 +1051,10 @@ svg.final stop {
   overflow: auto;
 }
 
+.selected-display h4{
+  color: #f99d1a;
+}
+
 @media (max-width: 600px) {
   .modal-home {
     margin: 10px;
@@ -5668,6 +5672,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .\[\&\.active\]\:bg-\[\#F99D1A\].active {
   --tw-bg-opacity: 1;
   background-color: rgb(249 157 26 / var(--tw-bg-opacity, 1));
+}
+
+.\[\&\.active\]\:text-\[\#060610\].active {
+  --tw-text-opacity: 1;
+  color: rgb(6 6 16 / var(--tw-text-opacity, 1));
 }
 
 .\[\&\.active\]\:text-\[\#F99D1A\].active {
