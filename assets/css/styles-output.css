@@ -1537,6 +1537,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   left: 0.625rem;
 }
 
+.left-3 {
+  left: 0.75rem;
+}
+
 .left-3\.5 {
   left: 0.875rem;
 }
@@ -1595,6 +1599,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .top-12 {
   top: 3rem;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .top-2\.5 {
@@ -1667,6 +1675,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .top-auto {
   top: auto;
+}
+
+.top-3 {
+  top: 0.75rem;
 }
 
 .z-0 {
@@ -2246,6 +2258,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .w-px {
   width: 1px;
+}
+
+.w-\[76px\] {
+  width: 76px;
 }
 
 .min-w-\[100px\] {
