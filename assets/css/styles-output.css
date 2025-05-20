@@ -2260,6 +2260,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   width: 1px;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
