@@ -2417,6 +2417,14 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 20rem;
 }
 
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
 .flex-none {
   flex: none;
 }
@@ -4859,6 +4867,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   background-color: rgb(249 19 19 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[rgb\(255\2c 224\2c 179\2c 0\.1\)\]:hover {
+  background-color: rgb(255,224,179,0.1);
+}
+
 .hover\:bg-\[rgba\(249\2c 157\2c 26\2c 0\.10\)\]:hover {
   background-color: rgba(249,157,26,0.10);
 }
@@ -4875,22 +4887,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .hover\:bg-white\/20:hover {
   background-color: rgb(255 255 255 / 0.2);
-}
-
-.hover\:bg-\[rgb\(255\.224\2c 179\/10\%\)\]:hover {
-  background-color: rgb(255.224,179/10%);
-}
-
-.hover\:bg-\[rgb\(255\2c 224\2c 179\/10\%\)\]:hover {
-  background-color: rgb(255,224,179/10%);
-}
-
-.hover\:bg-\[rgb\(255\2c 224\2c 179\2c 10\%\)\]:hover {
-  background-color: rgb(255,224,179,10%);
-}
-
-.hover\:bg-\[rgb\(255\2c 224\2c 179\2c 0\.1\)\]:hover {
-  background-color: rgb(255,224,179,0.1);
 }
 
 .hover\:from-\[\#7a633d\]:hover {
