@@ -76,6 +76,10 @@
       }
       .selected-display>div{
         background: none;
+         padding: 0;
+      }
+      .selected-display>a>div{
+        padding: 0;
       }
       .wrapper-dropdown.dropdown-2 .selected-display .text-white{
         color:rgb(249, 157, 26 )!important;
